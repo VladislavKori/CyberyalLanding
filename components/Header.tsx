@@ -11,7 +11,7 @@ function Header() {
     var element = document.getElementById("ref");
   }
 
-  var isPrivacy = router.pathname === "/privacy";
+  const isPrivacy = router.pathname === "/privacy";
 
   const handleClick = () => element?.scrollIntoView();
 
