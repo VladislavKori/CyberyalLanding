@@ -3,15 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "@/public/logo.svg";
+import { useRouter } from "next/router";
 
 function Header() {
+  const router = useRouter();
   if (typeof window !== "undefined") {
     var element = document.getElementById("ref");
   }
 
-  if (typeof window !== "undefined") {
-    var isPrivacy = window.location.pathname === "/privacy";
-  }
+  var isPrivacy = router.pathname === "/privacy";
 
   const handleClick = () => element?.scrollIntoView();
 
@@ -22,9 +22,9 @@ function Header() {
           <Image className="header__logo-img" src={Logo} alt="logo" />
         </div>
         <nav className="header__navbar">
-          <a className="header__link" href="/">
+          <Link className="header__link" href={"/privacy"}>
             Home
-          </a>
+          </Link>
           {/* <Link className="header__link" href="/about">About</Link> */}
         </nav>
       </div>
