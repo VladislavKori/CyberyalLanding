@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import Bg from "@/public/assets/comingsoonbg.webp";
+import Cards from "./Cards";
 
 function ComingSoon() {
   return (
@@ -11,7 +12,7 @@ function ComingSoon() {
 
       <div className="comingsoon__bottom">
         <div className="comingsoon__blackout"></div>
-        <Image className="comingsoon__bg" src={Bg} alt="bg" />
+        <Cards />
       </div>
     </div>
   );
