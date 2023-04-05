@@ -22,7 +22,7 @@ function Header() {
           <Image className="header__logo-img" src={Logo} alt="logo" />
         </div>
         <nav className="header__navbar">
-          <Link className="header__link" href={"/privacy"}>
+          <Link className="header__link" href={"/"}>
             Home
           </Link>
           {/* <Link className="header__link" href="/about">About</Link> */}
