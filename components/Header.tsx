@@ -9,6 +9,10 @@ function Header() {
     var element = document.getElementById("ref");
   }
 
+  if (typeof window !== "undefined") {
+    var isPrivacy = window.location.pathname === "/privacy";
+  }
+
   const handleClick = () => element?.scrollIntoView();
 
   return (
@@ -18,15 +22,19 @@ function Header() {
           <Image className="header__logo-img" src={Logo} alt="logo" />
         </div>
         <nav className="header__navbar">
-          <Link className="header__link" href="/">
+          <a className="header__link" href="/">
             Home
-          </Link>
+          </a>
           {/* <Link className="header__link" href="/about">About</Link> */}
         </nav>
       </div>
-      <button className="header__btn" onClick={handleClick}>
-        Subscribe
-      </button>
+      {isPrivacy ? (
+        ""
+      ) : (
+        <button className="header__btn" onClick={handleClick}>
+          Subscribe
+        </button>
+      )}
     </header>
   );
 }
