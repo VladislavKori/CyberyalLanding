@@ -94,15 +94,27 @@
 }
 
 @media (max-width: 1400px) {
+    .content {
+        width: 100%;
+        padding: 0px 75px;
+    }
     .socials {
 
         &__list {
             flex-wrap: wrap;
+            align-items: center;
         }
 
         &__item {
             width: 170px;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        width: 100%;
+        padding: 0px 16px;
     }
 }
 
@@ -138,6 +150,7 @@
 
     &__bg {
         width: 100%;
+        height: auto ;
     }
 
     &__blackout {
