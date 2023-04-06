@@ -15,6 +15,13 @@ function Header() {
 
   const handleClick = () => element?.scrollIntoView();
 
+  const handleClickRoute = async () => {
+    // Wait for route change before do anything
+    await router.push("/");
+    // Reload after routing
+    router.reload();
+  };
+
   return (
     <header className="header">
       <div className="header__left">
@@ -22,9 +29,9 @@ function Header() {
           <Image className="header__logo-img" src={Logo} alt="logo" />
         </div>
         <nav className="header__navbar">
-          <Link className="header__link" href={"/"}>
+          <div className="header__link" onClick={() => handleClickRoute()}>
             Home
-          </Link>
+          </div>
           {/* <Link className="header__link" href="/about">About</Link> */}
         </nav>
       </div>
