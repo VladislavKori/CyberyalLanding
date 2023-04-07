@@ -30,7 +30,7 @@ function Socials() {
         <li className="socials__item socials__item_discord">
           <a
             className="socials__card"
-            href="https://discord.com"
+            href="https://discord.gg/chjDVWAbBU"
             target="_blank"
           >
             <Image className="socials__icon" src={DiscordIcon} alt="discord" />
@@ -58,7 +58,7 @@ function Socials() {
         <li className="socials__item socials__item_youtube">
           <a
             className="socials__card socials__card_discord"
-            href="https://discord.com"
+            href="https://www.youtube.com/@CyberyalGaming"
             target="_blank"
           >
             <Image className="socials__icon" src={YoutubeIcon} alt="discord" />
