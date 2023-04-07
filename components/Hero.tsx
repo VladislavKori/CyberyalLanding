@@ -6,10 +6,41 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import close_modal from "../public/assets/close_modal.svg";
 import Modal from "react-modal";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import apiClient from "@/api/apiClient";
 
 function Hero() {
+  const [utmParams, setUtmParams] = useState<any>({});
+
+  useEffect(() => {
+    return () => {
+      if (typeof window !== "undefined") {
+        const getParam = (param: any) => {
+          const urlParams = new URL(window.location.toString()).searchParams;
+          return urlParams.get(param) || "";
+        };
+
+        const utmSource = getParam("utm_source");
+        const utmMedium = getParam("utm_medium");
+        const utmCampaign = getParam("utm_campaign");
+        const utmContent = getParam("utm_content");
+        const utmTerm = getParam("utm_term");
+        const utmSky = getParam("utm_sky");
+
+        setUtmParams({
+          utm_source: utmSource,
+          utm_medium: utmMedium,
+          utm_campaign: utmCampaign,
+          utm_content: utmContent,
+          utm_term: utmTerm,
+          utm_sky: utmSky,
+        });
+      }
+    };
+  }, []);
+
+  // console.log("utmParams", utmParams);
+
   const validationSchema = z.object({
     email: z.string().min(1, { message: "Please write your email" }).email({
       message: "You entered your email incorrectly",
