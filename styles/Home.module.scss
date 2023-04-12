@@ -353,8 +353,8 @@
         border-radius: 50px;
 
         &:hover {
-            background: linear-gradient(0deg, rgba(26, 26, 34, 0.07), rgba(26, 26, 34, 0.07)), url(../public/assets/hero1.webp) no-repeat;
-            background-size: cover;
+            // background: linear-gradient(0deg, rgba(26, 26, 34, 0.13), rgba(26, 26, 34, 0.013)), url(../public/assets/hero1.webp) no-repeat;
+                // background-size: cover;
         }
 
         &__title {
@@ -407,10 +407,11 @@
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../public/assets/hero.webp);
             background-size: cover;
             border-radius: 40px;
+            transition: 0.3s;
 
             &:hover {
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/assets/hero.webp);
-                background-size: cover;
+                // background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../public/assets/hero.webp);
+                    // background-size: cover;
             }
 
             &__title {

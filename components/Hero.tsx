@@ -61,9 +61,10 @@ function Hero() {
   });
 
   const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
-    console.log(data);
+    // console.log(data);
     apiClient
       .post(``, {
+        utm: utmParams,
         email: data.email,
       })
       .then((response: any) => {

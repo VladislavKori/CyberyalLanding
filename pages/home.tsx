@@ -69,7 +69,11 @@ export default function Home() {
 
       <main className="wrapper">
         <HeaderWithNoSSR />
-        <div className="content">Landing</div>
+        <div className="content">
+          <Hero />
+          <Socials />
+          <ComingSoon />
+        </div>
         <Footer />
       </main>
     </>
