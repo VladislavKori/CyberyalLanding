@@ -70,7 +70,16 @@ export default function Home() {
       <main className="wrapper">
         <HeaderWithNoSSR />
         <div className="content">
-          <Hero />
+          <Hero
+            modal_text={
+              "You have successfully subscribed to our email newsletter, news, promotions and notifications will be sent to the email address you specified."
+            }
+            form_header={"Subscribe to our newsletter "}
+            form_text={
+              "Join the number of those who will be the first to know about our launch - subscribe to our email newsletter and do not miss the chance to get nice bonuses"
+            }
+            form_button={"Subscribe"}
+          />
           <Socials />
           <ComingSoon />
         </div>

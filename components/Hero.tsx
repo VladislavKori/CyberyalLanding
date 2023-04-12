@@ -9,7 +9,7 @@ import Modal from "react-modal";
 import React, { useEffect, useState } from "react";
 import apiClient from "@/api/apiClient";
 
-function Hero() {
+function Hero({ modal_text, form_header, form_text, form_button }: any) {
   const [utmParams, setUtmParams] = useState<any>({});
 
   useEffect(() => {
@@ -105,11 +105,7 @@ function Hero() {
           />
           <div className="modal__content">
             <h3 className="modal__title">Congratulations</h3>
-            <p className="modal__text">
-              You have successfully subscribed to our email newsletter, news,
-              promotions and notifications will be sent to the email address you
-              specified.
-            </p>
+            <p className="modal__text">{modal_text}</p>
             <p className="modal__text">
               Thank you for your attention to our product
             </p>
@@ -153,13 +149,9 @@ function Hero() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="hero__section_2__subscribe" id="ref">
               <h3 className="hero__section_2__subscribe__title">
-                Subscribe to our newsletter
+                {form_header}
               </h3>
-              <p className="hero__section_2__subscribe__text">
-                Join the number of those who will be the first to know about our
-                launch - subscribe to our email newsletter and do not miss the
-                chance to get nice bonuses
-              </p>
+              <p className="hero__section_2__subscribe__text">{form_text}</p>
               <hr className="hero__section_2__subscribe__divider" />
 
               <p className="hero__section_2__subscribe__email">You Email</p>
@@ -196,7 +188,7 @@ function Hero() {
                   className="hero__section_2__subscribe__button"
                   type="submit"
                 >
-                  Subscribe <Image src={ArrowRight} alt="ArrowRight" />
+                  {form_button} <Image src={ArrowRight} alt="ArrowRight" />
                 </button>
               </div>
             </div>

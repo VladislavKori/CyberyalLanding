@@ -69,7 +69,18 @@ export default function Home() {
 
       <main className="wrapper">
         <HeaderWithNoSSR />
-        <div className="content">Landing</div>
+        <div className="content">
+          <Hero
+            modal_text={
+              "You are successful created an account to participate in the Cyberyal Affilate program. Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards."
+            }
+            form_header={"Cyberyal ID"}
+            form_text={
+              "Challenge players of your own skill level in your preferred games. Participate in tournaments and secure your portion of rewards. Join now!"
+            }
+            form_button={"Create Cyberyal ID"}
+          />
+        </div>
         <Footer />
       </main>
     </>
