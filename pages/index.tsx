@@ -10,6 +10,9 @@ import Affilate from "@/components/Affilate";
 import Board from "@/components/Board";
 import Features from "@/components/Features";
 import WhoAreWe from "@/components/WhoAreWe";
+import Required from "@/components/Required";
+import SocialNetworks from "@/components/Landing/SocialNetworks";
+
 const HeaderWithNoSSR = dynamic(() => import("@/components/Header"), {
   ssr: false,
 });
@@ -87,6 +90,8 @@ export default function Home() {
           <Features />
           <WhoAreWe />
           <Affilate />
+          <Required />
+          <SocialNetworks />
         </div>
         <Footer />
       </main>
