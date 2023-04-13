@@ -6,6 +6,7 @@ import Socials from "@/components/Socials";
 import ComingSoon from "@/components/ComingSoon";
 import Hero from "@/components/Hero";
 import dynamic from "next/dynamic";
+import Affilate from "@/components/Affilate";
 const HeaderWithNoSSR = dynamic(() => import("@/components/Header"), {
   ssr: false,
 });
@@ -80,6 +81,7 @@ export default function Home() {
             }
             form_button={"Create Cyberyal ID"}
           />
+          <Affilate />
         </div>
         <Footer />
       </main>
