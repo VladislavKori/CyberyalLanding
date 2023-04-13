@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-        z-index: 100;
+    z-index: 100;
     width: 100%;
     background: #1A1A22;
     border-radius: 0px 0px 40px 40px;
@@ -70,13 +70,16 @@
     .header {
         padding: 14px 16px;
         border-radius: 0px 0px 24px 24px;
+
         &__logo {
             width: 30px;
             height: 30px;
         }
+
         &__link {
             font-size: 16px;
         }
+
         &__btn {
             padding: 8px 16px;
             font-size: 14px;
@@ -121,12 +124,307 @@
     .footer {
         padding: 20px 16px;
         border-radius: 0px 0px 24px 24px;
+
         &__logo {
             width: 48px;
             height: 48px;
         }
+
         &__link {
             font-size: 16px;
+        }
+    }
+}
+
+.board {
+    background: #1A1A22;
+    border-radius: 40px;
+    padding: 48px 24px;
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        color: #FFFFFF;
+
+        margin-top: 12px;
+    }
+
+    &__text {
+        font-family: 'Nunito';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+
+        margin-top: 20px;
+        max-width: 70%;
+    }
+
+    &__over-title {
+        background: #494959;
+        border-radius: 40px;
+        padding: 4px 12px;
+        width: max-content;
+
+        & p {
+            font-family: 'Nunito';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #288BFF;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .board {
+        text-align: center;
+
+        &__text {
+            margin: 20px auto 0 auto;
+        }
+
+        &__over-title {
+            margin: 0 auto;
+            background: transparent;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .board {
+        &__text {
+            max-width: 100%;
+        }
+    }
+}
+
+.features {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    &__img-container {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        color: #FFFFFF;
+
+        margin-top: 20px;
+    }
+
+    &__text {
+        font-family: 'Nunito';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgb(255, 255, 255, 0.5);
+
+        margin-top: 8px;
+    }
+
+    &__icon {
+        width: 48px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .features {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 16px 0;
+
+        &__container {
+            flex-direction: column-reverse;
+            align-items: inherit;
+        }
+
+        &__img-container {
+            width: 100%;
+            aspect-ratio: 1 / 0.3;
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .features {
+        &__img-container {
+            aspect-ratio: 1 / 1;
+
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.whoarewe {
+    // background: linear-gradient(180deg, rgba(255, 40, 221, 0) 0%, rgba(151, 71, 255, 0.3) 47.4%, rgba(255, 40, 221, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    &__img-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &__img {
+
+        &_blue {
+            top: 50%;
+            right: -20%;
+            transform: translateY(-50%);
+            position: absolute;
+            border-radius: 16px;
+            box-shadow: 4.79999px 19.2px 95.9998px rgba(40, 139, 255, 0.25);
+        }
+
+        &_pink {
+            top:  75%;
+            transform: translateY(-50%);
+            left: -20%;
+            position: absolute;
+            border-radius: 16px;
+            box-shadow: 4.79999px 19.2px 95.9998px rgba(255, 40, 221, 0.25);
+        }
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .whoarewe {
+        &__img {
+
+            &_blue {
+                top: 50%;
+                right: -40%;
+            }
+    
+            &_pink {
+                top:  75%;
+                left: -25%;
+            }
+        }
+    }
+}
+
+.infoplate {
+    display: flex;
+    background: #1A1A22;
+    border-radius: 50px;
+    padding: 64px 48px;
+    gap: 90px;
+    overflow: hidden;
+
+    &__right {
+        flex-direction: row-reverse;
+    }
+
+    &__textblock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        flex: 0.5
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    &__text {
+        font-family: 'Nunito';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: rgb(255, 255, 255, 0.5);
+    }
+
+    &__imgblock {
+        flex: 1;
+    }
+
+    &__mobile-imgblcok {
+        display: none;
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .whoarewe {
+        &__img {
+            &_pink,
+            &_blue {
+                display: inherit;
+                position: inherit;
+                box-shadow: none;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                transform: none;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    }
+    .infoplate {
+        padding: 24px 12px;
+        &__imgblock,
+        &__textblock {
+            flex: inherit;
+        }
+        &__imgblock {
+            display: none;
+        }
+        &__right {
+            flex-direction: inherit;
+        }
+        text-align: center;
+        gap: inherit;
+
+        &__mobile-imgblcok {
+            display: inherit;
+            // height: 100px;
         }
     }
 }
