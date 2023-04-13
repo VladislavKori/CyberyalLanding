@@ -2,6 +2,12 @@ import ArrowRight from "../public/assets/ArrowRight.svg";
 import Image from "next/image";
 
 function Affilate() {
+  if (typeof window !== "undefined") {
+    var element = document.getElementById("ref");
+  }
+
+  const handleClick = () => element?.scrollIntoView();
+
   return (
     <div className="affilate">
       <div className="affilate__container">
@@ -11,7 +17,7 @@ function Affilate() {
           engaging and easy tasks, and then collect your well-deserved rewards.
           Start today and ensure your success.
         </p>
-        <button className="affilate__button">
+        <button className="affilate__button" onClick={handleClick}>
           Create Cyberyal ID <Image src={ArrowRight} alt="ArrowRight" />
         </button>
       </div>
