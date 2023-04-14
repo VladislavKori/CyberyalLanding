@@ -89,7 +89,11 @@ export default function Home() {
             form_button={"Create Cyberyal ID"}
           />
           <Features />
-          <WhoAreWe />
+        </div>
+
+        <WhoAreWe />
+
+        <div className="content">
           <Affilate />
           <Required />
           <SocialNetworks />
