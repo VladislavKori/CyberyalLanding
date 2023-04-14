@@ -32,7 +32,9 @@ function Header() {
           <div className="header__link" onClick={() => handleClickRoute()}>
             Home
           </div>
-          {/* <Link className="header__link" href="/about">About</Link> */}
+          <Link className="header__link" href="/about">
+            About
+          </Link>
         </nav>
       </div>
       {isPrivacy ? (

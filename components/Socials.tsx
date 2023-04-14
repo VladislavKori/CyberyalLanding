@@ -9,8 +9,13 @@ import FacebookIcon from "@/public/socials/Facebook.svg";
 import TwitchIcon from "@/public/socials/Twitch.svg";
 import VkIcon from "@/public/socials/VK.svg";
 import ShareIcon from "@/public/socials/Share.svg";
+import { useRouter } from "next/router";
 
 function Socials() {
+  const router = useRouter();
+
+  const isAbout = router.pathname === "/about";
+
   const [copySuccess, setCopySuccess] = useState("");
 
   async function copyToClip() {
@@ -116,25 +121,30 @@ function Socials() {
             </div>
           </a>
         </li>
+        {isAbout ? (
+          ""
+        ) : (
+          <li
+            className="socials__item socials__item_share"
+            onClick={() => copyToClip()}
+            style={{ cursor: "pointer" }}
+          >
+            <a className="socials__card socials__card_discord">
+              <Image className="socials__icon" src={ShareIcon} alt="share" />
 
-        <li
-          className="socials__item socials__item_share"
-          onClick={() => copyToClip()}
-          style={{ cursor: "pointer" }}
-        >
-          <a className="socials__card socials__card_discord">
-            <Image className="socials__icon" src={ShareIcon} alt="share" />
+              <div className="socials__card__info">
+                <p className="socials__card-text" style={{ fontWeight: "700" }}>
+                  {copySuccess}
+                </p>
+                <h2 className="socials__card-title">Share</h2>
 
-            <div className="socials__card__info">
-              <p className="socials__card-text" style={{ fontWeight: "700" }}>
-                {copySuccess}
-              </p>
-              <h2 className="socials__card-title">Share</h2>
-
-              <p className="socials__card-text">Share a link to our website</p>
-            </div>
-          </a>
-        </li>
+                <p className="socials__card-text">
+                  Share a link to our website
+                </p>
+              </div>
+            </a>
+          </li>
+        )}
       </ul>
     </div>
   );

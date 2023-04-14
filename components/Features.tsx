@@ -36,43 +36,42 @@ const featuresContent = [
 
 function Features() {
     return (
-        <div className="features">
-            <Board
-                overtitle="A little about the possibilities"
-                title="Mechanics"
-                text="Daily personalized fitness, sleep, and recovery data delivered to you in real time with Untitled. We’re changing how you move."
-            />
+      <div className="features">
+        <Board
+          overtitle="A little about the possibilities"
+          title="Mechanics"
+          text="Daily personalized fitness, sleep, and recovery data delivered to you in real time with Untitled. We’re changing how you move."
+        />
 
-            <div className="features__container">
-
-                <div className="features__info">
-                    {featuresContent.map((item) => (
-                        <React.Fragment>
-                            <div className="features__text-block">
-                                <Image
-                                    className="features__icon"
-                                    src={item.icon}
-                                    alt={item.title + "-icon"}
-                                />
-                                <h1 className="features__title">{item.title}</h1>
-                                <p className="features__text">{item.text}</p>
-                            </div>
-                        </React.Fragment>
-                    ))}
+        <div className="features__container">
+          <div className="features__info">
+            {featuresContent.map((item) => (
+              <React.Fragment>
+                <div className="features__text-block">
+                  <Image
+                    className="features__icon"
+                    src={item.icon}
+                    alt={item.title + "-icon"}
+                  />
+                  <h1 className="features__title">{item.title}</h1>
+                  <p className="features__text">{item.text}</p>
                 </div>
+              </React.Fragment>
+            ))}
+          </div>
 
-                <div
-                    style={{
-                        background: `url('${FeaturesImg.src}')`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }} 
-                    className="features__img-container"
-                >
-                </div>
-            </div>
+          <div
+            style={{
+              background: `url('${FeaturesImg.src}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              height: "465px",
+            }}
+            className="features__img-container"
+          ></div>
         </div>
-    )
+      </div>
+    );
 }
 
 export default Features
