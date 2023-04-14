@@ -70,7 +70,15 @@
     .header {
         padding: 14px 16px;
         border-radius: 0px 0px 24px 24px;
+        &__navbar {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
 
+                                                &__left {
+                                                    gap: 20px;
+                                                }
         &__logo {
             width: 30px;
             height: 30px;
@@ -430,3 +438,4 @@
         }
     }
 }
+
