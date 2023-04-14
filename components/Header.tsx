@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ArrowRight from "../public/assets/ArrowRight.svg";
 
 import Logo from "@/public/logo.svg";
 import { useRouter } from "next/router";
@@ -12,6 +13,8 @@ function Header() {
   }
 
   const isPrivacy = router.pathname === "/privacy";
+  const isHome = router.pathname === "/home";
+  const isLanding = router.pathname === "/";
 
   const handleClick = () => element?.scrollIntoView();
 
@@ -39,9 +42,17 @@ function Header() {
       </div>
       {isPrivacy ? (
         ""
-      ) : (
+      ) : isHome ? (
         <button className="header__btn" onClick={handleClick}>
           Subscribe
+        </button>
+      ) : (
+        <button
+          className="header__btn"
+          style={{ display: "flex", alignItems: "center" }}
+          onClick={isLanding ? handleClick : () => handleClickRoute()}
+        >
+          Cyberyal ID <Image src={ArrowRight} alt="ArrowRight" />
         </button>
       )}
     </header>
