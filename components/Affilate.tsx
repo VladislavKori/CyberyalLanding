@@ -1,5 +1,6 @@
 import ArrowRight from "../public/assets/ArrowRight.svg";
 import Image from "next/image";
+import {motion} from 'framer-motion'
 
 function Affilate() {
   if (typeof window !== "undefined") {
@@ -9,7 +10,16 @@ function Affilate() {
   const handleClick = () => element?.scrollIntoView();
 
   return (
-    <div className="affilate">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        ease: "easeInOut",
+        duration: 0.4,
+        delay: 0.2,
+      }}
+      className="affilate">
       <div className="affilate__container">
         <h2 className="affilate__header">Cyberyal Affilate program</h2>
         <p className="affilate__text">
@@ -21,7 +31,7 @@ function Affilate() {
           Create Cyberyal ID <Image src={ArrowRight} alt="ArrowRight" />
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

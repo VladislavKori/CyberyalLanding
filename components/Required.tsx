@@ -5,6 +5,7 @@ import DiscordIcon from "@/public/socials/Discord.svg";
 import TwitterIcon from "@/public/socials/Twitter.svg";
 import ListIcon from "@/public/socials/CheckList.svg";
 import FacebookIcon from "@/public/socials/Facebook.svg";
+import { motion } from 'framer-motion'
 
 const requiredInfo = [
   {
@@ -37,19 +38,48 @@ function Required() {
   return (
     <div className="required">
       <div className="required__text">
-        <h2 className="required__main_header" style={{ marginBottom: "20px" }}>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.5,
+            delay: 0.4
+          }}
+          viewport={{ once: true }}
+          className="required__main_header"
+          style={{ marginBottom: "20px" }}>
           What is required for beginners to start in an affiliate program?
-        </h2>
-        <p className="required__main_text">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.5,
+            delay: 0.6
+          }}
+          viewport={{ once: true }}
+          className="required__main_text">
           You can choose which tasks to complete in order to earn points in our
           company and then use them for various opportunities in your game. The
           tasks will be as simple as possible so that you can earn as much as
           possible.
-        </p>
+        </motion.p>
       </div>
       <div className="required__cards">
-        {requiredInfo.map((el) => (
-          <RequiredCard el={el} />
+        {requiredInfo.map((el, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.5,
+              delay: 0.2 + (index / 10),
+            }}>
+            <RequiredCard el={el} />
+          </motion.div>
         ))}
       </div>
     </div>

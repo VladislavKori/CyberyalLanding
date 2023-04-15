@@ -5,6 +5,7 @@ import YoutubeIcon from "@/public/socials/Youtube.svg";
 import FacebookIcon from "@/public/socials/Facebook.svg";
 import TwitchIcon from "@/public/socials/Twitch.svg";
 import VkIcon from "@/public/socials/VK.svg";
+import { motion } from 'framer-motion'
 
 const socials = [
   {
@@ -54,13 +55,31 @@ const socials = [
 function SocialNetworks() {
   return (
     <div className="socialnet">
-      <div className="socialnet__header_container">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.5,
+          delay: 0.4,
+        }}
+        className="socialnet__header_container">
         <h2 className="required__main_header">Our social networks</h2>
-      </div>
+      </motion.div>
       <div className="socialnet__socicons_container">
         <ul className="socialnet__list">
-          {socials.map((el) => (
-            <li className={`socialnet__list socials__item_${el.social}`}>
+          {socials.map((el, index) => (
+            <motion.li
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                ease: "easeInOut",
+                duration: 0.5,
+                delay: 0.2 + (index / 10),
+              }}
+              className={`socialnet__list socials__item_${el.social}`}>
               <a className="socialnet__card" href={el.link} target="_blank">
                 <Image className="socials__icon" src={el.icon} alt={el.title} />
 
@@ -69,7 +88,7 @@ function SocialNetworks() {
                   <p className="socials__card-text">{el.text}</p>
                 </div>
               </a>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
