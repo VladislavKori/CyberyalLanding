@@ -65,7 +65,11 @@ export default function About() {
           content="http://cyberyal/assets/Cyberyal_open_graph1200x630.png"
         />
 
-        <link rel="canonical" href="http://cyberyal.com" key="canonical" />
+        <link
+          rel="canonical"
+          href="http://cyberyal.com/about"
+          key="canonical"
+        />
         <link rel="icon" href="/logo.svg" />
       </Head>
 

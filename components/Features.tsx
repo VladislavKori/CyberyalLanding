@@ -12,27 +12,27 @@ import HandshakeIcon from "@/public/assets/HandshakeIcon.svg"
 import UsersIcon from "@/public/assets/UsersIcon.svg"
 
 const featuresContent = [
-    {
-        icon: UsersIcon,
-        title: "PvP challenges",
-        text: "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop."
-    },
-    {
-        icon: CupIcon,
-        title: "Tournaments",
-        text: "Start a championship or join an existing one. Challenge your friends or strangers to prove that you are the most skilled player among all."
-    },
-    {
-        icon: HandshakeIcon,
-        title: "Boosting",
-        text: "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
-    },
-    {
-        icon: BarbellIcon,
-        title: "Couching",
-        text: "Improves skills, overcomes plateaus, enhances time management & mindset, boosts teamwork, provides game knowledge, and offers e-sports career guidance"
-    },
-]
+  {
+    icon: UsersIcon,
+    title: "PvP challenges",
+    text: "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
+  },
+  {
+    icon: CupIcon,
+    title: "Tournaments",
+    text: "Start a championship or join an existing one. Challenge your friends or strangers to prove that you are the most skilled player among all.",
+  },
+  {
+    icon: HandshakeIcon,
+    title: "Boosting",
+    text: "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.",
+  },
+  {
+    icon: BarbellIcon,
+    title: "Coaching",
+    text: "Improves skills, overcomes plateaus, enhances time management & mindset, boosts teamwork, provides game knowledge, and offers e-sports career guidance",
+  },
+];
 
 function Features() {
     return (

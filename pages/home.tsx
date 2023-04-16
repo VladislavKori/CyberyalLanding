@@ -63,7 +63,7 @@ export default function Home() {
           content="http://cyberyal/assets/Cyberyal_open_graph1200x630.png"
         />
 
-        <link rel="canonical" href="http://cyberyal.com" key="canonical" />
+        <link rel="canonical" href="http://cyberyal.com/home" key="canonical" />
         <link rel="icon" href="/logo.svg" />
       </Head>
 
