@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 interface BoardProps {
     title: string
@@ -8,7 +9,17 @@ interface BoardProps {
 
 function Board({ title, text, overtitle }: BoardProps) {
     return (
-        <div className="board">
+        <motion.div
+            initial={{opacity: 0, y: 100}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+                ease: "easeInOut",
+                duration: 0.4,
+                delay: 0.2,
+            }}
+            className="board"
+        >
             {overtitle ? (
                 <div className="board__over-title">
                     <p>{overtitle}</p>
@@ -16,7 +27,7 @@ function Board({ title, text, overtitle }: BoardProps) {
             ) : null}
             <h1 className="board__title">{title}</h1>
             <p className="board__text">{text}</p>
-        </div>
+        </motion.div>
     )
 }
 

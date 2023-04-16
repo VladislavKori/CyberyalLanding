@@ -8,6 +8,7 @@ import close_modal from "../public/assets/close_modal.svg";
 import Modal from "react-modal";
 import React, { useEffect, useState } from "react";
 import apiClient from "@/api/apiClient";
+import { motion } from 'framer-motion'
 
 function Hero({ modal_text, form_header, form_text, form_button }: any) {
   const [utmParams, setUtmParams] = useState<any>({});
@@ -128,7 +129,16 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
         </div>
       </Modal>
       <div className="hero">
-        <div className="hero__section_1">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.6,
+            delay: 0.2,
+          }}
+          className="hero__section_1">
           <Image className="socials__icon" src={GameController} alt="gamepad" />
           <h3 className="hero__section_1__title">
             Take your gaming to the next level
@@ -138,15 +148,33 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
             of experienced gamers will help you improve your skills, climb the
             ranks, and dominate the game.{" "}
           </p>
-        </div>
+        </motion.div>
         <div className="hero__section_2">
-          <div className="hero__section_2__start">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.4,
+              delay: 0.4,
+            }}
+            className="hero__section_2__start">
             <h3 className="hero__section_2__start__title">Start</h3>
             <p className="hero__section_2__start__text">
               Achieve your best shape with CYBERYAL!
             </p>
-          </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          </motion.div>
+          <motion.form
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.6,
+              delay: 0.6,
+            }}
+            onSubmit={handleSubmit(onSubmit)}>
             <div className="hero__section_2__subscribe" id="ref">
               <h3 className="hero__section_2__subscribe__title">
                 {form_header}
@@ -158,9 +186,8 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
               <input
                 {...register("email")}
                 type="text"
-                className={`hero__section_2__subscribe__input ${
-                  errors.email ? "hero__section_2__subscribe__input_error" : ""
-                }`}
+                className={`hero__section_2__subscribe__input ${errors.email ? "hero__section_2__subscribe__input_error" : ""
+                  }`}
                 placeholder="Enter your Email"
               />
               {errors.email || errors.privacy ? (
@@ -175,11 +202,10 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
                 <input
                   {...register("privacy")}
                   type="checkbox"
-                  className={`hero__section_2__subscribe__checkbox ${
-                    errors.email
-                      ? "hero__section_2__subscribe__checkbox_error"
-                      : ""
-                  }`}
+                  className={`hero__section_2__subscribe__checkbox ${errors.email
+                    ? "hero__section_2__subscribe__checkbox_error"
+                    : ""
+                    }`}
                 />
                 I agree with the Privacy Policy
               </label>
@@ -192,7 +218,7 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
                 </button>
               </div>
             </div>
-          </form>
+          </motion.form>
         </div>
       </div>
     </>
