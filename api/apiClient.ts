@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://cyberyal.com/',
+  baseURL: 'https://cyberyal.com/',
   headers: {
     "X-Requested-With": "XMLHttpRequest",
   },

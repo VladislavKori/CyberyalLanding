@@ -9,6 +9,7 @@ import Modal from "react-modal";
 import React, { useEffect, useState } from "react";
 import apiClient from "@/api/apiClient";
 import { motion } from 'framer-motion'
+import Link from "next/link";
 
 function Hero({ modal_text, form_header, form_text, form_button }: any) {
   const [utmParams, setUtmParams] = useState<any>({});
@@ -138,7 +139,8 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
             duration: 0.6,
             delay: 0.2,
           }}
-          className="hero__section_1">
+          className="hero__section_1"
+        >
           <Image className="socials__icon" src={GameController} alt="gamepad" />
           <h3 className="hero__section_1__title">
             Take your gaming to the next level
@@ -159,7 +161,8 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
               duration: 0.4,
               delay: 0.4,
             }}
-            className="hero__section_2__start">
+            className="hero__section_2__start"
+          >
             <h3 className="hero__section_2__start__title">Start</h3>
             <p className="hero__section_2__start__text">
               Achieve your best shape with CYBERYAL!
@@ -174,7 +177,8 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
               duration: 0.6,
               delay: 0.6,
             }}
-            onSubmit={handleSubmit(onSubmit)}>
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <div className="hero__section_2__subscribe" id="ref">
               <h3 className="hero__section_2__subscribe__title">
                 {form_header}
@@ -186,8 +190,9 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
               <input
                 {...register("email")}
                 type="text"
-                className={`hero__section_2__subscribe__input ${errors.email ? "hero__section_2__subscribe__input_error" : ""
-                  }`}
+                className={`hero__section_2__subscribe__input ${
+                  errors.email ? "hero__section_2__subscribe__input_error" : ""
+                }`}
                 placeholder="Enter your Email"
               />
               {errors.email || errors.privacy ? (
@@ -202,12 +207,16 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
                 <input
                   {...register("privacy")}
                   type="checkbox"
-                  className={`hero__section_2__subscribe__checkbox ${errors.email
-                    ? "hero__section_2__subscribe__checkbox_error"
-                    : ""
-                    }`}
+                  className={`hero__section_2__subscribe__checkbox ${
+                    errors.email
+                      ? "hero__section_2__subscribe__checkbox_error"
+                      : ""
+                  }`}
                 />
-                I agree with the Privacy Policy
+                I agree with the{" "}
+                <Link href={"/privacy"} className="privacy_link">
+                  Privacy Policy
+                </Link>
               </label>
               <div style={{ width: "100%", marginTop: "auto" }}>
                 <button

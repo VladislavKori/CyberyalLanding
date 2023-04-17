@@ -12,14 +12,14 @@ const socials = [
     title: "Facebook",
     icon: FacebookIcon,
     text: "You can follow us on Facebook",
-    link: "https://www.facebook.com/groups/playstar/",
+    link: "http://www.facebook.com/groups/cyberyalgaming/",
     social: "facebook",
   },
   {
     title: "Twitter",
     icon: TwitterIcon,
     text: "Follow the news on Twitter",
-    link: "https://www.twitter.com/PlaystarEU",
+    link: "https://twitter.com/cyberyalgaming",
     social: "twitter",
   },
   {
@@ -47,7 +47,7 @@ const socials = [
     title: "VK",
     icon: VkIcon,
     text: "Subscribe to the group in VK",
-    link: "https://vk.com/cyberyal",
+    link: "https://vk.com/cyberyalgaming",
     social: "vk",
   },
 ];

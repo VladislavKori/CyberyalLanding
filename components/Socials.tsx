@@ -49,7 +49,7 @@ function Socials() {
         <li className="socials__item socials__item_twitter">
           <a
             className="socials__card socials__card_discord"
-            href="https://www.twitter.com/PlaystarEU"
+            href="https://twitter.com/cyberyalgaming"
             target="_blank"
           >
             <Image className="socials__icon" src={TwitterIcon} alt="discord" />
@@ -79,7 +79,7 @@ function Socials() {
         <li className="socials__item socials__item_facebook">
           <a
             className="socials__card socials__card_discord"
-            href="https://www.facebook.com/groups/playstar/"
+            href="http://www.facebook.com/groups/cyberyalgaming/"
             target="_blank"
           >
             <Image className="socials__icon" src={FacebookIcon} alt="discord" />
@@ -110,7 +110,7 @@ function Socials() {
         <li className="socials__item socials__item_vk">
           <a
             className="socials__card socials__card_discord"
-            href="https://vk.com/cyberyal"
+            href="https://vk.com/cyberyalgaming"
             target="_blank"
           >
             <Image className="socials__icon" src={VkIcon} alt="discord" />

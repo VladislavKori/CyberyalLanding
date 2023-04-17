@@ -11,6 +11,10 @@
     margin-top: 96px
 }
 
+.privacy_link {
+    text-decoration: none;
+    color: #0077ff;
+}
 .socials {
     display: flex;
     flex-direction: column;
@@ -136,10 +140,11 @@
         gap: 15px !important;
 
         &__section_1 {
+            border-radius: 90px !important;
             min-width: 100% !important;
             min-height: auto !important;
             padding: 40px 20px !important;
-
+            
             // &__title {
             //     font-size: 18px !important;
             //     line-height: 28px !important;

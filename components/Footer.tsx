@@ -12,15 +12,11 @@ function Footer() {
       </div>
       {/* <Link className="footer__link" href={"/"}>
         Home
-      </Link>
+      </Link> */}
       <Link className="footer__link" href={"/about"}>
         About
-      </Link> */}
-      <Link
-        style={{ marginLeft: "auto" }}
-        className="footer__link"
-        href={"/privacy"}
-      >
+      </Link>
+      <Link className="footer__link" href={"/privacy"}>
         Privacy Policy
       </Link>
     </footer>
