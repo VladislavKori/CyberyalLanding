@@ -15,7 +15,7 @@ export default function Privacy() {
       </Head>
       <main className="wrapper">
         <Header />
-        <div className="content">
+        <div className="content"></div>
           <div className="privacy__wrapper">
             <h1 className="privacy__title">Privacy policy</h1>
             <p className="privacy__default-text">Last updated: 3 May, 2023</p>
