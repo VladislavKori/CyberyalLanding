@@ -348,6 +348,8 @@
     }
 }
 
+
+
 .hero {
     display: flex;
     // margin-top: 96px;
@@ -361,8 +363,10 @@
         align-items: center;
         min-width: 640px;
         min-height: 758px;
-        background: linear-gradient(0deg, rgba(26, 26, 34, 0.15), rgba(26, 26, 34, 0.15)), url(../public/assets/hero1.webp) no-repeat;
-        background-size: cover;
+        background: linear-gradient(275deg, #4f83b7, #7b63ba, #ad63ba, #8547b0);
+	background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+        // background: linear-gradient(0deg, rgba(26, 26, 34, 0.15), rgba(26, 26, 34, 0.15)), url(../public/assets/hero1.webp) no-repeat;
         border-radius: 50px;
 
         &:hover {
@@ -660,4 +664,19 @@
         justify-content: center;
         padding: 10px;
     }
+}
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

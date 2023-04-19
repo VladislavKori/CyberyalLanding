@@ -4,9 +4,9 @@ import InfoPlate from './InfoPlate'
 import Image from 'next/image'
 
 import CupIcon from '@/public/assets/CupIcon.svg'
-import RoomImg from '@/public/assets/room.png'
-import AccountIcon from '@/public/assets/account.svg'
-import UserPageImg from '@/public/assets/userpage.png'
+import RoomImg from "@/public/assets/room.webp";
+import AccountIcon from "@/public/assets/account.svg";
+import UserPageImg from "@/public/assets/userpage.webp";
 
 function WhoAreWe() {
     return (

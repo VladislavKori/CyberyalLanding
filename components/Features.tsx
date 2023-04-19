@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Board from "./Board";
 
 // imgs
-import FeaturesImg from "@/public/assets/Features.png";
+import FeaturesImg from "@/public/assets/Features.webp";
 import BarbellIcon from "@/public/assets/BarbellIcon.svg";
 import CupIcon from "@/public/assets/CupIcon.svg";
 import HandshakeIcon from "@/public/assets/HandshakeIcon.svg";

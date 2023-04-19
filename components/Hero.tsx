@@ -57,7 +57,7 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<ValidationSchema>({
     resolver: zodResolver(validationSchema),
   });

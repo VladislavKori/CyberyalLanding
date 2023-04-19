@@ -1,5 +1,5 @@
 import Image from "next/image";
-import About from "../../public/assets/about.png";
+import About from "../../public/assets/about.webp";
 
 function AboutUs() {
   return (
