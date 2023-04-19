@@ -131,8 +131,8 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
       </Modal>
       <div className="hero">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{
             ease: "easeInOut",

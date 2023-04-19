@@ -380,6 +380,13 @@ line-height: 28px;
             display: none;
         }
     }
+
+    .infoplate {
+        &__text {
+            font-size: 16px !important;
+        }
+
+    }
 }
 
 .infoplate {
