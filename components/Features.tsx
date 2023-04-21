@@ -47,7 +47,7 @@ function Features() {
       <div className="features__container">
         <div className="features__info">
           {featuresContent.map((item, index) => (
-            <React.Fragment>
+            <React.Fragment key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

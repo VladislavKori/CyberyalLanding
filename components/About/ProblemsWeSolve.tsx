@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from "next/image";
 import CheatersIcon from "../../public/assets/problemsWeSolve/Cheaters.svg";
 import LowIncomeIcon from "../../public/assets/problemsWeSolve/LowIncome.svg";
@@ -31,18 +32,19 @@ function ProblemsWeSolve() {
         <div className="problems_container_inside">
           <h2 style={{ textAlign: "center" }}>Problems we solve</h2>
           <div className="problems_list">
-            {ProblemsList.map((el) => (
-              <div className="problems_list_item">
-                <Image src={el.icon} alt="icon" width={48} />
-                <p>{el.text}</p>
-              </div>
+            {ProblemsList.map((el, index) => (
+              <React.Fragment key={index}>
+                <div className="problems_list_item">
+                  <Image src={el.icon} alt="icon" width={48} />
+                  <p>{el.text}</p>
+                </div>
+              </React.Fragment>
             ))}
           </div>
         </div>
       </div>
     </>
   );
-  return;
 }
 
 export default ProblemsWeSolve;
