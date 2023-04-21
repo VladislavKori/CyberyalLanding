@@ -35,7 +35,11 @@ const featuresContent = [
   },
 ];
 
-function Features() {
+interface FeaturesProps {
+  diraction?: 'default' | 'conversely'
+}
+
+function Features({diraction = 'default'}: FeaturesProps) {
   return (
     <div className="features">
       <Board
@@ -44,7 +48,10 @@ function Features() {
         text="Daily personalized fitness, sleep, and recovery data delivered to you in real time with Untitled. We’re changing how you move."
       />
 
-      <div className="features__container">
+      <div
+        style={diraction == 'conversely' ? {flexDirection: 'row-reverse'} : {}} 
+        className="features__container"
+      >
         <div className="features__info">
           {featuresContent.map((item, index) => (
             <React.Fragment key={index}>

@@ -78,7 +78,7 @@ export default function About() {
         <HeaderWithNoSSR />
         <div className="content">
           <AboutUs />
-          <Features />
+          <Features diraction="conversely" />
           <Socials />
           <ProblemsWeSolve />
         </div>
