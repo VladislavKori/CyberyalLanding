@@ -70,15 +70,17 @@
     .header {
         padding: 14px 16px;
         border-radius: 0px 0px 24px 24px;
-        &__navbar {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
 
-                                                &__left {
-                                                    gap: 20px;
-                                                }
+        &__navbar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &__left {
+            gap: 20px;
+        }
+
         &__logo {
             width: 30px;
             height: 30px;
@@ -115,15 +117,15 @@
 
     &__link {
         font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-line-height: 28px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
 
 
-    color: #FFFFFF;
+        color: #FFFFFF;
 
-    opacity: 0.8;
+        opacity: 0.8;
         text-decoration: none;
         transition: color .2s ease-in-out;
 
@@ -137,8 +139,9 @@ line-height: 28px;
     .footer {
         padding: 20px 16px;
         border-radius: 0px 0px 24px 24px;
-        
+
         gap: 25px;
+
         &__logo {
             width: 48px;
             height: 48px;
@@ -146,7 +149,7 @@ line-height: 28px;
         }
 
         &__link {
-            
+
             font-size: 16px;
         }
     }
@@ -218,8 +221,9 @@ line-height: 28px;
 }
 
 .features {
-    // height: 100vh;
-        margin: 3% 0;
+    margin: 3% 0;
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -335,7 +339,7 @@ line-height: 28px;
         }
 
         &_pink {
-            top:  75%;
+            top: 75%;
             transform: translateY(-50%);
             left: -20%;
             position: absolute;
@@ -364,9 +368,9 @@ line-height: 28px;
                 top: 50%;
                 right: -40%;
             }
-    
+
             &_pink {
-                top:  75%;
+                top: 75%;
                 left: -25%;
             }
         }
@@ -440,6 +444,7 @@ line-height: 28px;
 @media (max-width: 1230px) {
     .whoarewe {
         &__img {
+
             &_pink,
             &_blue {
                 display: inherit;
@@ -454,20 +459,25 @@ line-height: 28px;
                 height: 100%;
             }
         }
-        
+
     }
+
     .infoplate {
         padding: 24px 12px;
+
         &__imgblock,
         &__textblock {
             flex: inherit;
         }
+
         &__imgblock {
             display: none;
         }
+
         &__right {
             flex-direction: inherit;
         }
+
         text-align: center;
         gap: inherit;
 
@@ -477,4 +487,3 @@ line-height: 28px;
         }
     }
 }
-
