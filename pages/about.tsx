@@ -9,6 +9,8 @@ import dynamic from "next/dynamic";
 import Features from "@/components/Features";
 import AboutUs from "@/components/About/AboutUs";
 import ProblemsWeSolve from "@/components/About/ProblemsWeSolve";
+import OurTeam from "@/components/About/OurTeam";
+import RoadMap from "@/components/About/RoadMap";
 const HeaderWithNoSSR = dynamic(() => import("@/components/Header"), {
   ssr: false,
 });
@@ -81,6 +83,8 @@ export default function About() {
           <Features diraction="conversely" />
           <Socials />
           <ProblemsWeSolve />
+          <OurTeam />
+          <RoadMap />
         </div>
         <Footer />
       </main>

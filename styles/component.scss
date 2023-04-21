@@ -284,7 +284,7 @@
         margin: 16px 0;
 
         &__container {
-            flex-direction: column-reverse;
+            flex-direction: column-reverse !important;
             align-items: inherit;
         }
 

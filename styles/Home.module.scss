@@ -22,6 +22,8 @@
     row-gap: 40px;
     margin: 100px 0;
     align-items: center;
+    position: relative;
+    z-index: 2;
 
     &__title {
         font-family: 'Montserrat';
