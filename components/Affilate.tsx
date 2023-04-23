@@ -1,13 +1,26 @@
 import ArrowRight from "../public/assets/ArrowRight.svg";
 import Image from "next/image";
 import {motion} from 'framer-motion'
+import { useRouter } from "next/router";
 
 function Affilate() {
+  const router = useRouter();
   if (typeof window !== "undefined") {
     var element = document.getElementById("ref");
   }
 
+  const isPrivacy = router.pathname === "/privacy";
+  const isHome = router.pathname === "/home";
+  const isLanding = router.pathname === "/";
+
   const handleClick = () => element?.scrollIntoView();
+
+  const handleClickRoute = async () => {
+    // Wait for route change before do anything
+    await router.push("/");
+    // Reload after routing
+    // router.reload();
+  };
 
   return (
     <motion.div
@@ -19,7 +32,8 @@ function Affilate() {
         duration: 0.4,
         delay: 0.2,
       }}
-      className="affilate">
+      className="affilate"
+    >
       <div className="affilate__container">
         <h2 className="affilate__header">Cyberyal Affilate program</h2>
         <p className="affilate__text">
@@ -27,7 +41,10 @@ function Affilate() {
           engaging and easy tasks, and then collect your well-deserved rewards.
           Start today and ensure your success.
         </p>
-        <button className="affilate__button" onClick={handleClick}>
+        <button
+          className="affilate__button"
+          onClick={isLanding ? handleClick : () => handleClickRoute()}
+        >
           Create Cyberyal ID <Image src={ArrowRight} alt="ArrowRight" />
         </button>
       </div>

@@ -6,7 +6,7 @@ import Logo from '@/public/logo.svg';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ marginTop: "100px" }}>
       <div className="footer__logo">
         <Image className="footer__logo-img" src={Logo} alt="logo" />
       </div>

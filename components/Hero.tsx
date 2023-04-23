@@ -186,7 +186,7 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
               <p className="hero__section_2__subscribe__text">{form_text}</p>
               <hr className="hero__section_2__subscribe__divider" />
 
-              <p className="hero__section_2__subscribe__email">You Email</p>
+              <p className="hero__section_2__subscribe__email">Your Email</p>
               <input
                 {...register("email")}
                 type="text"

@@ -83,6 +83,8 @@
         width: 100%;
         height: 100%;
         opacity: 0.02;
+        border-radius: 40px;
+        background-size: 350%;
         background: url(../public/assets/graph.svg);
         background-position: center;
     }
@@ -214,6 +216,119 @@
     }
 }
 
+.investor_button {
+    padding: 14px 32px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+background: none;
+/* identical to box height, or 156% */
+cursor: pointer;
+margin-top: 20px;
+
+/* White */
+
+color: #FFFFFF;
+width: 259px;
+height: 56px;
+
+/* White */
+
+border: 1px solid #FFFFFF;
+border-radius: 10px;
+transition: background .2s ease-in-out;
+}
+
+.investor_button:hover {
+    background: #288BFF;
+}
+.investor_cards {
+
+    display: flex;
+    gap: 40px 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__card {
+        width: 410px;
+        height: 250px;
+
+        background: #1A1A22;
+        border-radius: 20px;
+        padding: 20px;
+
+    }
+}
+
+.investor_container_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.14;
+    border-radius: 40px;
+
+    background: url(../public/assets/vectors.svg) no-repeat;
+    background-position: center;
+   
+}
+
+.investor_text {
+    text-align: center;
+    padding: 30px 170px;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+/* or 140% */
+
+text-align: center;
+
+/* White */
+
+color: #FFFFFF;
+
+opacity: 0.5;
+}
+
+.about_us {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.about_us_image {
+    display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 520px;
+           
+          
+
+            background: url(../public/assets/birds.png);
+            background-size: cover;
+            border-radius: 40px;
+           
+}
+
+.about_us_form {
+    display: flex;
+            flex-direction: column;
+       
+            padding: 37px 24px;
+            gap: 16px;
+            width: 520px;
+            
+            background: #1A1A22;
+            border-radius: 40px;
+}
+
 .roadmap {
     margin: 100px 0;
 
@@ -281,6 +396,23 @@
 
 
 @media (max-width: 1200px) {
+    .about_us_form {
+       
+                width: 100%;
+              
+    }
+    .investor_cards {
+
+    
+        gap: 20px;
+      
+    
+    }
+    .investor_text {
+      
+        padding: 30px 20px;
+        
+    }
     .about {
         flex-direction: column;
 
@@ -290,6 +422,7 @@
 
             &__inner {
                 height: 400px;
+                background-position: inherit !important;
             }
         }
 
@@ -322,6 +455,17 @@
 }
 
 @media (max-width: 992px) {
+    .about_us {
+      
+        display: flex;
+
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .about_us_image {
+        height: 675px;
+        width: 100%;
+    }
     .roadmap {
         &__img {
             width: 100%;
@@ -342,6 +486,37 @@
 }
 
 @media (max-width: 768px) {
+    .investor_cards {
+
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        &__card {
+            width: 100%;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        
+            padding: 20px;
+    
+        }
+    }
+    .investor_header{
+        font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 32px;
+        
+
+    }
+    .investor_text {
+        font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+    }
     .roadmap {
 
         &__title,

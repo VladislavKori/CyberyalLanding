@@ -11,6 +11,9 @@ import AboutUs from "@/components/About/AboutUs";
 import ProblemsWeSolve from "@/components/About/ProblemsWeSolve";
 import OurTeam from "@/components/About/OurTeam";
 import RoadMap from "@/components/About/RoadMap";
+import BecomeAnInvestor from "@/components/About/BecomeAnInvestor";
+import ContactUs from "@/components/About/ContactUs";
+import Affilate from "@/components/Affilate";
 const HeaderWithNoSSR = dynamic(() => import("@/components/Header"), {
   ssr: false,
 });
@@ -80,11 +83,16 @@ export default function About() {
         <HeaderWithNoSSR />
         <div className="content">
           <AboutUs />
+          <div className="about__gradient"></div>
           <Features diraction="conversely" />
           <Socials />
           <ProblemsWeSolve />
           <OurTeam />
           <RoadMap />
+
+          <BecomeAnInvestor />
+          <ContactUs />
+          <Affilate />
         </div>
         <Footer />
       </main>

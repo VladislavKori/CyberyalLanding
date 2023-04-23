@@ -22,7 +22,7 @@ function Header() {
     // Wait for route change before do anything
     await router.push("/");
     // Reload after routing
-    router.reload();
+    // router.reload();
   };
 
   return (

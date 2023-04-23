@@ -49,7 +49,9 @@ function Features({diraction = 'default'}: FeaturesProps) {
       />
 
       <div
-        style={diraction == 'conversely' ? {flexDirection: 'row-reverse'} : {}} 
+        style={
+          diraction == "conversely" ? { flexDirection: "row-reverse" } : {}
+        }
         className="features__container"
       >
         <div className="features__info">
