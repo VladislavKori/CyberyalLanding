@@ -10,7 +10,6 @@ export default function Privacy() {
       <Head>
         <title>Cyberyal</title>
         <meta name="description" content="Privacy Policy" />
-        <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main className="wrapper">

@@ -27,10 +27,7 @@ export default function About() {
           name="description"
           content="Boost your gaming skills on our esports platform! Participate in tournaments, complete engaging tasks, and become a part of our active gaming community. Join now!"
         />
-        <meta
-          name="viewport"
-          content="width=device-width, user-scalable=no"
-        />
+
         <meta property="og:url" content="http://cyberyal.com" />
         <meta property="og:site_name" content="Cyberyal" />
         <meta property="og:locale" content="en_US" />
