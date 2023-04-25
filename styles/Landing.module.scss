@@ -295,8 +295,33 @@
             }
         }
     }
-    
+
     @media (max-width: 500px) {
+        .socialnet {
+            display: flex;
+    
+    
+            &__list {
+    
+                justify-content: center;
+                width: auto;
+    
+    
+            }
+    
+            &__card {
+                padding: 12px;
+                height: 165px;
+                width: 165px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-decoration: none;
+    
+            }
+        }}
+    
+    @media (max-width: 386px) {
         .socialnet {
             display: flex;
     

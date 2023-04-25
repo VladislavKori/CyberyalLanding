@@ -197,6 +197,52 @@
     }
 }
 
+.board_gamer {
+    background: #1A1A22;
+    border-radius: 40px;
+    padding: 48px 24px;
+    position: relative;
+    
+    
+
+}
+.board_gamer_gamepad {
+    background:  url(../public/assets/gamepad.png) no-repeat;
+    background-position-x: 140%;
+    background-position-y: 60%;
+    height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+}
+.board_gamer_text {
+    width: 50%;
+}
+@media (max-width: 992px) {
+    .board_gamer {
+        background: #1A1A22 !important;
+        border-radius: 40px; 
+        padding: 48px 24px;
+ 
+        
+    
+    }
+    .board_gamer_gamepad {
+        background-position: center !important;
+        opacity: 0.1;
+        height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+    }
+    .board_gamer_text {
+        width: 100%;
+    }
+}
 @media (max-width: 770px) {
     .board {
         text-align: center;
@@ -462,6 +508,16 @@
 }
 
 @media (max-width: 1230px) {
+    .board_gamer {
+        background: #1A1A22;
+        border-radius: 40px;
+        padding: 48px 24px;
+     
+        background-position-x: 28vw;
+        background-position-y: 60%;
+        
+    
+    }
     .whoarewe {
         &__img {
 

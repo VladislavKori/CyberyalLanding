@@ -34,67 +34,67 @@ const breakpoints = {
 
 export default function OurTeam() {
     return (
-        <div className="ourteam">
-            <header className="ourteam__header">
-                <h2 className="ourteam__title">Our team</h2>
-                <a className="ourteam__link" href={commonLinkedin}>
-                    <Image
-                        src={LinkedinIcon}
-                        alt="linkedin"
-                        className="ourteam__linkedin"
-                    />
+      <div className="ourteam">
+        <header className="ourteam__header">
+          <h2 className="ourteam__title">Our team</h2>
+          <a className="ourteam__link" href={commonLinkedin} target="_blank">
+            <Image
+              src={LinkedinIcon}
+              alt="linkedin"
+              className="ourteam__linkedin"
+            />
+          </a>
+        </header>
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            nextEl: "#switch-next",
+            prevEl: "#switch-prev",
+          }}
+          breakpoints={breakpoints}
+          modules={[Navigation]}
+          className="ourteam__slider"
+        >
+          {members.map((member, index) => (
+            <React.Fragment key={index}>
+              <SwiperSlide className="ourteam__slide">
+                <div className="ourteam__avatar">
+                  <Image src={member.photo} alt={member.name} />
+                </div>
+                <h2 className="ourteam__name">{member.name}</h2>
+                <h2 className="ourteam__post">{member.post}</h2>
+                <p className="ourteam__description">{member.description}</p>
+                <a
+                  className="ourteam__link"
+                  href={member.linkedin}
+                  target="_blank"
+                >
+                  <Image
+                    src={LinkedinIcon}
+                    alt="linkedin"
+                    className="ourteam__linkedin"
+                  />
                 </a>
-            </header>
-            <Swiper
-                slidesPerView={4}
-                spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={{
-                    nextEl: "#switch-next",
-                    prevEl: "#switch-prev",
-                }}
-                breakpoints={breakpoints}
-                modules={[Navigation]}
-                className="ourteam__slider"
-            >
-                {members.map((member, index) => (
-                    <React.Fragment key={index}>
-                        <SwiperSlide className="ourteam__slide">
-                            <div className="ourteam__avatar">
-                                <Image src={member.photo} alt={member.name} />
-                            </div>
-                            <h2 className="ourteam__name">{member.name}</h2>
-                            <h2 className="ourteam__post">{member.post}</h2>
-                            <p className="ourteam__description">{member.description}</p>
-                            <a className="ourteam__link" href={member.linkedin}>
-                                <Image
-                                    src={LinkedinIcon}
-                                    alt="linkedin"
-                                    className="ourteam__linkedin"
-                                />
-                            </a>
-                        </SwiperSlide>
-                    </React.Fragment>
-                ))}
-            </Swiper>
-            <div className="ourteam__slider-controllers">
-                <button id="switch-prev" className="ourteam__switch">
-                    <Image
-                        src={SliderArrow}
-                        alt="arrow"
-                        className="ourteam__arrow"
-                    />
-                </button>
-                <button id="switch-next" className="ourteam__switch">
-                    <Image
-                        src={SliderArrow}
-                        alt="arrow"
-                        className="ourteam__arrow ourteam__arrow_reverse"
-                    />
-                </button>
-            </div>
+              </SwiperSlide>
+            </React.Fragment>
+          ))}
+        </Swiper>
+        <div className="ourteam__slider-controllers">
+          <button id="switch-prev" className="ourteam__switch">
+            <Image src={SliderArrow} alt="arrow" className="ourteam__arrow" />
+          </button>
+          <button id="switch-next" className="ourteam__switch">
+            <Image
+              src={SliderArrow}
+              alt="arrow"
+              className="ourteam__arrow ourteam__arrow_reverse"
+            />
+          </button>
         </div>
+      </div>
     );
 }

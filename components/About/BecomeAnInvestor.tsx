@@ -47,7 +47,7 @@ function BecomeAnInvestor() {
           </div>
         </div>
       </div>
-      <div style={{ marginTop: "120px" }}>
+      <div style={{ marginTop: "60px" }}>
         <h2 className="investor_header" style={{ textAlign: "center" }}>
           We are open for partnership
         </h2>
