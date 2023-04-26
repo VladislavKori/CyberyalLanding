@@ -6,8 +6,38 @@ import { z } from "zod";
 import Link from "next/link";
 import ArrowRight from "../../public/assets/ArrowRight.svg";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 function ContactUs() {
+  const [utmParams, setUtmParams] = useState<any>({});
+
+  useEffect(() => {
+    return () => {
+      if (typeof window !== "undefined") {
+        const getParam = (param: any) => {
+          const urlParams = new URL(window.location.toString()).searchParams;
+          return urlParams.get(param) || "";
+        };
+
+        const utmSource = getParam("utm_source");
+        const utmMedium = getParam("utm_medium");
+        const utmCampaign = getParam("utm_campaign");
+        const utmContent = getParam("utm_content");
+        const utmTerm = getParam("utm_term");
+        const utmSky = getParam("utm_sky");
+
+        setUtmParams({
+          utm_source: utmSource,
+          utm_medium: utmMedium,
+          utm_campaign: utmCampaign,
+          utm_content: utmContent,
+          utm_term: utmTerm,
+          utm_sky: utmSky,
+        });
+      }
+    };
+  }, []);
+
   const validationSchema = z.object({
     email: z.string().min(0, { message: "Please fill the form" }).email({
       message: "You entered your email incorrectly",
@@ -37,6 +67,7 @@ function ContactUs() {
         email: data.email,
         name: data.name,
         message: data.message,
+        utm: utmParams,
       })
       .then((response: any) => {})
       .catch((error: any) => {

@@ -20,7 +20,7 @@ export const members = [
     post: "COO",
     description:
       "Video Game industry analyst and streamer. Optimizes resources and cash flows, develops service mechanics and influencer partnership programs. Also he is responsible for project economics.",
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/alexander-tsivin-110032274/",
   },
   {
     photo: Roma,
@@ -41,7 +41,7 @@ export const members = [
   {
     photo: Galina,
     name: "Galina Gerasenkova",
-    post: "Head of human resources ",
+    post: "Head of human resources",
     description:
       "Head of Human Resources with over 15 years of experience in managing people and processes. Founded an advertising agency. Also has experience working with NGOs and the media. ",
     linkedin: "https://www.linkedin.com/in/galinagerasenkova",
@@ -52,8 +52,9 @@ export const members = [
     post: "Art Director",
     description:
       "An artist and designer with extensive experience. Engaged in the development of promotional materials and their control. Represents the interests of the company in the media environment.",
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/alexey-sychev-603986273/",
   },
-]; 
+];
 
-export const commonLinkedin = "https://www.linkedin.com"
+export const commonLinkedin =
+  "https://www.linkedin.com/company/cyberyalgaming/";
