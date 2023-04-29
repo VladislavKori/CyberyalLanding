@@ -20,7 +20,7 @@ export default function Home() {
           content="Boost your gaming skills on our esports platform! Participate in tournaments, complete engaging tasks, and become a part of our active gaming community. Join now!"
         />
 
-        <meta property="og:url" content="http://cyberyal.com" />
+        <meta property="og:url" content="https://cyberyal.com" />
         <meta property="og:site_name" content="Cyberyal" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
@@ -34,11 +34,11 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="http://cyberyal/assets/Cyberyal_open_graph1200x630.png"
+          content="https://cyberyal/assets/Cyberyal_open_graph1200x630.png"
         />
         <meta
           property="og:image:secure_url"
-          content="http://cyberyal/assets/Cyberyal_open_graph1200x630.png"
+          content="https://cyberyal/assets/Cyberyal_open_graph1200x630.png"
         ></meta>
 
         <meta name="twitter:card" content="summary" />
@@ -60,10 +60,14 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="http://cyberyal/assets/Cyberyal_open_graph1200x630.png"
+          content="https://cyberyal/assets/Cyberyal_open_graph1200x630.png"
         />
 
-        <link rel="canonical" href="http://cyberyal.com/home" key="canonical" />
+        <link
+          rel="canonical"
+          href="https://cyberyal.com/home"
+          key="canonical"
+        />
         <link rel="icon" href="/logo.svg" />
       </Head>
 

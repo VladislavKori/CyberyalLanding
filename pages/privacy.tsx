@@ -40,7 +40,7 @@ export default function Privacy() {
                 <p className="privacy__default-text">
                   Service (referred to as either "Website", "We", "Us" or "Our"
                   in this Cookies Policy) represents the “Cyberyal” website
-                  accessible from http://cyberyal.com
+                  accessible from https://cyberyal.com
                 </p>
               </li>
               <li className="privacy__item">

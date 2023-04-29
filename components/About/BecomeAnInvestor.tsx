@@ -43,7 +43,9 @@ function BecomeAnInvestor() {
             development.
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <button className="investor_button">Download one pager</button>
+            <a href="https://drive.google.com/uc?export=download&id=1iC1dAVcJYtyNK18TAhlSlBdk5f7ajDxR">
+              <button className="investor_button">Download one pager</button>
+            </a>
           </div>
         </div>
       </div>

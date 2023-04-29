@@ -89,10 +89,20 @@ p {
 
 
 // Modal
+.Overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.425);
+}
 
 .modal {
+   
     background-color: #1A1A22;
-    padding: 30px 60px;
+    padding: 40px 60px;
     border-radius: 10px;
     width: 658px;
     height: 100%;
