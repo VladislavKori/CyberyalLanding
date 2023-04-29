@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import SocialMediaIcon from '@/public/affiliate/socialmedia.svg';
+=======
+import SocialMediaIcon from '@/public/affiliate/socialMedia.svg';
+>>>>>>> 1b46ec4 (add affiliate)
 import BlogIcon from '@/public/affiliate/blog.svg';
 import WebsiteIcon from '@/public/affiliate/website.svg';
 import OtherIcon from '@/public/affiliate/other.svg';
