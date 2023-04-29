@@ -1,0 +1,24 @@
+.partnerconditions {
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        text-align: left;
+    }
+
+    &__title {
+        text-align: left;
+    }
+
+    &__text {
+        color: rgb(255, 255, 255,0.8);
+        text-align: left;
+    }
+
+    &__btn {
+        width: max-content !important;
+        margin-bottom: 32px;
+    }
+}

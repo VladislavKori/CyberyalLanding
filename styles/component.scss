@@ -91,8 +91,13 @@
         }
 
         &__btn {
-            padding: 8px 16px;
+            padding: 8px 14px;
             font-size: 14px;
+
+            &-icon {
+                width: 15px;
+                height: 15px;
+            }
         }
     }
 }
@@ -202,47 +207,53 @@
     border-radius: 40px;
     padding: 48px 24px;
     position: relative;
-    
-    
+
+
 
 }
+
 .board_gamer_gamepad {
-    background:  url(../public/assets/gamepad.png) no-repeat;
+    background: url(../public/assets/gamepad.png) no-repeat;
     background-position-x: 140%;
     background-position-y: 60%;
     height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.board_gamer_text {
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .board_gamer {
+        background: #1A1A22 !important;
+        border-radius: 40px;
+        padding: 48px 24px;
+
+
+
+    }
+
+    .board_gamer_gamepad {
+        background-position: center !important;
+        opacity: 0.1;
+        height: 100%;
         width: 100%;
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-}
-.board_gamer_text {
-    width: 50%;
-}
-@media (max-width: 992px) {
-    .board_gamer {
-        background: #1A1A22 !important;
-        border-radius: 40px; 
-        padding: 48px 24px;
- 
-        
-    
     }
-    .board_gamer_gamepad {
-        background-position: center !important;
-        opacity: 0.1;
-        height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-    }
+
     .board_gamer_text {
         width: 100%;
     }
 }
+
 @media (max-width: 770px) {
     .board {
         text-align: center;
@@ -322,7 +333,7 @@
 }
 
 @media (max-width: 1200px) {
-    
+
     .features {
         height: max-content;
         display: flex;
@@ -356,26 +367,29 @@
         }
     }
 }
+
 .about__gradient {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 140%;
-        z-index: -2;
-        transform: translateY(-50%);
-        background: linear-gradient(180deg, rgba(90, 166, 255, 0) 0%, rgba(40, 139, 255, 0.1) 34.9%, rgba(90, 166, 255, 0) 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 140%;
+    z-index: -2;
+    transform: translateY(-50%);
+    background: linear-gradient(180deg, rgba(90, 166, 255, 0) 0%, rgba(40, 139, 255, 0.1) 34.9%, rgba(90, 166, 255, 0) 100%);
 }
+
 .about__gradient__2 {
-        height: 180%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-       z-index: -2;
-      
-        transform: translateY(10%);
-        background: linear-gradient(180deg, rgba(255, 40, 221, 0) 0%, rgba(190, 59, 242, 0.12) 25%, rgba(255, 40, 221, 0) 50%, rgba(151, 71, 255, 0.12) 75%, rgba(255, 40, 221, 0) 100%);
+    height: 180%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -2;
+
+    transform: translateY(10%);
+    background: linear-gradient(180deg, rgba(255, 40, 221, 0) 0%, rgba(190, 59, 242, 0.12) 25%, rgba(255, 40, 221, 0) 50%, rgba(151, 71, 255, 0.12) 75%, rgba(255, 40, 221, 0) 100%);
 }
+
 .whoarewe {
     position: relative;
 
@@ -395,20 +409,26 @@
 
     &__img {
 
-        &_blue {
+        &_right {
             top: 50%;
             right: -20%;
             transform: translateY(-50%);
             position: absolute;
+        }
+
+        &_left {
+            top: 75%;
+            transform: translateY(-50%);
+            left: -20%;
+            position: absolute;
+        }
+
+        &_blue {
             border-radius: 16px;
             box-shadow: 4.79999px 19.2px 95.9998px rgba(40, 139, 255, 0.25);
         }
 
         &_pink {
-            top: 75%;
-            transform: translateY(-50%);
-            left: -20%;
-            position: absolute;
             border-radius: 16px;
             box-shadow: 4.79999px 19.2px 95.9998px rgba(255, 40, 221, 0.25);
         }
@@ -450,61 +470,6 @@
             display: none;
         }
     }
-
-    .infoplate {
-        &__text {
-            font-size: 16px !important;
-        }
-
-    }
-}
-
-.infoplate {
-    display: flex;
-    background: #1A1A22;
-    border-radius: 50px;
-    padding: 64px 48px;
-    gap: 90px;
-    overflow: hidden;
-
-    &__right {
-        flex-direction: row-reverse;
-    }
-
-    &__textblock {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        flex: 0.5
-    }
-
-    &__title {
-        font-family: 'Montserrat';
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
-        color: #FFFFFF;
-        text-align: center;
-    }
-
-    &__text {
-        font-family: 'Nunito';
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        color: rgb(255, 255, 255, 0.5);
-    }
-
-    &__imgblock {
-        flex: 1;
-    }
-
-    &__mobile-imgblcok {
-        display: none;
-        overflow: hidden;
-        height: 100%;
-    }
 }
 
 @media (max-width: 1230px) {
@@ -512,12 +477,13 @@
         background: #1A1A22;
         border-radius: 40px;
         padding: 48px 24px;
-     
+
         background-position-x: 28vw;
         background-position-y: 60%;
-        
-    
+
+
     }
+
     .whoarewe {
         &__img {
 
@@ -536,30 +502,5 @@
             }
         }
 
-    }
-
-    .infoplate {
-        padding: 24px 12px;
-
-        &__imgblock,
-        &__textblock {
-            flex: inherit;
-        }
-
-        &__imgblock {
-            display: none;
-        }
-
-        &__right {
-            flex-direction: inherit;
-        }
-
-        text-align: center;
-        gap: inherit;
-
-        &__mobile-imgblcok {
-            display: inherit;
-            // height: 100px;
-        }
     }
 }

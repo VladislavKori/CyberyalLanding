@@ -1,0 +1,102 @@
+@import '../breakpoints';
+
+.affiliate-hero {
+    height: 100vh;
+    background: url('../../public/affiliate/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-size: 48px;
+    }
+
+    &__subtitle {
+        font-family: 'Nunito';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: rgb(255, 255, 255, 0.3);
+
+        margin-top: 20px;
+    }
+
+    &__btn {
+        margin-top: 10px;
+        font-size: 24px;
+        line-height: 32px;
+        padding: 18px 48px;
+    }
+
+    &__inside {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: $xl) {
+    .affiliate-hero {
+        margin: 0 auto;
+        margin-top: 12px;
+        border-radius: 30px;
+        background: none;
+        width: 100%;
+
+        &__inside {
+            background: url('../../public/affiliate/hero.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1 / 0.8;
+            border-radius: 30px;
+        }
+
+        &__btn {
+            padding: 14px 32px;
+            font-size: 18px;
+            line-height: 28px;
+
+            margin-top: 32px;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .affiliate-hero {
+        width: 100%;
+        height: 80vh;
+        margin-top: 100px;
+        border-radius: 30px;
+        padding: 0 16px;
+        align-items: center;
+        text-align: center;
+
+        & .affiliate-container {
+            height: 100%;
+        }
+
+        &__inside {
+            height: 100%;
+            aspect-ratio: inherit;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 32px;
+            width: 80%;
+        }
+
+        &__btn {
+            display: none !important;
+        }
+    }
+}

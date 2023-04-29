@@ -1,0 +1,38 @@
+@import './AffiliateHero.scss';
+@import './AffiliateJoin.scss';
+@import './AffiliateFAQ.scss';
+@import './AffiliatePartnerConditions.scss';
+@import './AffiliateHowAffiliateWorks.scss';
+@import '../breakpoints';
+
+.affiliate-container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.affiliate-infoplate__img {
+    left: -30%;
+}
+
+.aboutAffiliate {
+    margin: 100px 0;
+}
+
+@media (max-width: $xxxl) {
+    .affiliate-container {
+        width: 100%;
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: $md) {
+    .affiliate-container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 1230px ) {
+    .affiliate-infoplate__img {
+        left: 0%;
+    }
+}

@@ -100,7 +100,7 @@ function WhoAreWe() {
               <Image
                 src={RoomImg}
                 alt={"room"}
-                className="whoarewe__img_blue"
+                // className="whoarewe__img_blue whoarewe__img_right"
               />
             </div>
           </InfoPlate>
@@ -117,7 +117,6 @@ function WhoAreWe() {
               <Image
                 src={UserPageImg}
                 alt={"account"}
-                className="whoarewe__img_pink"
               />
             </div>
           </InfoPlate>

@@ -1,0 +1,114 @@
+@import '../breakpoints';
+
+.haw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+    }
+
+    &__circle {
+        margin-bottom: 40px;
+        background: red;
+        background: linear-gradient(135deg, #0085FF 0%, #8F00FF 100%);
+        border-radius: 200px;
+        width: 80px;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-title {
+            font-family: 'Inter';
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 60px;
+            color: #FFFFFF;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 64px;
+        gap: 30px;
+    }
+
+    &__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        &-title {
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        &-text {
+            font-family: 'Nunito';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: rgb(255, 255, 255, 0.8);
+        }
+    }
+}
+
+@media (max-width: $xl) {
+    .haw {
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__item {
+            flex: 2;
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .haw {
+        margin: 40px 0;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__circle {
+            margin-bottom: 16px;
+            width: 64px;
+            height: 64px;
+
+            &-title {
+                font-size: 32px;
+                line-height: 40px;
+            }
+        }
+
+        &__item {
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &-text {
+                text-align: left;
+            }
+        }
+    }
+}

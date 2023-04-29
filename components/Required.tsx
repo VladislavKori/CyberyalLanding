@@ -78,7 +78,7 @@ function Required() {
               duration: 0.5,
               delay: 0.2 + (index / 10),
             }}>
-            <RequiredCard el={el} />
+            <RequiredCard {...el} />
           </motion.div>
         ))}
       </div>
