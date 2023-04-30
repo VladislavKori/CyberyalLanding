@@ -12,20 +12,6 @@ import ShareIcon from "@/public/socials/Share.svg";
 import { useRouter } from "next/router";
 
 function Socials() {
-  const router = useRouter();
-
-  const isAbout = router.pathname === "/about";
-
-  const [copySuccess, setCopySuccess] = useState("");
-
-  async function copyToClip() {
-    await navigator.clipboard.writeText(location.href);
-    setCopySuccess("Copied");
-    setTimeout(() => {
-      setCopySuccess("");
-    }, 2000);
-  }
-
   return (
     <div className="socials">
       <h1 className="socials__title">
@@ -121,30 +107,6 @@ function Socials() {
             </div>
           </a>
         </li>
-        {isAbout ? (
-          ""
-        ) : (
-          <li
-            className="socials__item socials__item_share"
-            onClick={() => copyToClip()}
-            style={{ cursor: "pointer" }}
-          >
-            <a className="socials__card socials__card_discord">
-              <Image className="socials__icon" src={ShareIcon} alt="share" />
-
-              <div className="socials__card__info">
-                <p className="socials__card-text" style={{ fontWeight: "700" }}>
-                  {copySuccess}
-                </p>
-                <h2 className="socials__card-title">Share</h2>
-
-                <p className="socials__card-text">
-                  Share a link to our website
-                </p>
-              </div>
-            </a>
-          </li>
-        )}
       </ul>
     </div>
   );

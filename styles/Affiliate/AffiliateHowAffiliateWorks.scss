@@ -85,6 +85,16 @@
 @media (max-width: $sm) {
     .haw {
         margin: 40px 0;
+
+        &__title {
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
         &__list {
             display: flex;
             flex-direction: column;
