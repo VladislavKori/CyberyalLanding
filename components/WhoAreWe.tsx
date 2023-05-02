@@ -7,7 +7,10 @@ import CupIcon from '@/public/assets/CupIcon.svg'
 import RoomImg from "@/public/assets/room.png";
 import AccountIcon from "@/public/assets/account.svg";
 import marker from "../public/assets/marker.svg";
-import UserPageImg from "@/public/assets/userpage.webp";
+
+import UserPageImg from "@/public/assets/Страница пользователя.png";
+import BigPict from '@/public/assets/1vs1 eng.png';
+
 import { motion } from "framer-motion";
 
 const benefitsList = [
@@ -60,15 +63,6 @@ function WhoAreWe() {
                       gap: "10px",
                     }}
                   >
-                    {/* <div
-                      style={{
-                        width: "8px",
-                        height: "8px",
-                        background: "#FF28DD",
-                        opacity: "0.5",
-                        borderRadius: "100%",
-                      }}
-                    ></div> */}
                     <Image src={marker} width={8} height={8} alt={""} />
                     <p style={{ opacity: "0.5" }}>{el.text}</p>
                   </div>
@@ -95,15 +89,9 @@ function WhoAreWe() {
             With this feature, you can participate in tournaments that other players participate in and win prize money. All tournaments are held using a secure payment system, which ensures the safety of your financial transactions.
             In addition, you can customize various tournament settings, such as game rules, prize pool, tournament duration, and more. You can choose any game mode you want to use in your tournament.
             Thus, the "Create a Tournament" feature is the perfect tool for those who want to enjoy competitive play at a high level and earn some money in the process.`}
-          >
-            <div className="whoarewe__img-container">
-              <Image
-                src={RoomImg}
-                alt={"room"}
-                // className="whoarewe__img_blue whoarewe__img_right"
-              />
-            </div>
-          </InfoPlate>
+            img={BigPict}
+            imgClassName='whoarewe__img1 whoarewe__img_blue'
+          />
 
           <InfoPlate
             icon={AccountIcon}
@@ -112,14 +100,9 @@ function WhoAreWe() {
             text={`The user's personal account is a personal account on the platform, which is designed to manage their personal data and activities on the site. 
             Usually on the profile page, the account owner can change information about himself, such as nickname, banner, avatar and other data. Also, the account owner can add links to their social networks such as Facebook, Discord, Twitch, etc. to share their activities with friends and followers.
             In addition, the account owner can list their favorite game and showcase their stream on the Twitch platform to show off their gaming skills and share their experience with their viewers. Also on the profile page, the user's rating on the site can be indicated, which displays the level of activity and interaction with other participants.`}
-          >
-            <div className="whoarewe__img-container">
-              <Image
-                src={UserPageImg}
-                alt={"account"}
-              />
-            </div>
-          </InfoPlate>
+            img={UserPageImg}
+            imgClassName='whoarewe__img2 whoarewe__img_pink'
+          />
         </div>
       </div>
     </div>

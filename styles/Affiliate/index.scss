@@ -18,6 +18,25 @@
     margin: 100px 0;
 }
 
+.affiliate {
+
+    &__container-for-shy {
+        position: relative;
+    }
+
+    &__bg-shy {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        content: "";
+        background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #173B69 33.33%, rgba(36, 70, 113, 0.932692) 66.67%, rgba(217, 217, 217, 0) 100%);
+    }
+}
+
 @media (max-width: $xxxl) {
     .affiliate-container {
         width: 100%;

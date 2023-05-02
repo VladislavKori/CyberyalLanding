@@ -1,5 +1,5 @@
 import Yakov from '../public/team/Yakov.png'
-import Alexander from '../public/team/Alexander.png'
+import Alexander from '../public/team/A3.jpg'
 import Roma from '../public/team/Roma.png'
 import Anton from '../public/team/Anton.png'
 import Yexela from '../public/team/Yexela.png'

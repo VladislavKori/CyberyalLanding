@@ -12,7 +12,6 @@
 
     &__right {
         flex-direction: row-reverse;
-
     }
 
     &__textblock {
@@ -27,9 +26,20 @@
         display: block;
         width: 100%;
         flex: 1;
-        // background: red;
-        height: 200px;
+        height: 100%;
+        aspect-ratio: 10 / 10;
         position: relative;
+
+        &_inner {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+        }
     }
 
     &__title {
@@ -63,18 +73,6 @@
         color: rgb(255, 255, 255, 0.8);
     }
 
-    &__img {
-        position: absolute;
-        top: -100%;
-        left: -15%;
-
-        &_right {
-            position: absolute;
-            right: -30%;
-            top: -100%;
-        }
-    }
-
     &__mobile-imgblcok {
         display: none !important;
         width: 100%;
@@ -98,6 +96,13 @@
         flex-direction: column;
         padding: 30px 14px;
 
+        &__imgblock {
+            height: 300px;
+            width: 80%;
+            aspect-ratio: inherit;
+            flex: inherit;
+        }
+
         &__title {
             font-size: 32px;
             line-height: 40px;
@@ -106,19 +111,6 @@
         &__text {
             font-size: 18px;
             line-height: 28px;
-        }
-
-        &__img {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%) translateY(40%);
-
-            &_right {
-                position: absolute;
-                right: 50%;
-                bottom: -50%;
-                transform: translateX(50%) translateY(40%);
-            }
         }
     }
 }
