@@ -1,15 +1,17 @@
 import Image from 'next/image'
+import { StaticImageData } from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import Button from './Button'
 
 interface InfoPlateProps {
-    children: JSX.Element
     icon?: string
     title: string
     text: string
     direction?: 'left' | 'right',
     buttonOn?: boolean
+    img: StaticImageData
+    imgClassName?: string
 }
 
 const animation = {
@@ -23,7 +25,7 @@ const animation = {
     }
 }
 
-function InfoPlate({ children, icon, title, text, direction = 'left', buttonOn = false }: InfoPlateProps) {
+function InfoPlate({ icon, title, text, direction = 'left', buttonOn = false, img, imgClassName }: InfoPlateProps) {
     return (
         <>
             <motion.div
@@ -46,15 +48,25 @@ function InfoPlate({ children, icon, title, text, direction = 'left', buttonOn =
                         </div>
                     ) : null}
                 </div>
-                <div className="infoplate__imgblock">
-                    <div className={direction != "left" ? "infoplate__img" : "infoplate__img_right"}>
-                        {children}
-                    </div>
+                <div className={"infoplate__imgblock"}>
+                    <div
+                        className={"infoplate__imgblock_inner "  + imgClassName}
+                        style={{
+                            background: `url('${img.src}')`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'cover'
+                        }}
+                    />
                 </div>
             </motion.div>
-            <div className="infoplate__mobile-imgblcok">
-                {children}
-            </div>
+            <div
+                className="infoplate__mobile-imgblcok"
+                style={{
+                    background: `url('${img.src}')`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover'
+                }}
+            />
         </>
     )
 }

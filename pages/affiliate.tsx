@@ -25,8 +25,12 @@ export default function Affiliate() {
             <main className="wrapper">
                 <Header />
                 <Hero />
-                <HowAffiliateWorks />
-                <PartnerConditions />
+
+                <div className="affiliate__container-for-shy">
+                    <div className="affiliate__bg-shy"></div>
+                    <HowAffiliateWorks />
+                    <PartnerConditions />
+                </div>
                 <AboutAffiliate />
                 <FAQ />
                 <div className="affiliate-container">
