@@ -65,7 +65,7 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
   const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
     // console.log(data);
     apiClient
-      .post(`api/v1/mailer/set`, {
+      .post(`v1/cyberyal/set`, {
         utm: utmParams,
         email: data.email,
       })

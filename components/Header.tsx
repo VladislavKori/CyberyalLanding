@@ -22,46 +22,59 @@ function Header() {
     const isHome = router.pathname === "/home";
     const isLanding = router.pathname === "/";
 
-  const handleClickRoute = async () => {
-    // Wait for route change before do anything
-    await router.push("/");
-    // Reload after routing
-    // router.reload();
-  };
-  
-  const handleClick = () => element?.scrollIntoView();
 
-  return (
-    <>
-      <header className="header">
-        <div className="header__left">
-          <div className="header__logo">
-            <Image className="header__logo-img" src={Logo} alt="logo" />
+    const currentRoute = router.pathname;
+
+    const handleClick = () => element?.scrollIntoView();
+
+    return (
+      <>
+        <header className="header">
+          <div className="header__left">
+            <Link href={"/"}>
+              <div className="header__logo">
+                <Image className="header__logo-img" src={Logo} alt="logo" />
+              </div>
+            </Link>
+            <nav className="header__navbar">
+              <Link
+                className={`header__link ${
+                  currentRoute === "/" ? "active_link" : ""
+                }`}
+                href="/"
+              >
+                Home
+              </Link>
+              <Link
+                className={`header__link ${
+                  currentRoute === "/about" ? "active_link" : ""
+                }`}
+                href="/about"
+              >
+                About
+              </Link>
+              <Link
+                className={`header__link ${
+                  currentRoute === "/affiliate" ? "active_link" : ""
+                }`}
+                href="/affiliate"
+              >
+                Affiliate
+              </Link>
+            </nav>
           </div>
-          <nav className="header__navbar">
-            <div className="header__link" onClick={() => handleClickRoute()}>
-              Home
-            </div>
-            <Link className="header__link" href="/about">
-              About
-            </Link>
-            <Link className="header__link" href="/affiliate">
-              Affiliate
-            </Link>
-          </nav>
-        </div>
-        {isPrivacy ? (
-          ""
-        ) : isHome ? (
-          <button className="header__btn" onClick={handleClick}>
-            Subscribe
-          </button>
-        ) : (
-          <Button />
-        )}
-      </header>
-    </>
-  );
+          {isPrivacy ? (
+            ""
+          ) : isHome ? (
+            <button className="header__btn" onClick={handleClick}>
+              Subscribe
+            </button>
+          ) : (
+            <Button />
+          )}
+        </header>
+      </>
+    );
 }
 
 export default Header;

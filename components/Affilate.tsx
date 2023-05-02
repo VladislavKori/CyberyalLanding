@@ -2,6 +2,7 @@ import ArrowRight from "../public/assets/ArrowRight.svg";
 import Image from "next/image";
 import {motion} from 'framer-motion'
 import { useRouter } from "next/router";
+import Button from "./Button";
 
 function Affilate() {
   const router = useRouter();
@@ -41,12 +42,9 @@ function Affilate() {
           engaging and easy tasks, and then collect your well-deserved rewards.
           Start today and ensure your success.
         </p>
-        <button
-          className="affilate__button"
-          onClick={isLanding ? handleClick : () => handleClickRoute()}
-        >
-          Create Cyberyal ID <Image src={ArrowRight} alt="ArrowRight" />
-        </button>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Button />
+        </div>
       </div>
     </motion.div>
   );

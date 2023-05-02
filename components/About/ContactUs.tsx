@@ -63,7 +63,7 @@ function ContactUs() {
   const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
     console.log(data);
     apiClient
-      .post(`api/v1/mailer/set`, {
+      .post(`v1/mailer/set`, {
         email: data.email,
         name: data.name,
         message: data.message,

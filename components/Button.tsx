@@ -75,19 +75,19 @@ function Button() {
     const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
         // console.log(data);
         apiClient
-            .post(`api/v1/mailer/set`, {
-                utm: utmParams,
-                email: data.email,
-            })
-            .then((response: any) => {
-                setIsOpen(false);
-                setIsOpenCongrat(true);
-            })
-            .catch((error: any) => {
-                console.log(error.message);
-                // setIsOpen(false);
-                // setIsOpenCongrat(true);
-            });
+          .post(`v1/cyberyal/set`, {
+            utm: utmParams,
+            email: data.email,
+          })
+          .then((response: any) => {
+            setIsOpen(false);
+            setIsOpenCongrat(true);
+          })
+          .catch((error: any) => {
+            console.log(error.message);
+            // setIsOpen(false);
+            // setIsOpenCongrat(true);
+          });
     };
 
     const [modalIsOpen, setIsOpen] = React.useState(false);

@@ -28,25 +28,22 @@ export default function About() {
           content="Boost your gaming skills on our esports platform! Participate in tournaments, complete engaging tasks, and become a part of our active gaming community. Join now!"
         />
 
-        <meta property="og:url" content="https://cyberyal.com" />
+        <meta property="og:url" content="cyberyal.com/about" />
         <meta property="og:site_name" content="Cyberyal" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Cyberyal | Take your gaming to the next level"
-        />
+        <meta property="og:title" content="Cyberyal Gaming Platform | About" />
         <meta
           property="og:description"
-          content="Cyberyal.com | Boost your gaming skills on our esports platform! Participate in tournaments, complete engaging tasks, and become a part of our active gaming community. Join now!"
+          content="Cyberyal is not just a gaming platform, it's a whole community of gamers. Here you will find everything you need to become a true champion: participate in exciting tournaments with players from all over the world, hone your skills with individual coaching, level up in PVP mode, and, of course, monetize your gaming achievements - all on one platform! Join Cyberyal and get the most out of your gaming experience."
         />
         <meta
           property="og:image"
-          content="https://cyberyal/assets/Cyberyal_open_graph1200x630.png"
+          content="https://cyberyal/assets/Cyberyal_about.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://cyberyal/assets/Cyberyal_open_graph1200x630.png"
+          content="https://cyberyal/assets/Cyberyal_about.png"
         ></meta>
 
         <meta name="twitter:card" content="summary" />
@@ -58,17 +55,14 @@ export default function About() {
           name="twitter:creator"
           content="https://www.twitter.com/PlaystarEU"
         />
-        <meta
-          name="twitter:title"
-          content="Cyberyal | Take your gaming to the next level"
-        />
+        <meta name="twitter:title" content="Cyberyal Gaming Platform | About" />
         <meta
           name="twitter:description"
-          content="Cyberyal.com | Boost your gaming skills on our esports platform! Participate in tournaments, complete engaging tasks, and become a part of our active gaming community. Join now!"
+          content="Cyberyal is not just a gaming platform, it's a whole community of gamers. Here you will find everything you need to become a true champion: participate in exciting tournaments with players from all over the world, hone your skills with individual coaching, level up in PVP mode, and, of course, monetize your gaming achievements - all on one platform! Join Cyberyal and get the most out of your gaming experience."
         />
         <meta
           name="twitter:image"
-          content="https://cyberyal/assets/Cyberyal_open_graph1200x630.png"
+          content="https://cyberyal/assets/Cyberyal_about.png"
         />
 
         <link
