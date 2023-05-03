@@ -75,22 +75,22 @@ export default function Affiliate() {
           <link rel="icon" href="/logo.svg" />
         </Head>
         <main className="wrapper">
-                <Header />
-                <Hero />
+          <Header />
+          <Hero />
 
-                <div className="affiliate__container-for-shy">
-                    <div className="affiliate__bg-shy"></div>
-                    <HowAffiliateWorks />
-                    <PartnerConditions />
-                </div>
-                <AboutAffiliate />
-                <FAQ />
-                <div className="affiliate-container">
-                    <Join />
-                    <Socials />
-                </div>
-                <Footer />
-            </main>
+          <div className="affiliate__container-for-shy">
+            <div className="affiliate__bg-shy"></div>
+            <HowAffiliateWorks />
+            <PartnerConditions />
+          </div>
+          <AboutAffiliate />
+          {/* <FAQ /> */}
+          <div className="affiliate-container">
+            <Join />
+            <Socials />
+          </div>
+          <Footer />
+        </main>
       </>
     );
 }

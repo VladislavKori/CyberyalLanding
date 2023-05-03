@@ -59,29 +59,33 @@ export default function OurTeam() {
           modules={[Navigation]}
           className="ourteam__slider"
         >
-          {members.map((member, index) => (
-            <React.Fragment key={index}>
-              <SwiperSlide className="ourteam__slide">
-                <div className="ourteam__avatar">
-                  <Image src={member.photo} alt={member.name} />
-                </div>
-                <h2 className="ourteam__name">{member.name}</h2>
-                <h2 className="ourteam__post">{member.post}</h2>
-                <p className="ourteam__description">{member.description}</p>
-                <a
-                  className="ourteam__link"
-                  href={member.linkedin}
-                  target="_blank"
-                >
-                  <Image
-                    src={LinkedinIcon}
-                    alt="linkedin"
-                    className="ourteam__linkedin"
-                  />
-                </a>
-              </SwiperSlide>
-            </React.Fragment>
-          ))}
+          {members
+            .filter(
+              (membr) => membr.name !== process.env.NEXT_PUBLIC_ALEXANDER_CARD
+            )
+            .map((member, index) => (
+              <React.Fragment key={index}>
+                <SwiperSlide className="ourteam__slide">
+                  <div className="ourteam__avatar">
+                    <Image src={member.photo} alt={member.name} />
+                  </div>
+                  <h2 className="ourteam__name">{member.name}</h2>
+                  <h2 className="ourteam__post">{member.post}</h2>
+                  <p className="ourteam__description">{member.description}</p>
+                  <a
+                    className="ourteam__link"
+                    href={member.linkedin}
+                    target="_blank"
+                  >
+                    <Image
+                      src={LinkedinIcon}
+                      alt="linkedin"
+                      className="ourteam__linkedin"
+                    />
+                  </a>
+                </SwiperSlide>
+              </React.Fragment>
+            ))}
         </Swiper>
         <div className="ourteam__slider-controllers">
           <button id="switch-prev" className="ourteam__switch">

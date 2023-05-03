@@ -1,8 +1,8 @@
-import Yakov from '../public/team/Yakov.png'
-import Alexander from '../public/team/A3.jpg'
-import Roma from '../public/team/Roma.png'
-import Anton from '../public/team/Anton.png'
-import Yexela from '../public/team/Yexela.png'
+import Yakov from "../public/team/Yakov.png";
+import Alexander from "../public/team/A3.jpg";
+import Roma from "../public/team/Roma.png";
+import Anton from "../public/team/Anton.png";
+import Yexela from "../public/team/Yexela.png";
 import Galina from "../public/team/Galina.png";
 
 export const members = [
@@ -20,7 +20,7 @@ export const members = [
     post: "COO",
     description:
       "Video Game industry analyst and streamer. Optimizes resources and cash flows, develops service mechanics and influencer partnership programs. Also he is responsible for project economics.",
-    linkedin: "https://www.linkedin.com/in/alexander-tsivin-110032274/",
+    linkedin: process.env.NEXT_PUBLIC_ALEXANDER_LINK,
   },
   {
     photo: Roma,
