@@ -39,11 +39,11 @@ export default function About() {
         />
         <meta
           property="og:image"
-          content="https://cyberyal/assets/Cyberyal_about.png"
+          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://cyberyal/assets/Cyberyal_about.png"
+          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
         ></meta>
 
         <meta name="twitter:card" content="summary" />
@@ -62,7 +62,7 @@ export default function About() {
         />
         <meta
           name="twitter:image"
-          content="https://cyberyal/assets/Cyberyal_about.png"
+          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
         />
 
         <link
