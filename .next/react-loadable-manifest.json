@@ -1,0 +1,20 @@
+{
+  "about.tsx -> @/components/Header": {
+    "id": 9852,
+    "files": [
+      "static/chunks/230.bfb5bfaae1c08ac1.js"
+    ]
+  },
+  "home.tsx -> @/components/Header": {
+    "id": 9852,
+    "files": [
+      "static/chunks/852.a3188ef2fd0dfd10.js"
+    ]
+  },
+  "index.tsx -> @/components/Header": {
+    "id": 9852,
+    "files": [
+      "static/chunks/230.bfb5bfaae1c08ac1.js"
+    ]
+  }
+}
