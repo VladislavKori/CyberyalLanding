@@ -78,7 +78,7 @@ function Hero({ modal_text , form_header , form_text , form_button  }) {
     });
     const onSubmit = (data)=>{
         // console.log(data);
-        _api_apiClient__WEBPACK_IMPORTED_MODULE_10__/* ["default"].post */ .Z.post(`v1/cyberyal/set`, {
+        _api_apiClient__WEBPACK_IMPORTED_MODULE_10__/* ["default"].post */ .Z.post(`api/v1/cyberyal/set`, {
             utm: utmParams,
             email: data.email
         }).then((response)=>{

@@ -75,7 +75,7 @@ function Button() {
     const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
         // console.log(data);
         apiClient
-          .post(`v1/cyberyal/set`, {
+          .post(`api/v1/cyberyal/set`, {
             utm: utmParams,
             email: data.email,
           })
