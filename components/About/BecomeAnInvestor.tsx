@@ -32,15 +32,14 @@ function BecomeAnInvestor() {
             Become an investor
           </h2>
           <p className="investor_text">
-            In April 2023, we began preparations for a seed round of
-            investment.  As the results of the pre-seed round, all the goals set
-            have been met and we are fully ready to launch the platform at the
-            end of May. We have the funds to reach the optimal release, but for
-            a successful rapid launch we need additional funds. Therefore, we
-            attract investors and offer 15% of the company for 150 thousand
-            euros.  You can leave your contacts here and we will contact you and
-            tell you more about the company's processes, economy and plans for
-            development.
+            We view ourselves as a loyal and reliable partner and strive to meet
+            the expectations of those who trust us. Investing into Cyberyal
+            platform is not only an opportunity to join the board of owners of a
+            fast growing company in a steadily growing market, it is also an
+            access to a well established team of experienced professionals and
+            young talents. After launching the Cyberyal platform our team will
+            continue to release products, scaling the company by covering new
+            topics and features.
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <a href="https://drive.google.com/uc?export=download&id=1iC1dAVcJYtyNK18TAhlSlBdk5f7ajDxR">

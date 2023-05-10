@@ -1,20 +1,14 @@
 {
   "about.tsx -> @/components/Header": {
-    "id": 9852,
+    "id": "about.tsx -> @/components/Header",
     "files": [
-      "static/chunks/230.bfb5bfaae1c08ac1.js"
-    ]
-  },
-  "home.tsx -> @/components/Header": {
-    "id": 9852,
-    "files": [
-      "static/chunks/852.90695994ab28a1ec.js"
+      "static/chunks/components_Header_tsx.js"
     ]
   },
   "index.tsx -> @/components/Header": {
-    "id": 9852,
+    "id": "index.tsx -> @/components/Header",
     "files": [
-      "static/chunks/230.bfb5bfaae1c08ac1.js"
+      "static/chunks/components_Header_tsx.js"
     ]
   }
 }

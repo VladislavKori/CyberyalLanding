@@ -555,7 +555,11 @@ line-height: 24px;
         &__slider {
             margin: 32px;
         }
-
+        &__description {
+           
+            height: 230px;
+        
+        }
         &__switch {
             display: none;
         }

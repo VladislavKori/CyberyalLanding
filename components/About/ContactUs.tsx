@@ -7,6 +7,8 @@ import Link from "next/link";
 import ArrowRight from "../../public/assets/ArrowRight.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Modal from "react-modal";
+import close_modal from "../../public/assets/close_modal.svg";
 
 function ContactUs() {
   const [utmParams, setUtmParams] = useState<any>({});
@@ -69,14 +71,71 @@ function ContactUs() {
         message: data.message,
         utm: utmParams,
       })
-      .then((response: any) => {})
+      .then((response: any) => {
+        setIsOpenCongrat(true);
+      })
       .catch((error: any) => {
         console.log(error.message);
       });
   };
 
+  const [modalCongratIsOpen, setIsOpenCongrat] = useState(false);
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
+
   return (
     <>
+      <Modal
+        isOpen={modalCongratIsOpen}
+        onRequestClose={() => setIsOpenCongrat(false)}
+        style={customStyles}
+        overlayClassName="Overlay"
+        className="Modal"
+        contentLabel="Example Modal"
+      >
+        <div className="modal">
+          <Image
+            onClick={() => setIsOpenCongrat(false)}
+            className="modal__close"
+            src={close_modal}
+            alt="so-icons"
+          />
+          <div className="modal__content">
+            <h3 className="modal__title">Congratulations</h3>
+            <p className="modal__text">
+              You have successfully subscribed to our email newsletter, news,
+              promotions and notifications will be sent to the email address you
+              specified.
+            </p>
+            <p className="modal__text">
+              Thank you for your attention to our product
+            </p>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "10px",
+              }}
+            >
+              <button
+                className="modal__button"
+                onClick={() => setIsOpenCongrat(false)}
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      </Modal>
       <div className="about_us">
         <motion.form
           initial={{ opacity: 0, y: 100 }}
