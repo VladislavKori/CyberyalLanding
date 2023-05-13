@@ -90,7 +90,7 @@ function WhoAreWe() {
             In addition, you can customize various tournament settings, such as game rules, prize pool, tournament duration, and more. You can choose any game mode you want to use in your tournament.
             Thus, the "Create a Tournament" feature is the perfect tool for those who want to enjoy competitive play at a high level and earn some money in the process.`}
             img={BigPict}
-            imgClassName='whoarewe__img1 whoarewe__img_blue'
+            imgClassName="whoarewe__img1 whoarewe__img_blue"
           />
 
           <InfoPlate
@@ -98,10 +98,10 @@ function WhoAreWe() {
             direction="right"
             title="Personal account"
             text={`The user's personal account is a personal account on the platform, which is designed to manage their personal data and activities on the site. 
-            Usually on the profile page, the account owner can change information about himself, such as nickname, banner, avatar and other data. Also, the account owner can add links to their social networks such as Facebook, Discord, Twitch, etc. to share their activities with friends and followers.
+            Usually on the profile page, the account owner can change their own nickname, banner, avatar and other data. Also, the account owner can add links to their social networks such as Facebook, Discord, Twitch, etc. to share their activities with friends and followers.
             In addition, the account owner can list their favorite game and showcase their stream on the Twitch platform to show off their gaming skills and share their experience with their viewers. Also on the profile page, the user's rating on the site can be indicated, which displays the level of activity and interaction with other participants.`}
             img={UserPageImg}
-            imgClassName='whoarewe__img2 whoarewe__img_pink'
+            imgClassName="whoarewe__img2 whoarewe__img_pink"
           />
         </div>
       </div>

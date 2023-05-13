@@ -34,11 +34,11 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
+          content="https://drive.google.com/uc?export=view&id=1xe97s0ePX0YWbxzsmGwNry2iST57HghY"
         />
         <meta
           property="og:image:secure_url"
-          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
+          content="https://drive.google.com/uc?export=view&id=1xe97s0ePX0YWbxzsmGwNry2iST57HghY"
         ></meta>
 
         <meta name="twitter:card" content="summary" />
@@ -60,7 +60,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
+          content="https://drive.google.com/uc?export=view&id=1xe97s0ePX0YWbxzsmGwNry2iST57HghY"
         />
 
         <link

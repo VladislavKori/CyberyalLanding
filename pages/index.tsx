@@ -41,11 +41,11 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
+          content="https://drive.google.com/uc?export=view&id=1xe97s0ePX0YWbxzsmGwNry2iST57HghY"
         />
         <meta
           property="og:image:secure_url"
-          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
+          content="https://drive.google.com/uc?export=view&id=1xe97s0ePX0YWbxzsmGwNry2iST57HghY"
         ></meta>
 
         <meta name="twitter:card" content="summary" />
@@ -67,7 +67,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://cyberyal.com/_next/static/media/Cyberyal_open_graph1200x630.png"
+          content="https://drive.google.com/uc?export=view&id=1xe97s0ePX0YWbxzsmGwNry2iST57HghY"
         />
 
         <link rel="canonical" href="https://cyberyal.com" key="canonical" />
@@ -79,7 +79,7 @@ export default function Home() {
         <div className="content">
           <Hero
             modal_text={
-              "You are successful created an account to participate in the Cyberyal Affilate program. Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards."
+              "You are successfully created an account to participate in the Cyberyal Affilate program. Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards."
             }
             form_header={"Cyberyal ID"}
             form_text={

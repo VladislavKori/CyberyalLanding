@@ -20,7 +20,7 @@ export const members = [
     post: "COO",
     description:
       "Video Game industry analyst and streamer. Optimizes resources and cash flows, develops service mechanics and influencer partnership programs. Also he is responsible for project economics.",
-    linkedin: process.env.NEXT_PUBLIC_ALEXANDER_LINK,
+    linkedin: "https://www.linkedin.com/in/tsivin/",
   },
   {
     photo: Roma,
@@ -28,7 +28,7 @@ export const members = [
     post: "CMO",
     description:
       "Head of marketing departments with ten years of experience. Launched startups in Russia, Georgia, and Germany. Has founded two advertising agencies and two charitable organizations. Responsible for advertising strategy and user experience in the company.",
-    linkedin: "https://www.linkedin.com/in/evertine",
+    linkedin: "https://t.me/kogankto",
   },
   {
     photo: Anton,
@@ -52,7 +52,7 @@ export const members = [
     post: "Art Director",
     description:
       "An artist and designer with extensive experience. Engaged in the development of promotional materials and their control. Represents the interests of the company in the media environment.",
-    linkedin: "https://www.linkedin.com/in/alexey-sychev-603986273/",
+    linkedin: "https://www.crunchbase.com/person/alexey-sychev",
   },
 ];
 
