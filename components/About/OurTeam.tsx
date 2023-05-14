@@ -10,7 +10,7 @@ import TelegramIcon from "@/public/socials/telegram.svg";
 import { members, commonLinkedin } from "@/data/team";
 import SliderArrow from "@/public/assets/SliderArrow.svg";
 
-// for slider
+// for sliders
 const breakpoints = {
   320: {
     slidesPerView: 1.3,
