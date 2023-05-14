@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import LinkedinIcon from '@/public/team/linkedin.svg';
 import CrunchBaseIcon from "@/public/socials/Crunchbase.svg";
-import TelegramIcon from "@/public/socials/telegram.svg";
+import TelegramIcon from "@/public/socials/Telegram.svg";
 import { members, commonLinkedin } from "@/data/team";
 import SliderArrow from "@/public/assets/SliderArrow.svg";
 
