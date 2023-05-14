@@ -26,7 +26,7 @@ const featuresContent = [
   {
     icon: HandshakeIcon,
     title: "Boosting",
-    text: "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.",
+    text: "Measure your results using our convenient reports. You can quickly filter, export, and drill down into the data with just a few clicks.",
   },
   {
     icon: BarbellIcon,
@@ -36,16 +36,16 @@ const featuresContent = [
 ];
 
 interface FeaturesProps {
-  diraction?: 'default' | 'conversely'
+  diraction?: "default" | "conversely";
 }
 
-function Features({diraction = 'default'}: FeaturesProps) {
+function Features({ diraction = "default" }: FeaturesProps) {
   return (
     <div className="features">
       <Board
         overtitle="A little about the possibilities"
         title="Mechanics"
-        text="Daily personalized fitness, sleep, and recovery data delivered to you in real time with Untitled. We’re changing how you move."
+        text="Elevate your gaming experience with robust mechanics designed for competitive play and skill improvement. Compete with others, sharpen your gaming abilities, and embrace the thrill of growth."
       />
 
       <div
