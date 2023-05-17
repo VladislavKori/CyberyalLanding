@@ -1,0 +1,11 @@
+{
+  "/_app": "pages/_app.js",
+  "/about": "pages/about.html",
+  "/_document": "pages/_document.js",
+  "/affiliate": "pages/affiliate.html",
+  "/home": "pages/home.html",
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/privacy": "pages/privacy.html",
+  "/404": "pages/404.html"
+}

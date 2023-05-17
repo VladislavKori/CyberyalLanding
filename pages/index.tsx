@@ -31,6 +31,7 @@ export default function Home() {
         <meta property="og:site_name" content="Cyberyal" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
+
         <meta
           property="og:title"
           content="Cyberyal | Take your gaming to the next level"
