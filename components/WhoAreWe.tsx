@@ -7,10 +7,8 @@ import CupIcon from '@/public/assets/CupIcon.svg'
 import RoomImg from "@/public/assets/room.png";
 import AccountIcon from "@/public/assets/account.svg";
 import marker from "../public/assets/marker.svg";
-
 import UserPageImg from "@/public/assets/Страница пользователя.png";
 import BigPict from '@/public/assets/1vs1 eng.png';
-
 import { motion } from "framer-motion";
 
 const benefitsList = [
