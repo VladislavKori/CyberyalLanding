@@ -13,10 +13,10 @@ import { motion } from "framer-motion";
 
 const benefitsList = [
   {
-    text: "Affordable earnings via tournaments (with your or with on the platform existing teammates), educational sessions, if you have enough experience to teach and coach",
+    text: "Affordable earnings via tournaments (with your or existing teammates on the platform), educational sessions, if you have enough experience to teach and coach",
   },
   {
-    text: "To get some new experience and knowledge in interested game",
+    text: "To get some new experience and knowledge in an interesting game",
   },
   {
     text: "To connect and communicate with your favorite blogger or streamer",
@@ -25,7 +25,7 @@ const benefitsList = [
     text: "To try a new opportunity of a gameplay",
   },
   {
-    text: "Security and quality support",
+    text: "Reliable and high-quality support",
   },
 ];
 
@@ -74,7 +74,7 @@ function WhoAreWe() {
                   marginTop: "40px",
                 }}
               >
-                We're waiting just you and we promise - your gaming experience
+                We're waiting just for you and we promise - your gaming experience
                 will change forever.
               </p>
             </div>
@@ -83,10 +83,7 @@ function WhoAreWe() {
           <InfoPlate
             icon={CupIcon}
             title="More about tournaments"
-            text={`The "Tournament" feature allows users of our site to create their own tournaments of any size and format. With this feature you can create 1v1, 5v5 or even 1v100 tournaments by choosing from our wide list of supported games.
-            With this feature, you can participate in tournaments that other players participate in and win prize money. All tournaments are held using a secure payment system, which ensures the safety of your financial transactions.
-            In addition, you can customize various tournament settings, such as game rules, prize pool, tournament duration, and more. You can choose any game mode you want to use in your tournament.
-            Thus, the "Create a Tournament" feature is the perfect tool for those who want to enjoy competitive play at a high level and earn some money in the process.`}
+            text={`On the Cyberyal Gaming platform, you can find tournaments of various sizes and formats. You can create your own 1v1, 5v5, or even 100v100 tournaments by choosing from our extensive list of supported games.By participating in these tournaments, you can compete against other players and have a chance to win prize money. All tournaments are conducted through a secure payment system, ensuring the safety of your financial transactions.Customize your tournament according to your preferences, including game rules, prize pool, duration, and other settings. You have the freedom to select any game mode available in your chosen game.The "Create a Tournament" feature on Cyberyal Gaming is the perfect tool for those who seek high-level competitive gameplay and an opportunity to earn extra income. Join our platform today and immerse yourself in the thrilling world of tournaments!`}
             img={BigPict}
             imgClassName="whoarewe__img1 whoarewe__img_blue"
           />
