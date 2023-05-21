@@ -111,9 +111,10 @@ function ContactUs() {
           <div className="modal__content">
             <h3 className="modal__title">Congratulations</h3>
             <p className="modal__text">
-              You have successfully subscribed to our email newsletter, news,
-              promotions and notifications will be sent to the email address you
-              specified.
+              You are successfully created an account to participate in the
+              Cyberyal Affilate program. Complete simple tasks and receive
+              rewards! accomplish engaging and easy tasks, and then collect your
+              well-deserved rewards.
             </p>
             <p className="modal__text">
               Thank you for your attention to our product
