@@ -84,7 +84,7 @@ export default function Affiliate() {
             <PartnerConditions />
           </div>
           <AboutAffiliate />
-          {/* <FAQ /> */}
+          <FAQ />
           <div className="affiliate-container">
             <Join />
             <Socials />
