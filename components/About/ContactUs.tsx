@@ -57,7 +57,9 @@ function ContactUs() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<ValidationSchema>({
     resolver: zodResolver(validationSchema),
   });
@@ -78,6 +80,12 @@ function ContactUs() {
         console.log(error.message);
       });
   };
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ email: "", name: "", message: "" });
+    }
+  }, [formState, reset]);
 
   const [modalCongratIsOpen, setIsOpenCongrat] = useState(false);
   const customStyles = {
