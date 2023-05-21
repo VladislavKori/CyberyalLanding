@@ -20,7 +20,7 @@ function FAQ() {
             <div className="affiliate-container">
                 <motion.div {...animation} className="faq__inside">
                     <h1 className="faq__title">Frequently asked questions</h1>
-                    <p className="faq__subtitle">Everything you need to know about the product and billing.</p>
+                    {/* <p className="faq__subtitle">Everything you need to know about the product and billing.</p> */}
 
                     {faqdata.map((item, index) => (
                         <React.Fragment key={index}>
