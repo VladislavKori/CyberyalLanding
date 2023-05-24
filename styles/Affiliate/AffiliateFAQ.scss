@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     padding: 100px 0;
-    height: max-content;
+    height: 55rem;
 
     &__inside {
         margin: 0 auto;
@@ -84,8 +84,15 @@
     }
 }
 
+@media (max-width: $xxl) {
+    .faq {
+        height: 60rem;
+    }
+}
+
 @media (max-width: $lg) {
     .faq {
+        height: 75rem;
         &__inside {
             width: 100%;
         }
@@ -94,8 +101,13 @@
 
 @media (max-width: $sm) {
     .faq {
+        height: 60rem;
+        padding: 0px;
+        
+
         &__inside {
             padding: 20px 12px;
+            margin-top: 30%;
         }
 
         &__title {

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState, Dispatch, SetStateAction, useEffect } from 'react'
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import PlusIcon from '../../public/affiliate/plus.svg';
@@ -8,18 +8,23 @@ import MinusIcon from '../../public/affiliate/minus.svg';
 interface FAQItemProps {
     title: string
     text: string
+    index: number
+    active: boolean
+    changeActiveRow: (index: null | number) => void;
 }
 
-function FAQItem({title, text}: FAQItemProps) {
-
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+function FAQItem({ title, text, active, changeActiveRow, index }: FAQItemProps) {
+    
+    const openHandler = () => {
+        if (active) { changeActiveRow(null) } else { changeActiveRow(index) }
+    }
 
     return (
         <div className="faq__item">
             <header className="faq__item-header">
-                <h2 className="faq__item-title" onClick={() => setIsOpen(!isOpen)}>{title}</h2>
-                <button onClick={() => setIsOpen(!isOpen)} className="faq__item-btn">
-                    {!isOpen ? (
+                <h2 className="faq__item-title" onClick={() => openHandler()}>{title}</h2>
+                <button onClick={() => openHandler()} className="faq__item-btn">
+                    {!active ? (
                         <Image src={PlusIcon} alt="plus" />
                     ) : (
                         <Image src={MinusIcon} alt="minus" />
@@ -27,13 +32,13 @@ function FAQItem({title, text}: FAQItemProps) {
 
                 </button>
             </header>
-            {isOpen ? (
+            {active ? (
                 <div
                     className='faq__item-body'
                 >
                     <motion.p
                         initial={{ opacity: 0, y: -30 }}
-                        whileInView={{ opacity: 1,  y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{
                             ease: "easeInOut",
