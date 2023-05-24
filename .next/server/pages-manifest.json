@@ -1,6 +1,11 @@
 {
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
+  "/about": "pages/about.html",
   "/_document": "pages/_document.js",
-  "/affiliate": "pages/affiliate.js"
+  "/_app": "pages/_app.js",
+  "/affiliate": "pages/affiliate.html",
+  "/home": "pages/home.html",
+  "/privacy": "pages/privacy.html",
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
 }
