@@ -8,7 +8,7 @@ import Galina from "../public/team/Galina.png";
 export const members = [
   {
     photo: Yakov,
-    name: "Yakov Litvinov",
+    name: "Jaska Litvinov",
     post: "CEO",
     description:
       "An engineer and entrepreneur from Finland. Led teams in the media, forestry and startup industries. He is responsible for partner relations, corporate processes, project's philosophy and project development control.",
@@ -32,7 +32,7 @@ export const members = [
   },
   {
     photo: Anton,
-    name: "Anton Tyatenkov",
+    name: "Anton Tyatenko",
     post: "CTO",
     description:
       "Experienced manager, led teams of up to 50 developers. Has founded two HR startups. Also he is a renowned professional in corporate data optimization. In the company he is engaged in service architecture, cybersecurity, and strategic development planning.",
