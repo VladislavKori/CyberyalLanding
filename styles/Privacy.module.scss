@@ -142,6 +142,11 @@
             display: none;
         }
     }
+
+    &__link {
+        color: #288BFF;
+        text-decoration: none;
+    }
 }
 
 @media (max-width: 1000px) {
