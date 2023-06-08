@@ -31,7 +31,7 @@ const featuresContent = [
   {
     icon: BarbellIcon,
     title: "Coaching",
-    text: "Improves skills, overcomes plateaus, enhances time management & mindset, boosts teamwork, provides game knowledge, and offers e-sports career guidance",
+    text: "Improve your or someone's skills, enhance time management & mindset, improve teamwork, provide game knowledge and offer eSports career guidance.",
   },
 ];
 
