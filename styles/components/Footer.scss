@@ -130,4 +130,31 @@
         justify-content: space-between;
         margin-top: 24px;
     }
+
+    &__field {
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+        }
+
+        & a {
+            text-decoration: none;
+        }
+
+        & .footer__menu-title {
+            margin: 0;
+        }
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+            fill: #6A6A6F;
+        }
+    }
 }

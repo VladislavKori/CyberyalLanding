@@ -2,11 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from "framer-motion";
 
-// components
-import Board from "../Board";
-
 // data
 import { features } from '@/data/features';
+
+// animations
+import { smoothFromBottom } from '@/data/animations';
 
 function Features() {
   return (
@@ -23,20 +23,20 @@ function Features() {
       </div>
       
       <div className="features__text-block">
-        <h1 className="features__title">Over 10,000 registrations in the first month! Experience the thrill of competition now</h1>
-        <h1 className="features__subtitle">Sign up Today!</h1>
+        <motion.h1 {...smoothFromBottom(1)} className="features__title">Over 10,000 registrations in the first month! Experience the thrill of competition now</motion.h1>
+        <motion.h1 {...smoothFromBottom(1)} className="features__subtitle">Sign up Today!</motion.h1>
         <span className="features__blur"></span>
       </div>
 
       <div className="features__list">
-        {features.map(item => (
-          <div className="features__item" key={item.id}>
+        {features.map((item, index) => (
+          <motion.div {...smoothFromBottom(1, index / 5)} className="features__item" key={item.id}>
             <div className="features__icon-wrapper">
               {item.icon()}
             </div>
             <h2 className="features__item-title">{item.title}</h2>
             <p className="features__item-text">{item.text}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

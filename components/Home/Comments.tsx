@@ -41,8 +41,6 @@ const breakpoints = {
 };
 
 export default function Comments() {
-
-    console.log(Array(5).fill(0))
     return (
         <div className="comments">
             <h1 className="comments__title">Learn how gamers use Cyberyal Platform</h1>

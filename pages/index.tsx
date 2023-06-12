@@ -1,19 +1,24 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/Elements/Header";
+import Footer from "@/components/Elements/Footer";
 import Head from "next/head";
 import Image from "next/image";
-import Socials from "@/components/Socials";
+import Socials from "@/components/Elements/Socials";
 import ComingSoon from "@/components/ComingSoon";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Home/Hero";
 import dynamic from "next/dynamic";
-import Affilate from "@/components/Affilate";
-import Board from "@/components/Board";
-import Features from "@/components/Features";
-import WhoAreWe from "@/components/WhoAreWe";
-import Required from "@/components/Required";
-import SocialNetworks from "@/components/Landing/SocialNetworks";
 
-const HeaderWithNoSSR = dynamic(() => import("@/components/Header"), {
+import Comments from "@/components/Home/Comments";
+import Games from "@/components/Home/Games";
+import Features from "@/components/Home/Features";
+import Affiliate from "@/components/Home/Affilate";
+import InfoPlate from "@/components/Home/InfoPlate";
+
+// images
+import InfoPlateImage1 from '@/public/infoplate/img1.png';
+import InfoPlateImage2 from '@/public/infoplate/img2.png';
+import InfoPlateImage3 from '@/public/infoplate/img3.png';
+
+const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
   ssr: false,
 });
 
@@ -76,29 +81,38 @@ export default function Home() {
       </Head>
 
       <main className="wrapper">
-        <HeaderWithNoSSR />
         <div className="content">
-          <Hero
-            modal_text={
-              "You are successfully created an account to participate in the Cyberyal Affilate program. Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards."
-            }
-            form_header={"Cyberyal ID"}
-            form_text={
-              "Challenge players of your own skill level in your preferred games. Participate in tournaments and secure your portion of rewards. Join now!"
-            }
-            form_button={"Create Cyberyal ID"}
-          />
+          <HeaderWithNoSSR />
+          <Hero />
           <Features />
-        </div>
+          <Games />
+          <InfoPlate 
+            title="Tournament — intense gaming showdown"
+            text={`Witness nail-biting battles, extraordinary strategies, and exceptional teamwork as players vie for the championship title.
 
-        <WhoAreWe />
+Enter the thrilling arena of high-stakes gaming, where competitors showcase their skills in popular titles. With an exciting lineup of matches and expert commentary, immerse yourself in each heart-pounding moment. Are you ready for the challenge?`}
+            img={InfoPlateImage1}
+          />
+          <InfoPlate 
+            title="Couching — elevate your gaming skills"
+            text={`Unlock your true potential with personalized coaching designed to elevate your gaming skills. 
 
-        <div className="content">
-          <Affilate />
-          <Required />
-          <SocialNetworks />
+Our expert coaches provide tailored strategies, in-depth analysis, and valuable insights to help you excel in your favorite games. Through focused sessions and constructive feedback, watch your abilities soar to new heights. Are you prepared to transform your gameplay?`}
+            img={InfoPlateImage2}
+            reverse={true}
+          />
+          <InfoPlate 
+            title="PvP — Compete, Conquer, Claim Rewards"
+            text={`Dive into exhilarating PvP action where you'll compete, conquer, and claim incredible rewards. 
+
+Challenge players from around the globe in thrilling matches that test your skills and strategic prowess. Prove your dominance across a variety of popular games and climb the ranks to earn your spot among the elite. Are you ready to conquer the arena and claim your rewards?`}
+            img={InfoPlateImage3}
+          />
+          <Comments />
+          <Socials />
+          <Affiliate />
+          <Footer />
         </div>
-        <Footer />
       </main>
     </>
   );

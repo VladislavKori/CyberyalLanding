@@ -3,8 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image';
 import { useRouter } from 'next/router'
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/components/Elements/Footer";
+import Header from "@/components/Elements/Header";
 
 import ArrowLeft from '@/public/common/ArrowLeft.svg';
 

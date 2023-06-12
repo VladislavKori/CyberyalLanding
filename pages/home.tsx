@@ -1,12 +1,13 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/Elements/Header";
+import Footer from "@/components/Elements/Footer";
 import Head from "next/head";
 import Image from "next/image";
-import Socials from "@/components/Socials";
+import Socials from "@/components/Elements/Socials";
 import ComingSoon from "@/components/ComingSoon";
 import Hero from "@/components/Hero";
 import dynamic from "next/dynamic";
-const HeaderWithNoSSR = dynamic(() => import("@/components/Header"), {
+import Games from "@/components/Home/Games";
+const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
   ssr: false,
 });
 

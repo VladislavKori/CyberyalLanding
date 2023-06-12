@@ -10,6 +10,12 @@ import TwitterLogo from '@/public/hero/TwitterLogo.svg';
 import FacebookLogo from '@/public/hero/FacebookLogo.svg';
 import ShareLogo from '@/public/hero/ShareLogo.svg';
 
+// data
+import { socials } from '@/data/socials'
+
+// animations
+import { smoothFromBottom, smoothShow } from '@/data/animations'
+
 interface InfoPlateProps {
     title: string
     text: string
@@ -34,20 +40,20 @@ function InfoPlate({ title, text, img, reverse = false }: InfoPlateProps) {
             className="infoplate"
             style={reverse ? {flexDirection: 'row-reverse'} : {flexDirection: 'row'}}
         >
-            <div className="infoplate__img-container">
+            <motion.div {...smoothShow(1)} className="infoplate__img-container">
                 <Image src={img} alt="img" />
-            </div>
+            </motion.div>
             <div className="infoplate__info">
-                <h1 className="infoplate__title">{title}</h1>
-                <p className="infoplate__text">{text}</p>
-                <div className="infoplate__button">
+                <motion.h1 {...smoothFromBottom(0.7)} className="infoplate__title">{title}</motion.h1>
+                <motion.p {...smoothFromBottom(0.7, 0.2)} className="infoplate__text">{text}</motion.p>
+                <motion.div {...smoothFromBottom(0.7, 0.4)} className="infoplate__button">
                     <Button />
-                </div>
-                <div className="infoplate__links">
-                    <SocialLink link="/" text="Tweet it" icon={TwitterLogo} />
-                    <SocialLink link="/" text="Share it" icon={FacebookLogo} />
+                </motion.div>
+                <motion.div {...smoothFromBottom(0.7, 0.5)} className="infoplate__links">
+                    <SocialLink link={socials.filter(item => item.title === "Twitter" )[0].link} text="Tweet it" icon={TwitterLogo} />
+                    <SocialLink link={socials.filter(item => item.title === "Facebook" )[0].link} text="Share it" icon={FacebookLogo} />
                     <SocialLink link="/" text="Repost it" icon={ShareLogo} />
-                </div>
+                </motion.div>
             </div>
         </div>
     )

@@ -1,19 +1,23 @@
 import React from 'react'
 import Image from 'next/image'
 import Button from '../UI/Button'
+import {motion} from 'framer-motion';
 
 // data
 import { games } from '@/data/games'
+
+// animations
+import { smoothFromBottom, smoothShow } from '@/data/animations';
 
 function Games() {
   return (
     <div className="games">
         <h1 className="games__title">Play your favorite games</h1>
         <div className="games__list">
-            {games.map(item => (
-                <div className="games__item" key={item.id}>
+            {games.map((item, index) => (
+                <motion.div {...smoothShow(0.8, index / 5)} className="games__item" key={item.id}>
                     <Image src={item.img} alt="game" />
-                </div>
+                </motion.div>
             ))}
         </div>
         <div className="games__proposal">

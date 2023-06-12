@@ -2,11 +2,10 @@ import React from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion'
 import ArrowRight from "@/public/assets/ArrowRight.svg";
-import Required from '../Required';
 import RequiredCard from '../Required/RequiredCard';
 
 import { partnerConditions } from '@/data/partner-conditions';
-import Button from '../Button';
+import Button from '@/components/UI/Button';
 
 const animation = (delay: number) => {
     return {

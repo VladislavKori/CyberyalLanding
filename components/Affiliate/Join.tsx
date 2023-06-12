@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion'
 
 import ArrowRight from "../../public/assets/ArrowRight.svg";
-import Button from '../Button';
+import Button from '@/components/UI/Button';
 
 const animation = {
     initial: { opacity: 0, y: 50 },

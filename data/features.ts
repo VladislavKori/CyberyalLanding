@@ -1,7 +1,7 @@
-import BarbellIcon from "@/public/assets/BarbellIcon.svg";
-import CupIcon from "@/public/assets/CupIcon.svg";
-import HandshakeIcon from "@/public/assets/HandshakeIcon.svg";
-import UsersIcon from "@/public/assets/UsersIcon.svg";
+import BarbellIcon from "@/public/features/BarbellIcon.svg";
+import CupIcon from "@/public/features/CupIcon.svg";
+import HandshakeIcon from "@/public/features/HandshakeIcon.svg";
+import UsersIcon from "@/public/features/UsersIcon.svg";
 
 export const features = [
     {

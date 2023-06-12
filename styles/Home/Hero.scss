@@ -34,21 +34,8 @@
     &__button {
         background: #288BFF;
         border-radius: 14px;
-        font-family: 'Montserrat';
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 28px;
-        color: #FFFFFF;
         padding: 16px 32px;
-        border: none;
-        cursor: pointer;
         margin-top: 48px;
-        transition: all 0.1s ease-in-out;
-
-        &:hover {
-            background: #1c67bd;
-            color: #dddddd;
-        }
     }
 
     &__left,
@@ -78,7 +65,7 @@
             position: absolute;
             z-index: 0;
             background: linear-gradient(88deg, #288BFF 1.72%, #FF28DD);
-            animation: rotateBg 8s linear 0s infinite;
+            animation: rotateBg 5s linear 0s infinite;
         }
 
         &-texts {

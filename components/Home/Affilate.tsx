@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from 'framer-motion'
 import { useRouter } from "next/router";
 import Button from "@/components/UI/Button";
+import { smoothShow } from "@/data/animations";
 
 function Affilate() {
   const router = useRouter();
@@ -25,14 +26,7 @@ function Affilate() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{
-        ease: "easeInOut",
-        duration: 0.4,
-        delay: 0.2,
-      }}
+      {...smoothShow(1)}
       className="affilate"
     >
       <div className="affilate__container">
@@ -40,9 +34,7 @@ function Affilate() {
         <p className="affilate__text">
           Join the ranks of those who are the first to discover opportunities Cyberyal - join our affililiate compaign, complete tasks and get bonuses
         </p>
-        <div className="affilate__button">
-          <Button />
-        </div>
+        <Button />
       </div>
     </motion.div>
   );

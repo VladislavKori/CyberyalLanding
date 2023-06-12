@@ -1,20 +1,16 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/Elements/Header";
+import Footer from "@/components/Elements/Footer";
 import Head from "next/head";
 import Image from "next/image";
-import Socials from "@/components/Socials";
-import ComingSoon from "@/components/ComingSoon";
-import Hero from "@/components/Hero";
+import Socials from "@/components/Elements/Socials";
 import dynamic from "next/dynamic";
-import Features from "@/components/Features";
 import AboutUs from "@/components/About/AboutUs";
 import ProblemsWeSolve from "@/components/About/ProblemsWeSolve";
 import OurTeam from "@/components/About/OurTeam";
 import RoadMap from "@/components/About/RoadMap";
 import BecomeAnInvestor from "@/components/About/BecomeAnInvestor";
 import ContactUs from "@/components/About/ContactUs";
-import Affilate from "@/components/Affilate";
-const HeaderWithNoSSR = dynamic(() => import("@/components/Header"), {
+const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
   ssr: false,
 });
 
@@ -74,11 +70,11 @@ export default function About() {
       </Head>
 
       <main className="wrapper">
-        <HeaderWithNoSSR />
         <div className="content">
+          <HeaderWithNoSSR />
           <AboutUs />
           <div className="about__gradient"></div>
-          <Features diraction="conversely" />
+          {/* <Features diraction="conversely" /> */}
           <Socials />
           <ProblemsWeSolve />
           <OurTeam />
@@ -86,9 +82,9 @@ export default function About() {
 
           <BecomeAnInvestor />
           <ContactUs />
-          <Affilate />
+          {/* <Affilate /> */}
+          <Footer />
         </div>
-        <Footer />
       </main>
     </>
   );

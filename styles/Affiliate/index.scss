@@ -5,6 +5,13 @@
 @import './AffiliateHowAffiliateWorks.scss';
 @import '../breakpoints';
 
+.affiliate__header-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+} 
+
 .affiliate-container {
     width: 1600px;
     margin: 0 auto;
