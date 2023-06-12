@@ -1,0 +1,133 @@
+.footer {
+
+    & hr {
+        border: 1px solid rgba(106, 106, 111, 0.4);
+        margin: 8.5px 0;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    &__logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1A1A22;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        transition: background .1s ease-in-out;
+
+        & svg {
+            width: 24px;
+            height: 24px;
+            fill: #6A6A6F;
+        }
+
+        &:hover {
+            background: #2c2c3a;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        column-gap: 30px;
+
+        &-title {
+            margin-bottom: 16px;
+            font-family: 'Nunito';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #6A6A6F;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+
+        &-links {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+        }
+    }
+
+    &__bottom {
+        margin: 32px 0;
+
+        &-links {
+            display: flex;
+            column-gap: 16px;
+        }
+    }
+
+    &__link {
+        font-family: 'Nunito';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: color .1s ease-in-out;
+
+        &:hover {
+            color: rgb(255, 255, 255, 0.6);
+        }
+    }
+
+    &__text {
+
+        &_gray {
+            font-family: 'Nunito';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #6A6A6F;
+        }
+
+        &_white {
+            font-family: 'Nunito';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+
+        &-cursive {
+            font-family: 'Nunito';
+            font-style: italic;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            color: #6A6A6F;
+        }
+    }
+
+    &__rights {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+    }
+}

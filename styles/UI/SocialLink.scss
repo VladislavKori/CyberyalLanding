@@ -1,0 +1,25 @@
+.socialLink {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+    width: max-content;
+    padding: 4px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .1s ease-in-out;
+
+    & p {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    &:hover {
+        background: #3a3a3a;
+    }
+}
