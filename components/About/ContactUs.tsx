@@ -119,11 +119,19 @@ function ContactUs() {
             onClick={() => setIsOpenCongrat(false)}
             className="modal__close"
           />
-          <div className="modal__content" style={{ textAlign: 'center' }}>
+          <div className="modal__content" style={{ textAlign: "center" }}>
             <h3 className="modal__title">Congratulations</h3>
-            <p className="modal__text">You are successful created an account to participate in the Cyberyal Affilate program.</p>
-            <p className="modal__text">Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards. </p>
-            <p className="modal__text">Thank you for your attention to our product</p>
+            <p className="modal__text">
+              You are successful created an account to participate in the
+              Cyberyal Affilate program.
+            </p>
+            <p className="modal__text">
+              Complete simple tasks and receive rewards! accomplish engaging and
+              easy tasks, and then collect your well-deserved rewards.{" "}
+            </p>
+            <p className="modal__text">
+              Thank you for your attention to our product
+            </p>
             <div
               style={{
                 width: "100%",
@@ -156,50 +164,73 @@ function ContactUs() {
             </p>
 
             <Input
-              {...register("name")}
+              id="name"
+              register={register}
               type="text"
-              className={`contactus__input ${errors.name ? "hero__section_2__subscribe__input_error" : ""
-                }`}
+              className={`contactus__input ${
+                errors.name ? "hero__section_2__subscribe__input_error" : ""
+              }`}
               placeholder="Enter your name"
               lable="Your Name"
             />
-            {errors.name ? <div className="modal__error-text"><div>{errors.name?.message || errors.message?.message}</div></div> : null}
+            {errors.name ? (
+              <div className="modal__error-text">
+                <div>{errors.name?.message || errors.message?.message}</div>
+              </div>
+            ) : null}
 
             <Input
-              {...register("email")}
+              id="email"
+              register={register}
               type="text"
-              className={`contactus__input ${errors.email ? "hero__section_2__subscribe__input_error" : ""
-                }`}
+              className={`contactus__input ${
+                errors.email ? "hero__section_2__subscribe__input_error" : ""
+              }`}
               placeholder="Enter your Email"
               lable="Your Email"
             />
-            {errors.email ? <div className="modal__error-text"><div>{errors.email?.message}</div></div> : null}
+            {errors.email ? (
+              <div className="modal__error-text">
+                <div>{errors.email?.message}</div>
+              </div>
+            ) : null}
 
             <Input
-              {...register("message")}
+              id="message"
+              register={register}
               type="text"
-              className={`contactus__input ${errors.message ? "hero__section_2__subscribe__input_error" : ""
-                }`}
+              className={`contactus__input ${
+                errors.message ? "hero__section_2__subscribe__input_error" : ""
+              }`}
               placeholder="Enter your message"
               lable="Message"
             />
-            {errors.message ? <div className="modal__error-text"><div>{errors.message?.message}</div></div> : null}
+            {errors.message ? (
+              <div className="modal__error-text">
+                <div>{errors.message?.message}</div>
+              </div>
+            ) : null}
 
             <label className="cidmodal__checkbox-lable contactus__checkbox">
               <input
                 {...register("privacy")}
                 type="checkbox"
-                className={`cidmodal__checkbox ${errors.email
-                  ? "hero__section_2__subscribe__checkbox_error"
-                  : ""
-                  }`}
+                className={`cidmodal__checkbox ${
+                  errors.email
+                    ? "hero__section_2__subscribe__checkbox_error"
+                    : ""
+                }`}
               />
-              I agree with the{" "}
+              I agree with the
               <Link href={"/privacy"} className="modal__link">
                 Privacy Policy
               </Link>
             </label>
-            {errors.message ? <div className="modal__error-text"><div>{errors.privacy?.message}</div></div> : null}
+            {errors.message ? (
+              <div className="modal__error-text">
+                <div>{errors.privacy?.message}</div>
+              </div>
+            ) : null}
 
             <button
               className="header__btn modal__btn cidmodal__btn contactus__btn"
@@ -211,7 +242,10 @@ function ContactUs() {
           </div>
         </motion.form>
 
-        <motion.div {...smoothFromBottom(0.4, 0.4)} className="contactus__image"></motion.div>
+        <motion.div
+          {...smoothFromBottom(0.4, 0.4)}
+          className="contactus__image"
+        ></motion.div>
       </div>
     </>
   );

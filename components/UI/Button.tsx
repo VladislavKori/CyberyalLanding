@@ -129,18 +129,17 @@ function Button({ className }: ButtonProps) {
           <div className="modal__content">
             <h3 className="modal__title">Cyberyal ID</h3>
             <p className="modal__text">
-              Challenge players of your own skill level in your preferred
-              games. Participate in tournaments and secure your portion of
-              rewards. Join now!
+              Challenge players of your own skill level in your preferred games.
+              Participate in tournaments and secure your portion of rewards.
+              Join now!
             </p>
             <form className="cidmodal__form" onSubmit={handleSubmit(onSubmit)}>
               <Input
                 {...register("email")}
                 type="text"
-                className={`cidmodal__input ${errors.email
-                  ? "hero__section_2__subscribe__input_error"
-                  : ""
-                  }`}
+                className={`cidmodal__input ${
+                  errors.email ? "hero__section_2__subscribe__input_error" : ""
+                }`}
                 placeholder="Enter your Email"
                 lable="Your Email"
               />
@@ -151,12 +150,13 @@ function Button({ className }: ButtonProps) {
                 <input
                   {...register("privacy")}
                   type="checkbox"
-                  className={`cidmodal__checkbox ${errors.email
-                    ? "hero__section_2__subscribe__checkbox_error"
-                    : ""
-                    }`}
+                  className={`cidmodal__checkbox ${
+                    errors.email
+                      ? "hero__section_2__subscribe__checkbox_error"
+                      : ""
+                  }`}
                 />
-                I agree with the{" "}
+                I agree with the
                 <Link href={"/privacy"} className="modal__link">
                   Privacy Policy
                 </Link>
@@ -201,11 +201,19 @@ function Button({ className }: ButtonProps) {
             onClick={() => setIsOpenCongrat(false)}
             className="modal__close"
           />
-          <div className="modal__content" style={{textAlign: 'center'}}>
+          <div className="modal__content" style={{ textAlign: "center" }}>
             <h3 className="modal__title">Congratulations</h3>
-            <p className="modal__text">You are successful created an account to participate in the Cyberyal Affilate program.</p>
-            <p className="modal__text">Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards. </p>
-            <p className="modal__text">Thank you for your attention to our product</p>
+            <p className="modal__text">
+              You are successful created an account to participate in the
+              Cyberyal Affilate program.
+            </p>
+            <p className="modal__text">
+              Complete simple tasks and receive rewards! accomplish engaging and
+              easy tasks, and then collect your well-deserved rewards.{" "}
+            </p>
+            <p className="modal__text">
+              Thank you for your attention to our product
+            </p>
             <div
               style={{
                 width: "100%",
