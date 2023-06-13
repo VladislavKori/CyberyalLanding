@@ -8,6 +8,9 @@ import { z } from "zod";
 import apiClient from "@/api/apiClient";
 import Modal from "react-modal";
 
+// components 
+import Input from './Input';
+
 // icons
 import CloseModalIcon from "@/public/assets/close_modal.svg";
 import ArrowRight from "@/public/assets/ArrowRight.svg";
@@ -131,8 +134,7 @@ function Button({ className }: ButtonProps) {
               rewards. Join now!
             </p>
             <form className="cidmodal__form" onSubmit={handleSubmit(onSubmit)}>
-              <p className="cidmodal__input-lable">Your Email</p>
-              <input
+              <Input
                 {...register("email")}
                 type="text"
                 className={`cidmodal__input ${errors.email
@@ -140,6 +142,7 @@ function Button({ className }: ButtonProps) {
                   : ""
                   }`}
                 placeholder="Enter your Email"
+                lable="Your Email"
               />
               <label
                 className="cidmodal__checkbox-lable"

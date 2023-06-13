@@ -28,7 +28,7 @@ export const members = [
     post: "CMO",
     description:
       "Head of marketing departments with ten years of experience. Launched startups in Russia, Georgia, and Germany. Has founded two advertising agencies and two charitable organizations. Responsible for advertising strategy and user experience in the company.",
-    linkedin: "https://t.me/kogankto",
+    telegram: "https://t.me/kogankto",
   },
   {
     photo: Anton,
@@ -52,7 +52,7 @@ export const members = [
     post: "Art Director",
     description:
       "An artist and designer with extensive experience. Engaged in the development of promotional materials and their control. Represents the interests of the company in the media environment.",
-    linkedin: "https://www.crunchbase.com/person/alexey-sychev",
+    crunchbase: "https://www.crunchbase.com/person/alexey-sychev",
   },
 ];
 

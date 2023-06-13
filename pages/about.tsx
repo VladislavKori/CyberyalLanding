@@ -4,15 +4,19 @@ import Head from "next/head";
 import Image from "next/image";
 import Socials from "@/components/Elements/Socials";
 import dynamic from "next/dynamic";
+
+const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
+  ssr: false,
+});
+
+// compoonents
+import Affilate from "@/components/Home/Affilate";
 import AboutUs from "@/components/About/AboutUs";
 import ProblemsWeSolve from "@/components/About/ProblemsWeSolve";
 import OurTeam from "@/components/About/OurTeam";
 import RoadMap from "@/components/About/RoadMap";
 import BecomeAnInvestor from "@/components/About/BecomeAnInvestor";
 import ContactUs from "@/components/About/ContactUs";
-const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
-  ssr: false,
-});
 
 export default function About() {
   return (
@@ -82,7 +86,7 @@ export default function About() {
 
           <BecomeAnInvestor />
           <ContactUs />
-          {/* <Affilate /> */}
+          <Affilate />
           <Footer />
         </div>
       </main>

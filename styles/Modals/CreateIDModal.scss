@@ -4,30 +4,6 @@
         margin-top: 24px;
     }
 
-    &__input {
-        border: 1px solid #494959 !important;
-        border-radius: 14px;
-        background: transparent;
-        margin-top: 12px;
-        padding: 14px 16px;
-        font-family: 'Nunito';
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        color: #fff;
-        width: 100%;
-        border: none;
-        outline: none;
-
-        &-lable {
-            font-family: 'Montserrat';
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 32px;
-            color: #FFFFFF;
-        }
-    }
-
     &__checkbox {
 
         &-lable {

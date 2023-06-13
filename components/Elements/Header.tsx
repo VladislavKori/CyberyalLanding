@@ -74,14 +74,11 @@ function Header() {
           </div>
         )}
         <button onClick={() => setBurgerOpen(!burgerIsOpen)} className="header__burger-btn">
-          <BurgerIcon />
+          {burgerIsOpen ? <CloseIcon style={{stroke: "#fff"}} /> : <BurgerIcon />}
         </button>
       </header>
-      <div onClick={() => setBurgerOpen(!burgerIsOpen)} className={burgerIsOpen ? "header__burger" : "header__burger header__burger_close"}>
-        <div className="header__burger-inner">
-          <button className="header__burger-close">
-            <CloseIcon />
-          </button>
+      <div className={burgerIsOpen ? "header__burger" : "header__burger header__burger_close"}>
+        <div className="header__burger-inner content">
           <Link
             className={`header__link ${currentRoute === "/about" ? "active_link" : ""
               }`}
@@ -96,7 +93,7 @@ function Header() {
           >
             Affiliate
           </Link>
-          <Button />
+          <Button className="header__burger-button" />
         </div>
       </div>
     </>

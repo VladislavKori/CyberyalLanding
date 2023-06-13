@@ -25,9 +25,9 @@ function FAQItem({ title, text, active, changeActiveRow, index }: FAQItemProps) 
                 <h2 className="faq__item-title" onClick={() => openHandler()}>{title}</h2>
                 <button onClick={() => openHandler()} className="faq__item-btn">
                     {!active ? (
-                        <Image src={PlusIcon} alt="plus" />
+                        <PlusIcon />
                     ) : (
-                        <Image src={MinusIcon} alt="minus" />
+                        <MinusIcon />
                     )}
 
                 </button>
