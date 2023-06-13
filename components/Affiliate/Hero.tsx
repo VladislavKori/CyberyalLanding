@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import { motion } from "framer-motion";
 
 import ArrowRight from "../../public/assets/ArrowRight.svg";
-import Button from '../Button';
+import Button from '@/components/UI/Button';
 
 const animation = (delay: number) => {
     return {

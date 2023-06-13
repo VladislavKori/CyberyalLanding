@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { ReactElement, ReactNode } from "react";
 
 interface RequiredCard {
   social?: string
-  icon: string
+  icon: any
   title: string
   text: string
 } 
@@ -10,7 +11,9 @@ interface RequiredCard {
 function RequiredCard({ social = "", icon, title, text}: RequiredCard) {
   return (
     <div className={`required__cards__card ${social}`}>
-      <Image className="required__icon" src={icon} alt={title} />
+      <div className="required__icon">
+        {icon()}
+      </div>
       <h4 className="required__title">{title}</h4>
       <p className="required__desc">{text}</p>
     </div>

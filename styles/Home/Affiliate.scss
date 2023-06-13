@@ -1,0 +1,73 @@
+@import '../breakpoints';
+
+.affilate {
+    margin: 100px 0;
+    background:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../../public/assets/Affilate.webp);
+    border-radius: 40px;
+    height: 552px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 600px;
+    }
+
+    &__header {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+    }
+
+    &__text {
+        font-family: 'Nunito';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: rgb(255, 255, 255, 0.8);
+        max-width: 70%;
+        margin-top: 20px;
+    }
+
+    &__button {
+        margin-top: 48px;
+        width: max-content;
+    }
+}
+
+
+@media (max-width: $lg) {
+    .affilate {
+        align-items: flex-end;
+        padding: 40px 0;
+
+        &__container {
+            width: 100%;
+        }
+
+        &__header {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        &__text {
+            margin-top: 12px;
+            font-size: 16px;
+            line-height: 24px;
+            max-width: none;
+        }
+    }
+}

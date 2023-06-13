@@ -20,39 +20,34 @@ function FAQItem({ title, text, active, changeActiveRow, index }: FAQItemProps) 
     }
 
     return (
-        <div className="faq__item">
-            <header className="faq__item-header">
-                <h2 className="faq__item-title" onClick={() => openHandler()}>{title}</h2>
-                <button onClick={() => openHandler()} className="faq__item-btn">
-                    {!active ? (
-                        <Image src={PlusIcon} alt="plus" />
-                    ) : (
-                        <Image src={MinusIcon} alt="minus" />
-                    )}
-
-                </button>
-            </header>
-            {active ? (
-                <div
-                    className='faq__item-body'
-                >
-                    <motion.p
-                        initial={{ opacity: 0, y: -30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{
-                            ease: "easeInOut",
-                            duration: 0.4,
-                            delay: 0.1,
-                        }}
-                        className='faq__item-text'
-                    >
-                        {text}
-                    </motion.p>
-                </div>
-            ) : null}
-        </div>
-    )
+      <div className="faq__item">
+        <header className="faq__item-header">
+          <h2 className="faq__item-title" onClick={() => openHandler()}>
+            {title}
+          </h2>
+          <button onClick={() => openHandler()} className="faq__item-btn">
+            {!active ? <PlusIcon /> : <MinusIcon />}
+          </button>
+        </header>
+        {active ? (
+          <div className="faq__item-body">
+            <motion.p
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                ease: "easeInOut",
+                duration: 0.4,
+                delay: 0.1,
+              }}
+              className="faq__item-text"
+            >
+              {text}
+            </motion.p>
+          </div>
+        ) : null}
+      </div>
+    );
 }
 
 export default FAQItem

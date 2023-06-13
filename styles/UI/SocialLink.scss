@@ -1,0 +1,50 @@
+@import '../breakpoints';
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+    width: max-content;
+    padding: 4px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .1s ease-in-out;
+
+    & p {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    & svg {
+        fill: #fff;
+    }
+
+    &:hover {
+        background: #3a3a3a;
+    }
+}
+
+@media (max-width: $xl) {
+    .socialLink  {
+        border: none;
+        padding: 0;
+
+        & p {
+            color: #6A6A6F;
+        }
+
+        & svg {
+            fill: #6A6A6F;
+        }
+
+        &:hover {
+            background: transparent;
+        }
+    }
+}

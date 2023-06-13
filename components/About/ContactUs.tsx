@@ -4,11 +4,17 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Link from "next/link";
-import ArrowRight from "../../public/assets/ArrowRight.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import close_modal from "../../public/assets/close_modal.svg";
+import Input from "../UI/Input";
+
+// icons
+import CloseModalIcon from "@/public/assets/close_modal.svg";
+import ArrowRight from "../../public/assets/ArrowRight.svg";
+
+// animations 
+import { smoothFromBottom } from "@/data/animations";
 
 function ContactUs() {
   const [utmParams, setUtmParams] = useState<any>({});
@@ -48,7 +54,9 @@ function ContactUs() {
     message: z.string().min(1, { message: "Please fill the form" }),
 
     privacy: z.literal(true, {
-      errorMap: () => ({ message: "You must accept Privacy Policy" }),
+      errorMap: () => ({
+        message: "You must accept Privacy Policy and Terms of use",
+      }),
     }),
   });
 
@@ -65,7 +73,6 @@ function ContactUs() {
   });
 
   const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
-    console.log(data);
     apiClient
       .post(`api/v1/mailer/set`, {
         email: data.email,
@@ -110,19 +117,19 @@ function ContactUs() {
         contentLabel="Example Modal"
       >
         <div className="modal">
-          <Image
+          <CloseModalIcon
             onClick={() => setIsOpenCongrat(false)}
             className="modal__close"
-            src={close_modal}
-            alt="so-icons"
           />
-          <div className="modal__content">
+          <div className="modal__content" style={{ textAlign: "center" }}>
             <h3 className="modal__title">Congratulations</h3>
             <p className="modal__text">
-              You are successfully created an account to participate in the
-              Cyberyal Affilate program. Complete simple tasks and receive
-              rewards! accomplish engaging and easy tasks, and then collect your
-              well-deserved rewards.
+              You are successful created an account to participate in the
+              Cyberyal Affilate program.
+            </p>
+            <p className="modal__text">
+              Complete simple tasks and receive rewards! accomplish engaging and
+              easy tasks, and then collect your well-deserved rewards.{" "}
             </p>
             <p className="modal__text">
               Thank you for your attention to our product
@@ -145,114 +152,109 @@ function ContactUs() {
           </div>
         </div>
       </Modal>
-      <div className="about_us">
+      <div className="contactus">
         <motion.form
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            ease: "easeInOut",
-            duration: 0.6,
-            delay: 0.6,
-          }}
+          className="contactus__form"
+          {...smoothFromBottom(0.4, 0.5)}
           onSubmit={handleSubmit(onSubmit)}
-          style={{ borderRadius: "20px" }}
         >
-          <div className="about_us_form" id="ref">
-            <h2 style={{ textAlign: "center" }}>Contact us</h2>
-            <p
-              className="hero__section_2__subscribe__text"
-              style={{
-                textAlign: "center",
-                opacity: "0.5",
-                marginBottom: "30px",
-              }}
-            >
+          <div className="contactus__inner" id="ref">
+            <h2 className="contactus__title">Contact us</h2>
+            <p className="contactus__subtitle">
               If you want to know more about investment opportunity or want to
               join the Cyberyal project as a partner
             </p>
 
-            <p className="hero__section_2__subscribe__email">Your Name</p>
-            <input
-              {...register("name")}
+            <Input
+              id="name"
+              register={register}
               type="text"
-              className={`hero__section_2__subscribe__input ${
-                errors.name ? "hero__section_2__subscribe__input_error" : ""
-              }`}
+              errors={errors.name}
               placeholder="Enter your name"
+              lable="Your Name"
             />
-            <p className="hero__section_2__subscribe__email">Your Email</p>
-            <input
-              {...register("email")}
+            {errors.name ? (
+              <div className="modal__error-text">
+                <div>{errors.name?.message || errors.message?.message}</div>
+              </div>
+            ) : null}
+
+            <Input
+              id="email"
+              register={register}
               type="text"
-              className={`hero__section_2__subscribe__input ${
-                errors.email ? "hero__section_2__subscribe__input_error" : ""
-              }`}
+              errors={errors.email}
+              className={`contactus__input`}
               placeholder="Enter your Email"
+              lable="Your Email"
             />
-            <p className="hero__section_2__subscribe__email">Message</p>
-            <input
-              {...register("message")}
+            {errors.email ? (
+              <div className="modal__error-text">
+                <div>{errors.email?.message}</div>
+              </div>
+            ) : null}
+
+            <Input
+              id="message"
+              register={register}
               type="text"
-              className={`hero__section_2__subscribe__input ${
-                errors.message ? "hero__section_2__subscribe__input_error" : ""
-              }`}
+              errors={errors.message}
               placeholder="Enter your message"
+              lable="Message"
             />
-            <div
-              className="hero__section_2__subscribe__input_text_error"
-              style={{ height: "70px" }}
-            >
-              {errors.email ||
-              errors.privacy ||
-              errors.name ||
-              errors.message ? (
-                <>
-                  <div>{errors.email?.message}</div>
-                  <div>{errors.name?.message || errors.message?.message}</div>
-                  <div>{errors.privacy?.message}</div>
-                </>
-              ) : (
-                ""
-              )}
-            </div>
-            <label className="hero__section_2__subscribe__privacy">
+            {errors.message ? (
+              <div className="modal__error-text">
+                <div>{errors.message?.message}</div>
+              </div>
+            ) : null}
+
+            <label className="cidmodal__checkbox-lable contactus__checkbox">
               <input
                 {...register("privacy")}
                 type="checkbox"
-                className={`hero__section_2__subscribe__checkbox ${
+                className={`cidmodal__checkbox ${
                   errors.email
                     ? "hero__section_2__subscribe__checkbox_error"
                     : ""
                 }`}
               />
-              I agree with the{" "}
-              <Link href={"/privacy"} className="privacy_link">
-                Privacy Policy
-              </Link>
-            </label>
-            <div style={{ width: "100%", marginTop: "auto" }}>
-              <button
-                className="hero__section_2__subscribe__button"
-                type="submit"
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  flexWrap: "wrap",
+                }}
               >
-                Send message <Image src={ArrowRight} alt="ArrowRight" />
-              </button>
-            </div>
+                I agree with the
+                <Link href={"/privacy"} className="modal__link">
+                  Privacy Policy
+                </Link>
+                and
+                <Link href={"/termsofuse"} className="modal__link">
+                  Terms of use
+                </Link>
+              </div>
+            </label>
+            {errors.privacy ? (
+              <div className="modal__error-text">
+                <div>{errors.privacy?.message}</div>
+              </div>
+            ) : null}
+
+            <button
+              className="header__btn modal__btn cidmodal__btn contactus__btn"
+              type="submit"
+            >
+              Send message
+              <ArrowRight className="modal__arrow-right" />
+            </button>
           </div>
         </motion.form>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            ease: "easeInOut",
-            duration: 0.4,
-            delay: 0.4,
-          }}
-          className="about_us_image"
-          style={{ borderRadius: "20px" }}
+          {...smoothFromBottom(0.4, 0.4)}
+          className="contactus__image"
         ></motion.div>
       </div>
     </>

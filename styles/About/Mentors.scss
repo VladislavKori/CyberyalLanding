@@ -1,0 +1,45 @@
+@import '../breakpoints';
+.mentors_card {
+    
+    height: 728px;
+    background: #1A1A22;
+    border-radius: 20px;
+}
+.mentor_container {
+    display: flex; 
+    margin: 20px 0px; 
+    gap: 15px;
+    width:100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.mentors_image {
+    width:350px;
+    height: 300px
+}
+
+.mentor_container::-webkit-scrollbar {
+    display: none;
+  }
+
+.mentors_desc {
+    font-family: 'Nunito';
+    width: 340px;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+
+opacity: 0.5;
+}
+
+@media (max-width: $md) {
+    
+    .mentors_card {
+    
+        // height: 100%;
+    }
+}
