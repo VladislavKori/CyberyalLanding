@@ -30,58 +30,26 @@ export default function TermsOfUse() {
           <h1 className="privacy__title">Terms of Use</h1>
           {/* <p className="privacy__default-text">Last revised: 1.04., 2023</p> */}
 
-          <div className="privacy__text-block">
-            <h2 className="privacy__min-title">1. Introduction</h2>
-            <p className="privacy__default-text">
-              This document sets out the terms and conditions on which PlayStar
-              Platform OÜ (referred to as "Company") will provide services and
-              products to you through the website cyberyal.com (hereinafter the
-              "Platform").
-            </p>
-            <p className="privacy__default-text">
-              In this document, references to we/our/us are to Company. Any
-              references to Customer/you/your are references to you as a
-              customer of Company and user of our services and product.
-            </p>
-            <p className="privacy__default-text">
-              By signing up to use an account through the Platform or any of our
-              associated websites, you agree that you have read, understood, and
-              accept all of the terms and conditions contained in this Agreement
-              and you have familiarized yourself with our Privacy and Cookie
-              Policies. This Agreement will govern the use of the services and
-              the products provided by the Company. By using the Platform, you
-              agree to be bound by the terms and conditions set out on herein
-              (the "Agreement"). This Agreement will come into effect when you
-              confirm that you agree to it.
-            </p>
-            <p className="privacy__default-text">
-              IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, AS WELL AS THE
-              TERMS OF USE, YOU MAY NOT USE ANY SERVICE ON THE PLATFORM.
-            </p>
-            <p className="privacy__default-text">
-              The Platform integrates various third-party games (“Supported
-              Games”) within its interface. The list of supported games is
-              available here{" "}
-              <a className="privacy__default-text privacy__link" href="/">
-                Cyberyal | Take your gaming to the next level
-              </a>
-              . You acknowledge and agree that each Supported Game is governed
-              by its own separate terms and conditions, as established by the
-              respective game developers or publishers. By accessing and playing
-              any of the Supported Games, you are bound to comply with the
-              applicable terms and conditions. The Platform is not responsible
-              for the content, functionality, or any aspect of the Supported
-              Games.
-            </p>
-            <p className="privacy__default-text">
-              Supported Games are skill-based. They either have no randomisation
-              or they utilize a Pseudo Random Number Generator (pRNG) to ensure
-              the randomness of certain game elements, where applicable. This
-              pRNG is specifically designed to provide a fair and skill-based
-              gaming experience, consistent with the non-random nature of the
-              Supported Games.
-            </p>
-          </div>
+    return (
+        <>
+            <Head>
+                <title>Cyberyal</title>
+                <meta name="description" content="Terms of Use" />
+                <link rel="icon" href="/logo.svg" />
+            </Head>
+            <main className="wrapper">
+                <div className="privacy__wrapper">
+                    <Header />
+                    <div className="privacy__header">
+                        <button className="privacy__goback" onClick={() => router.back()}>
+                            <ArrowLeft className="privacy__goback-icon" />
+                            <h3 className="privacy__goback-text">Back</h3>
+                        </button>
+                    </div>
+                    <h1 className="privacy__title">
+                        Terms of Use
+                    </h1>
+                    <p className="privacy__default-text">Last revised: 1.04., 2023</p>
 
           <div className="privacy__text-block">
             <h2 className="privacy__min-title">2. User Content</h2>
@@ -767,69 +735,73 @@ export default function TermsOfUse() {
             </p>
           </div>
 
-          <div className="privacy__text-block">
-            <h2 className="privacy__min-title">
-              16. Governing law and Legal disputes
-            </h2>
-            <p className="privacy__default-text">
-              Any matters arising from this Agreement shall be governed by and
-              interpreted in accordance with the substantive laws of Estonia.
-            </p>
-            <p className="privacy__default-text">
-              If a dispute arises between you and the Company, you are strongly
-              encouraged to first contact us directly to seek a resolution.
-            </p>
-            <p className="privacy__default-text">
-              In case of failure to settle any dispute through negotiations, any
-              disputes which may arise out of or in connection with this
-              Agreement shall be settled by the Harju County Court.
-            </p>
-            <p className="privacy__default-text">
-              All private customers are entitled to address a competent
-              supervisory authority, which is the Consumer Protection and
-              Technical Regulatory Authority at Endla 10A, 10122 Tallinn,
-              e-mail: info@ttja.ee.
-            </p>
-            <p className="privacy__default-text">
-              In order to resolve disputes, you, as a private customer, may
-              address the Consumer Disputes Committee. The Consumer Disputes
-              Committee is authorized to resolve disputes arising from contracts
-              entered into between purchasers and sellers that the parties have
-              failed to resolve by way of negotiations. Further information on
-              the resolution of complaints is available at{" "}
-              <a
-                className="privacy__default-text privacy__link"
-                href="https://ttja.ee/en/consumer-disputes-committee"
-              >
-                https://ttja.ee/en/consumer-disputes-committee
-              </a>
-              .
-            </p>
-            <p className="privacy__default-text">
-              To protect you in case of fraudulent authorisation of your credit
-              card or in other cases you are in duly justified cases of breaches
-              of your consumer rights you can initiate a formal payment dispute
-              with your bank or payment service provider (chargeback). You will
-              need to contact your bank or payment service provider for more
-              details on how their particular process works.
-            </p>
-            <p className="privacy__default-text">
-              When a chargeback procedure is started, the Company is no longer
-              able to resolve the dispute with you directly, and any refund you
-              receive will come from your bank or payment service provider and
-              not from the Company.
-            </p>
-            <p className="privacy__default-text">
-              If you act as a legal person or a sole proprietor, the provisions
-              relating to special consumer rights shall not apply to the
-              purchase contract (the so-called consumer protection provisions).
-            </p>
-          </div>
-        </div>
-        <div className="privacy__footer-wrapper">
-          <Footer />
-        </div>
-      </main>
-    </>
-  );
+                    <div className="privacy__text-block">
+                        <h2 className="privacy__min-title">16. General</h2>
+                        <p className="privacy__default-text">
+                            We grant you a limited, non-exclusive, non-transferable license, subject to the terms of this Agreement, to access and use the Platform, and related content, materials, information (collectively, the "Content") solely for approved purposes as permitted by us from time to time. Any other use of the Platform or Content is expressly prohibited and all other rights, titles, and interests in the Platform or Content is exclusively the property of Company and its licensors. You agree not to copy, transmit, distribute, sell, license, reverse engineer, modify, publish, or participate in the transfer or sale of, create derivative works from, or in any other way exploit any of the Content, in whole or in part.
+                        </p>
+                        <p className="privacy__default-text">
+                            The logos and trademarks displayed on the Platform are registered marks and intellectual property rights of the Company. You may not copy, imitate or use them without our prior written consent or any third party's copyright, trade secret, patent or other intellectual property rights, or rights of publicity or privacy.
+                        </p>
+                        <p className="privacy__default-text">
+                            We may periodically update these terms of this Agreement. The changes will be deemed to have been accepted if you continue to use the Platform. If you do not accept the change, you must contact us to terminate the Agreement. You may terminate the Agreement immediately and free of charge with effect at any time.
+                        </p>
+                        <p className="privacy__default-text">
+                            We may make all other amendments to the Agreement by posting the revised Terms (Agreement) on the Platform, indicating when the revised Agreement becomes effective. Although we will endeavour to provide you with advance notice where possible, where lawful we may indicate that the revised Agreement shall be effective immediately and if you do not agree with any such modification, you should close your account and cease using the Platform.
+                        </p>
+                        <p className="privacy__default-text">
+                            Any information acquired about other customers through the Platform should be treated as confidential and only used it in connection with the Platform. Such information may only be used to the extent reasonably necessary to carry out a transaction and other functions reasonably incidental thereto such as support, reconciliation and accounting unless you receive the other customer’s express consent to do so. You may not send unsolicited communications to another customer through the Platform, unless expressly allowed by the other customer.
+                        </p>
+                        <p className="privacy__default-text">
+                            This Agreement comprises the entire understanding and agreement between you and Company as to the subject matter hereof, and it supersedes any and all prior discussions, agreements and understandings of any kind (including without limitation any prior versions of this Agreement) between you and the Company.
+                        </p>
+                        <p className="privacy__default-text">
+                            Section headings in this Agreement are for convenience only and shall not govern the meaning or interpretation of any provision of this Agreement.
+                        </p>
+                        <p className="privacy__default-text">
+                            If any provision of this Agreement is determined to be invalid or unenforceable under any applicable law, this will not affect the validity of any other provision. If any provision is found unenforceable, the unenforceable provision will be severed, and the remaining provisions will be enforced.
+                        </p>
+                        <p className="privacy__default-text">
+                            We may not always strictly enforce our rights under this Agreement. If we do choose not to enforce our rights at any time, it shall not be seen as renouncement of such right.
+                        </p>
+                        <p className="privacy__default-text">
+                            All provisions of this Agreement which by their nature extend beyond the expiration or termination of this Agreement will continue to be binding and operate after the termination or expiration of this Agreement.
+                        </p>
+                    </div>
+
+                    <div className="privacy__text-block">
+                        <h2 className="privacy__min-title">16. Governing law and Legal disputes</h2>
+                        <p className="privacy__default-text">
+                            Any matters arising from this Agreement shall be governed by and interpreted in accordance with the substantive laws of Estonia.
+                        </p>
+                        <p className="privacy__default-text">
+                            If a dispute arises between you and the Company, you are strongly encouraged to first contact us directly to seek a resolution.
+                        </p>
+                        <p className="privacy__default-text">
+                            In case of failure to settle any dispute through negotiations, any disputes which may arise out of or in connection with this Agreement shall be settled by the Harju County Court.
+                        </p>
+                        <p className="privacy__default-text">
+                            All private customers are entitled to address a competent supervisory authority, which is the Consumer Protection and Technical Regulatory Authority at Endla 10A, 10122 Tallinn, e-mail: info@ttja.ee.
+                        </p>
+                        <p className="privacy__default-text">
+                            In order to resolve disputes, you, as a private customer, may address the Consumer Disputes Committee. The Consumer Disputes Committee is authorized to resolve disputes arising from contracts entered into between purchasers and sellers that the parties have failed to resolve by way of negotiations. Further information on the resolution of complaints is available at <a className="privacy__default-text privacy__link" href="https://ttja.ee/en/consumer-disputes-committee">https://ttja.ee/en/consumer-disputes-committee</a>.
+                        </p>
+                        <p className="privacy__default-text">
+                            To protect you in case of fraudulent authorisation of your credit card or in other cases you are in duly justified cases of breaches of your consumer rights you can initiate a formal payment dispute with your bank or payment service provider (chargeback). You will need to contact your bank or payment service provider for more details on how their particular process works.
+                        </p>
+                        <p className="privacy__default-text">
+                            When a chargeback procedure is started, the Company is no longer able to resolve the dispute with you directly, and any refund you receive will come from your bank or payment service provider and not from the Company.
+                        </p>
+                        <p className="privacy__default-text">
+                            If you act as a legal person or a sole proprietor, the provisions relating to special consumer rights shall not apply to the purchase contract (the so-called consumer protection provisions).
+                        </p>
+                    </div>
+
+                </div>
+                <div className="privacy__footer-wrapper">
+                    <Footer />
+                </div>
+            </main>
+        </>
+    );
 }
