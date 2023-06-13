@@ -23,6 +23,7 @@ function Header() {
   }
 
   const isPrivacy = router.pathname === "/privacy";
+  const isTermsOfUse = router.pathname === "/termsofuse";
   const isHome = router.pathname === "/home";
   const isLanding = router.pathname === "/";
 
@@ -59,7 +60,7 @@ function Header() {
             </Link>
           </nav>
         </div>
-        {isPrivacy ? (
+        {isPrivacy || isTermsOfUse ? (
           ""
         ) : isHome ? (
           <button className="header__btn" onClick={handleClick}>
