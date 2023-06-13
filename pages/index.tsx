@@ -85,14 +85,14 @@ export default function Home() {
           <Hero />
           <Features />
           <Games />
-          <InfoPlate 
+          <InfoPlate
             title="Tournament — intense gaming showdown"
             text={`Witness nail-biting battles, extraordinary strategies, and exceptional teamwork as players vie for the championship title.
 
 Enter the thrilling arena of high-stakes gaming, where competitors showcase their skills in popular titles. With an exciting lineup of matches and expert commentary, immerse yourself in each heart-pounding moment. Are you ready for the challenge?`}
             img={InfoPlateImage1}
           />
-          <InfoPlate 
+          <InfoPlate
             title="Couching — elevate your gaming skills"
             text={`Unlock your true potential with personalized coaching designed to elevate your gaming skills. 
 
@@ -100,14 +100,14 @@ Our expert coaches provide tailored strategies, in-depth analysis, and valuable 
             img={InfoPlateImage2}
             reverse={true}
           />
-          <InfoPlate 
+          <InfoPlate
             title="PvP — Compete, Conquer, Claim Rewards"
             text={`Dive into exhilarating PvP action where you'll compete, conquer, and claim incredible rewards. 
 
 Challenge players from around the globe in thrilling matches that test your skills and strategic prowess. Prove your dominance across a variety of popular games and climb the ranks to earn your spot among the elite. Are you ready to conquer the arena and claim your rewards?`}
             img={InfoPlateImage3}
           />
-          <Comments />
+          {/* <Comments /> */}
           <Socials />
           <Affiliate />
           <Footer />
