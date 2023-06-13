@@ -57,6 +57,8 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
   const {
     register,
     handleSubmit,
+    reset,
+    formState,
     formState: { errors },
   } = useForm<ValidationSchema>({
     resolver: zodResolver(validationSchema),
@@ -76,6 +78,12 @@ function Hero({ modal_text, form_header, form_text, form_button }: any) {
         console.log(error.message);
       });
   };
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ email: "" });
+    }
+  }, [formState, reset]);
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const customStyles = {
