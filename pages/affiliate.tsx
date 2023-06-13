@@ -81,10 +81,12 @@ export default function Affiliate() {
 
         <div className="affiliate__container-for-shy">
           <div className="affiliate__bg-shy"></div>
-          <HowAffiliateWorks />
-          <PartnerConditions />
+            <HowAffiliateWorks />
+            <PartnerConditions />
         </div>
-        <AboutAffiliate />
+        <div className="affiliate-container">
+          <AboutAffiliate />
+        </div>
         <FAQ />
         <div className="affiliate-container">
           <Join />

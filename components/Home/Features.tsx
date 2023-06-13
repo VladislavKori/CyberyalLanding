@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { motion } from "framer-motion";
 
 // data
-import { features } from '@/data/features';
+import { advantages } from '@/data/advantages';
 
 // animations
 import { smoothFromBottom } from '@/data/animations';
@@ -29,7 +29,7 @@ function Features() {
       </div>
 
       <div className="features__list">
-        {features.map((item, index) => (
+        {advantages.map((item, index) => (
           <motion.div {...smoothFromBottom(1, index / 5)} className="features__item" key={item.id}>
             <div className="features__icon-wrapper">
               {item.icon()}

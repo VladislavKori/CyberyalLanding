@@ -3,7 +3,7 @@ import CupIcon from "@/public/features/CupIcon.svg";
 import HandshakeIcon from "@/public/features/HandshakeIcon.svg";
 import UsersIcon from "@/public/features/UsersIcon.svg";
 
-export const features = [
+export const advantages = [
     {
       id: 0,
       icon: UsersIcon,

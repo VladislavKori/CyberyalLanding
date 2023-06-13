@@ -23,6 +23,7 @@ function Header() {
   }
 
   const isPrivacy = router.pathname === "/privacy";
+  const isTermsOfUse = router.pathname === "/termsofuse";
   const isHome = router.pathname === "/home";
   const isLanding = router.pathname === "/";
 
@@ -59,7 +60,7 @@ function Header() {
             </Link>
           </nav>
         </div>
-        {isPrivacy ? (
+        {isPrivacy || isTermsOfUse ? (
           ""
         ) : isHome ? (
           <button className="header__btn" onClick={handleClick}>
@@ -74,28 +75,28 @@ function Header() {
           </div>
         )}
         <button onClick={() => setBurgerOpen(!burgerIsOpen)} className="header__burger-btn">
-          {burgerIsOpen ? <CloseIcon style={{stroke: "#fff"}} /> : <BurgerIcon />}
+          {burgerIsOpen ? <CloseIcon style={{ stroke: "#fff" }} /> : <BurgerIcon />}
         </button>
-      </header>
-      <div className={burgerIsOpen ? "header__burger" : "header__burger header__burger_close"}>
-        <div className="header__burger-inner content">
-          <Link
-            className={`header__link ${currentRoute === "/about" ? "active_link" : ""
-              }`}
-            href="/about"
-          >
-            About
-          </Link>
-          <Link
-            className={`header__link ${currentRoute === "/affiliate" ? "active_link" : ""
-              }`}
-            href="/affiliate"
-          >
-            Affiliate
-          </Link>
-          <Button className="header__burger-button" />
+        <div className={burgerIsOpen ? "header__burger" : "header__burger header__burger_close"}>
+          <div className="header__burger-inner content">
+            <Link
+              className={`header__link ${currentRoute === "/about" ? "active_link" : ""
+                }`}
+              href="/about"
+            >
+              About
+            </Link>
+            <Link
+              className={`header__link ${currentRoute === "/affiliate" ? "active_link" : ""
+                }`}
+              href="/affiliate"
+            >
+              Affiliate
+            </Link>
+            <Button className="header__burger-button" />
+          </div>
         </div>
-      </div>
+      </header>
     </>
   );
 }

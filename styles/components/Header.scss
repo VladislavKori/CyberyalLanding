@@ -95,7 +95,7 @@
 
     &__burger {
         position: absolute;
-        top: 1;
+        top: 100%;
         right: 0;
         z-index: 2;
         width: 100%;
@@ -104,6 +104,7 @@
         transition: all .4s ease-in-out;
         border-top: 1px solid #EAECF0;
         border-bottom: 1px solid #EAECF0;
+        transform: translateY(-10%);
 
         &_close {
             top: -100%;

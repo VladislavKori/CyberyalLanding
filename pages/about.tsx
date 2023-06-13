@@ -17,6 +17,7 @@ import OurTeam from "@/components/About/OurTeam";
 import RoadMap from "@/components/About/RoadMap";
 import BecomeAnInvestor from "@/components/About/BecomeAnInvestor";
 import ContactUs from "@/components/About/ContactUs";
+import Advantages from "@/components/About/Advantages";
 
 export default function About() {
   return (
@@ -78,7 +79,7 @@ export default function About() {
           <HeaderWithNoSSR />
           <AboutUs />
           <div className="about__gradient"></div>
-          {/* <Features diraction="conversely" /> */}
+          <Advantages />
           <Socials />
           <ProblemsWeSolve />
           <OurTeam />

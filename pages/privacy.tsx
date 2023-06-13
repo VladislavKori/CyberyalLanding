@@ -446,7 +446,9 @@ export default function Privacy() {
             </p>
           </div>
         </div>
-        <Footer />
+        <div className="privacy__footer-wrapper">
+          <Footer />
+        </div>
       </main>
     </>
   );
