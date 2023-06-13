@@ -9,7 +9,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/GameController.49c3455a.svg","height":64,"width":64,"blurWidth":0,"blurHeight":0});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/GameController.5397e3fa.svg","height":64,"width":64,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 

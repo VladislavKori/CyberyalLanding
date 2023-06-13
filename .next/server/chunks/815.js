@@ -9,7 +9,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Discord.b18da5bb.svg","height":35,"width":46,"blurWidth":0,"blurHeight":0});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Discord.ed696e3c.svg","height":35,"width":46,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 
@@ -19,7 +19,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Facebook.ac550321.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Facebook.4c905e93.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 
@@ -29,7 +29,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Twitch.fed70e4e.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Twitch.e00ae7d6.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 
@@ -39,7 +39,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Twitter.888a428e.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Twitter.6f223576.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 
@@ -49,7 +49,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/VK.bdbd0520.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/VK.5145c66c.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 
@@ -59,7 +59,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Youtube.0d99d468.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/Youtube.59fd5faa.svg","height":48,"width":49,"blurWidth":0,"blurHeight":0});
 
 /***/ }),
 

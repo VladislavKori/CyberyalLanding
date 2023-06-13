@@ -32,14 +32,8 @@ function BecomeAnInvestor() {
             Become an investor
           </h2>
           <p className="investor_text">
-            We view ourselves as a loyal and reliable partner and strive to meet
-            the expectations of those who trust us. Investing into Cyberyal
-            platform is not only an opportunity to join the board of owners of a
-            fast growing company in a steadily growing market, it is also an
-            access to a well established team of experienced professionals and
-            young talents. After launching the Cyberyal platform our team will
-            continue to release products, scaling the company by covering new
-            topics and features.
+            We view ourselves as a loyal and reliable partner and strive to meet the expectations of those who trust us.<br />
+            Investing into Cyberyal platform is an opportunity to join a fast growing company in a steadily growing market, it is also an access to a well established team of experienced professionals and young talents.
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <a href="https://drive.google.com/uc?export=download&id=1iC1dAVcJYtyNK18TAhlSlBdk5f7ajDxR">

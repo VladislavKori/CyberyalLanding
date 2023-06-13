@@ -249,7 +249,7 @@ const featuresContent = [
     {
         icon: _public_assets_BarbellIcon_svg__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z,
         title: "Coaching",
-        text: "Improves skills, overcomes plateaus, enhances time management & mindset, boosts teamwork, provides game knowledge, and offers e-sports career guidance"
+        text: "Improve your or someone's skills, enhance time management & mindset, improve teamwork, provide game knowledge and offer eSports career guidance."
     }
 ];
 function Features({ diraction ="default"  }) {
