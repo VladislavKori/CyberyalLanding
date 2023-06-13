@@ -20,12 +20,13 @@
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 1
         }
     }
 
     &__text {
         position: relative;
-        z-index: 2;
+        z-index: 1;
         flex-basis: 48%;
 
         &__title {
@@ -225,6 +226,8 @@
     }
 
     &__arrow {
+        width: 24px;
+        height: 24px;
 
         &_reverse {
             transform: rotateZ(180deg);
@@ -325,13 +328,6 @@
     justify-content: center;
     align-items: center;
     width: 520px;
-
-
-
-    background: url(../public/assets/birds.png);
-    background-size: cover;
-    border-radius: 40px;
-
 }
 
 .about_us_form {

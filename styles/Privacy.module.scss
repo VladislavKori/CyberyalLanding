@@ -1,3 +1,5 @@
+@import './breakpoints';
+
 .privacy {
     &__title {
         font-family: 'Montserrat';
@@ -33,10 +35,14 @@
 
     &__wrapper {
         width: 850px;
-        margin-top: 126px;
         padding: 0 75px;
         display: flex;
         flex-direction: column;
+    }
+
+    &__footer-wrapper {
+        margin-top: 100px;
+        padding: 0 75px;
     }
 
     &__text-block {
@@ -59,7 +65,7 @@
         background: none;
         border: none;
         cursor: pointer;
-
+        margin-top: 32px;
         margin-bottom: 64px;
 
         &-icon {
@@ -198,9 +204,28 @@
     }
 }
 
+@media (max-width: $xl) {
+    .privacy {
+
+        &__wrapper,
+        &__footer-wrapper {
+            width: 768px;
+            margin: 0 auto;
+        }
+
+        &__footer-wrapper {
+            margin-top: 80px;
+        }
+    }
+}
+
 // for wrapper
-@media (max-width: 600px) {
-    .privacy__wrapper {
-        margin-top: 80px !important;
+@media (max-width: $md) {
+    .privacy {
+        &__wrapper,
+        &__footer-wrapper {
+            width: 100%;
+            padding: 0 16px;
+        }
     }
 }

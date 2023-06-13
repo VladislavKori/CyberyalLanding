@@ -35,7 +35,7 @@ function ProblemsWeSolve() {
             {ProblemsList.map((el, index) => (
               <React.Fragment key={index}>
                 <div className="problems_list_item">
-                  <Image src={el.icon} alt="icon" width={48} />
+                  {el.icon()}
                   <p>{el.text}</p>
                 </div>
               </React.Fragment>

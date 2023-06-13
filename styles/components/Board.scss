@@ -1,0 +1,85 @@
+@import '../breakpoints';
+
+.board {
+    background: #1A1A22;
+    border-radius: 40px;
+    padding: 48px 24px;
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        color: #FFFFFF;
+
+        margin-top: 12px;
+    }
+
+    &__text {
+        font-family: 'Nunito';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+
+        margin-top: 20px;
+        max-width: 70%;
+    }
+
+    &__over-title {
+        background: #494959;
+        border-radius: 40px;
+        padding: 4px 12px;
+        width: max-content;
+
+        & p {
+            font-family: 'Nunito';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #288BFF;
+        }
+    }
+}
+
+@media (max-width: $xl) {
+    .board {
+        &__text {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .board {
+        padding: 24px 12px;
+
+        &__over-title {
+            width: 100%;
+            background: none;
+            display: flex;
+            justify-content: center;
+
+            & p {
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 32px;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        &__text {
+            max-width: 100%;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            margin-top: 12px;
+        }
+    }
+}

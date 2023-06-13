@@ -3,8 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image';
 import { useRouter } from 'next/router'
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/components/Elements/Footer";
+import Header from "@/components/Elements/Header";
 
 import ArrowLeft from '@/public/common/ArrowLeft.svg';
 
@@ -20,15 +20,11 @@ export default function TermsOfUse() {
                 <link rel="icon" href="/logo.svg" />
             </Head>
             <main className="wrapper">
-                <Header />
                 <div className="privacy__wrapper">
+                    <Header />
                     <div className="privacy__header">
                         <button className="privacy__goback" onClick={() => router.back()}>
-                            <Image
-                                className="privacy__goback-icon"
-                                src={ArrowLeft}
-                                alt="arrow-left"
-                            />
+                            <ArrowLeft className="privacy__goback-icon" />
                             <h3 className="privacy__goback-text">Back</h3>
                         </button>
                     </div>
@@ -390,7 +386,9 @@ export default function TermsOfUse() {
                     </div>
 
                 </div>
-                <Footer />
+                <div className="privacy__footer-wrapper">
+                    <Footer />
+                </div>
             </main>
         </>
     );

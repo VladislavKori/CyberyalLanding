@@ -1,0 +1,116 @@
+@import '../breakpoints';
+
+.socials {
+    margin: 100px 0;
+    position: relative;
+    z-index: 2;
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    &__list {
+        margin-top: 64px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        gap: 16px;
+    }
+
+    &__item {
+        background: #1A1A22;
+        border-radius: 20px;
+        padding: 16px;
+        flex: 1;
+
+        &:hover {
+            box-shadow: 0 0 10px 0px rgba(256, 256, 256, 0.1);
+        }
+    }
+
+    &__card {
+        text-decoration: none;
+
+        & svg {
+            width: 48px;
+            height: 48px;
+            fill: #fff;
+        }
+
+        &-info {
+            margin-top: 38px;
+        }
+
+        &-title {
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #FFFFFF;
+        }
+
+        &-text {
+            font-family: 'Nunito';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #FFFFFF;
+            max-width: 80%;
+            margin-top: 8px;
+        }
+    }
+}
+
+@media (max-width: $xl) {
+    .socials {
+
+        &__list {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: $lg) {
+    .socials {
+
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        &__list {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        &__card {
+
+            &-title {
+                font-size: 20px;
+                line-height: 32px;
+            }
+
+            &-text {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            & svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
