@@ -66,7 +66,9 @@ function Button({ className }: ButtonProps) {
       message: "You entered your email incorrectly",
     }),
     privacy: z.literal(true, {
-      errorMap: () => ({ message: "You must accept Privacy Policy" }),
+      errorMap: () => ({
+        message: "You must accept Privacy Policy and Terms of use",
+      }),
     }),
   });
 
@@ -75,7 +77,9 @@ function Button({ className }: ButtonProps) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<ValidationSchema>({
     resolver: zodResolver(validationSchema),
   });
@@ -97,7 +101,11 @@ function Button({ className }: ButtonProps) {
         // setIsOpenCongrat(true);
       });
   };
-
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ email: "" });
+    }
+  }, [formState, reset]);
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [modalCongratIsOpen, setIsOpenCongrat] = React.useState(false);
   const customStyles = {
@@ -135,11 +143,10 @@ function Button({ className }: ButtonProps) {
             </p>
             <form className="cidmodal__form" onSubmit={handleSubmit(onSubmit)}>
               <Input
-                {...register("email")}
+                id="email"
+                register={register}
                 type="text"
-                className={`cidmodal__input ${
-                  errors.email ? "hero__section_2__subscribe__input_error" : ""
-                }`}
+                errors={errors.email}
                 placeholder="Enter your Email"
                 lable="Your Email"
               />
@@ -156,10 +163,23 @@ function Button({ className }: ButtonProps) {
                       : ""
                   }`}
                 />
-                I agree with the
-                <Link href={"/privacy"} className="modal__link">
-                  Privacy Policy
-                </Link>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  I agree with the
+                  <Link href={"/privacy"} className="modal__link">
+                    Privacy Policy
+                  </Link>
+                  and
+                  <Link href={"/termsofuse"} className="modal__link">
+                    Terms of use
+                  </Link>
+                </div>
               </label>
 
               {/* Error Output */}

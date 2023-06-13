@@ -3,7 +3,7 @@
 .input {
 
     & input {
-        border: 1px solid #494959 !important;
+        border: 1px solid #494959;
         border-radius: 14px;
         background: transparent;
         padding: 14px 16px;
@@ -13,7 +13,7 @@
         line-height: 28px;
         color: #fff;
         width: 100%;
-        border: none;
+        // border: none;
         outline: none;
     }
 

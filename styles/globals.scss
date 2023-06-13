@@ -32,6 +32,10 @@ body,
     margin: 0 auto;
 }
 
+.input_error {
+    border: 1px solid #fd6565 !important;
+}
+
 @media (max-width: $xxl) {
     .content {
         width: 1150px;

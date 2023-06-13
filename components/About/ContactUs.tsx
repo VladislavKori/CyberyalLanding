@@ -54,7 +54,9 @@ function ContactUs() {
     message: z.string().min(1, { message: "Please fill the form" }),
 
     privacy: z.literal(true, {
-      errorMap: () => ({ message: "You must accept Privacy Policy" }),
+      errorMap: () => ({
+        message: "You must accept Privacy Policy and Terms of use",
+      }),
     }),
   });
 
@@ -167,9 +169,7 @@ function ContactUs() {
               id="name"
               register={register}
               type="text"
-              className={`contactus__input ${
-                errors.name ? "hero__section_2__subscribe__input_error" : ""
-              }`}
+              errors={errors.name}
               placeholder="Enter your name"
               lable="Your Name"
             />
@@ -183,9 +183,8 @@ function ContactUs() {
               id="email"
               register={register}
               type="text"
-              className={`contactus__input ${
-                errors.email ? "hero__section_2__subscribe__input_error" : ""
-              }`}
+              errors={errors.email}
+              className={`contactus__input`}
               placeholder="Enter your Email"
               lable="Your Email"
             />
@@ -199,9 +198,7 @@ function ContactUs() {
               id="message"
               register={register}
               type="text"
-              className={`contactus__input ${
-                errors.message ? "hero__section_2__subscribe__input_error" : ""
-              }`}
+              errors={errors.message}
               placeholder="Enter your message"
               lable="Message"
             />
@@ -221,12 +218,25 @@ function ContactUs() {
                     : ""
                 }`}
               />
-              I agree with the
-              <Link href={"/privacy"} className="modal__link">
-                Privacy Policy
-              </Link>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  flexWrap: "wrap",
+                }}
+              >
+                I agree with the
+                <Link href={"/privacy"} className="modal__link">
+                  Privacy Policy
+                </Link>
+                and
+                <Link href={"/termsofuse"} className="modal__link">
+                  Terms of use
+                </Link>
+              </div>
             </label>
-            {errors.message ? (
+            {errors.privacy ? (
               <div className="modal__error-text">
                 <div>{errors.privacy?.message}</div>
               </div>

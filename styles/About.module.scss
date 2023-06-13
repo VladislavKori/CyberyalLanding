@@ -570,6 +570,15 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .ourteam {
+        &__description {
+   
+            height: 250px;
+
+        }
+    }
+}
 @media (max-width: 576px) {
     .ourteam {
         &__slider {

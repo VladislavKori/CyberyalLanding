@@ -12,18 +12,33 @@ function Socials() {
       <h1 className="socials__title">Our social networks</h1>
       <ul className="socials__list">
         {socials.map((item, index) => (
-          <motion.li {...smoothShow(0.5, index / 5)} className="socials__item socials__item_discord">
-            <a
-              className="socials__card"
-              href="https://discord.gg/chjDVWAbBU"
+          <motion.li
+            {...smoothShow(0.5, index / 5)}
+            className="socials__item socials__item_discord"
+          >
+            <Link
+              href={item.link}
               target="_blank"
+              style={{ textDecoration: "none" }}
             >
-              {item.icon()}
-              <div className="socials__card-info">
-                <h2 className="socials__card-title">{item.title}</h2>
-                <p className="socials__card-text">{item.text}</p>
+              <div className="socials__card" style={{ padding: "16px" }}>
+                <div
+                // className={`socials__icon ${
+                //   item.title === "Facebook"
+                //     ? "facebook"
+                //     : item.title === "Twitter"
+                //     ? "twitter"
+                //     : ""
+                // }`}
+                >
+                  {item.icon()}
+                </div>
+                <div className="socials__card-info">
+                  <h2 className="socials__card-title">{item.title}</h2>
+                  <p className="socials__card-text">{item.text}</p>
+                </div>
               </div>
-            </a>
+            </Link>
           </motion.li>
         ))}
       </ul>

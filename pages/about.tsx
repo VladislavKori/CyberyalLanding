@@ -18,6 +18,7 @@ import RoadMap from "@/components/About/RoadMap";
 import BecomeAnInvestor from "@/components/About/BecomeAnInvestor";
 import ContactUs from "@/components/About/ContactUs";
 import Advantages from "@/components/About/Advantages";
+import Mentors from "@/components/About/Mentors";
 
 export default function About() {
   return (
@@ -83,6 +84,7 @@ export default function About() {
           <Socials />
           <ProblemsWeSolve />
           <OurTeam />
+          <Mentors />
           <RoadMap />
 
           <BecomeAnInvestor />
