@@ -10,6 +10,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "@/components/UI/Button";
 
+// icons
+import BurgerIcon from '@/public/header/burger.svg';
+import CloseIcon from '@/public/assets/close_modal.svg';
+
 
 function Header() {
 
@@ -24,6 +28,8 @@ function Header() {
 
 
   const currentRoute = router.pathname;
+
+  const [burgerIsOpen, setBurgerOpen] = useState<boolean>(false);
 
   const handleClick = () => element?.scrollIntoView();
 
@@ -67,7 +73,32 @@ function Header() {
             <Button />
           </div>
         )}
+        <button onClick={() => setBurgerOpen(!burgerIsOpen)} className="header__burger-btn">
+          <BurgerIcon />
+        </button>
       </header>
+      <div onClick={() => setBurgerOpen(!burgerIsOpen)} className={burgerIsOpen ? "header__burger" : "header__burger header__burger_close"}>
+        <div className="header__burger-inner">
+          <button className="header__burger-close">
+            <CloseIcon />
+          </button>
+          <Link
+            className={`header__link ${currentRoute === "/about" ? "active_link" : ""
+              }`}
+            href="/about"
+          >
+            About
+          </Link>
+          <Link
+            className={`header__link ${currentRoute === "/affiliate" ? "active_link" : ""
+              }`}
+            href="/affiliate"
+          >
+            Affiliate
+          </Link>
+          <Button />
+        </div>
+      </div>
     </>
   );
 }

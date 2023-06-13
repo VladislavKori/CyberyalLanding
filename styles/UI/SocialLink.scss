@@ -1,3 +1,5 @@
+@import '../breakpoints';
+
 .socialLink {
     display: flex;
     align-items: center;
@@ -19,7 +21,30 @@
         color: #FFFFFF;
     }
 
+    & svg {
+        fill: #fff;
+    }
+
     &:hover {
         background: #3a3a3a;
+    }
+}
+
+@media (max-width: $xl) {
+    .socialLink  {
+        border: none;
+        padding: 0;
+
+        & p {
+            color: #6A6A6F;
+        }
+
+        & svg {
+            fill: #6A6A6F;
+        }
+
+        &:hover {
+            background: transparent;
+        }
     }
 }

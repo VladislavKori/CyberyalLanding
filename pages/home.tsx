@@ -3,8 +3,8 @@ import Footer from "@/components/Elements/Footer";
 import Head from "next/head";
 import Image from "next/image";
 import Socials from "@/components/Elements/Socials";
-import ComingSoon from "@/components/ComingSoon";
-import Hero from "@/components/Hero";
+// import ComingSoon from "@/components/ComingSoon";
+// import Hero from "@/components/Hero";
 import dynamic from "next/dynamic";
 import Games from "@/components/Home/Games";
 const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
@@ -75,7 +75,7 @@ export default function Home() {
       <main className="wrapper">
         <HeaderWithNoSSR />
         <div className="content">
-          <Hero
+          {/* <Hero
             modal_text={
               "You are successfully created an account to participate in the Cyberyal Affilate program. Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards."
             }
@@ -84,9 +84,9 @@ export default function Home() {
               "Join the number of those who will be the first to know about our launch - subscribe to our email newsletter and do not miss the chance to get nice bonuses"
             }
             form_button={"Subscribe"}
-          />
+          /> */}
           <Socials />
-          <ComingSoon />
+          {/* <ComingSoon /> */}
         </div>
         <Footer />
       </main>

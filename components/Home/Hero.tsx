@@ -54,7 +54,7 @@ function Hero() {
       {notifyIsOpen ? (
         <motion.div {...smoothFromTop(1)} className="hero__notify">
           <div className="hero__notify-inner">
-            <CubokIcon />
+            <CubokIcon className="hero__notify-icon" />
             <div className="hero__notify-texts">
               <h2 className="hero__notify-title">Register for your welcome tournament right now</h2>
               <p className="hero__notify-subtitle">Join us now and be the first to know about new tournaments! Play and reach new heights with our platform.</p>

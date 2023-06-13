@@ -3,7 +3,6 @@ import Footer from "@/components/Elements/Footer";
 import Head from "next/head";
 import Image from "next/image";
 import Socials from "@/components/Elements/Socials";
-import ComingSoon from "@/components/ComingSoon";
 import Hero from "@/components/Home/Hero";
 import dynamic from "next/dynamic";
 

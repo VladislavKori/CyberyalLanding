@@ -1,3 +1,5 @@
+@import '../breakpoints';
+
 .affilate {
     margin: 100px 0;
     background:
@@ -42,5 +44,30 @@
     &__button {
         margin-top: 48px;
         width: max-content;
+    }
+}
+
+
+@media (max-width: $lg) {
+    .affilate {
+        align-items: flex-end;
+        padding: 40px 0;
+
+        &__container {
+            width: 100%;
+        }
+
+        &__header {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        &__text {
+            margin-top: 12px;
+            font-size: 16px;
+            line-height: 24px;
+            max-width: none;
+        }
     }
 }

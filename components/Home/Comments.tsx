@@ -19,19 +19,19 @@ import { comments } from "@/data/comments";
 // for sliders
 const breakpoints = {
     320: {
-        slidesPerView: 1.3,
+        slidesPerView: 1.1,
         spaceBetween: 24,
     },
     740: {
-        slidesPerView: 2.2,
+        slidesPerView: 2,
         spaceBetween: 20,
     },
     815: {
-        slidesPerView: 2.5,
+        slidesPerView: 2,
         spaceBetween: 24,
     },
     1050: {
-        slidesPerView: 2.5,
+        slidesPerView: 2,
         spaceBetween: 30,
     },
     1350: {
@@ -80,12 +80,12 @@ export default function Comments() {
                         </React.Fragment>
                     ))}
             </Swiper>
-            <div className="ourteam__slider-controllers">
-                <button id="switch-prev" className="ourteam__switch">
-                    <SliderArrow className="ourteam__arrow" />
+            <div className="comments__controllers">
+                <button id="switch-prev" className="comments__switch">
+                    <SliderArrow className="comments__arrow" />
                 </button>
-                <button id="switch-next" className="ourteam__switch">
-                    <SliderArrow className="ourteam__arrow ourteam__arrow_reverse" />
+                <button id="switch-next" className="comments__switch">
+                    <SliderArrow className="comments__arrow comments__arrow_reverse" />
                 </button>
             </div>
         </div>

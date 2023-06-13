@@ -1,3 +1,5 @@
+@import '../breakpoints';
+
 .hero {
     height: 85vh;
     display: flex;
@@ -118,5 +120,78 @@
 
     100% {
         transform: rotateZ(360deg);
+    }
+}
+
+@media (max-width: $xl) {
+    .hero {
+        &__right {
+            & img {
+                width: 375px;
+                height: 375px;
+            }
+        }
+
+        &__button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .hero {
+        height: 100%;
+
+        &__content {
+            flex-direction: column-reverse;
+        }
+
+        &__right img {
+            width: 343px;
+            height: 343px;
+        }
+
+        &__notify {
+
+            &-icon {
+                display: none;
+            }
+
+            &-title {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            &-subtitle {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 12px;
+        }
+
+        &__button {
+            margin-top: 36px;
+        }
+        
+        &__links {
+            margin-top: 20px;
+        }
+
+        &__link-list {
+            column-gap: 0px;
+            justify-content: space-between;
+        }
     }
 }

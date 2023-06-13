@@ -1,3 +1,5 @@
+@import '../breakpoints';
+
 .games {
     margin: 100px 0;
 
@@ -13,8 +15,9 @@
 
     &__list {
         flex: 1;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
         margin-top: 64px;
     }
@@ -43,6 +46,56 @@
         }
     }
 
+    &__slider,
+    &__slider-controllers {
+        display: none !important;
+    }
+
+    &__slider {
+        margin-top: 24px;
+
+        &-controllers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 12px;
+            margin-top: 12px;
+        }
+    }
+
+    &__switch {
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: 0.571429px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__arrow {
+        height: 13px;
+        width: 13px;
+
+        &_reverse {
+            transform: rotateZ(180deg);
+        }
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 11.4402px;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &__proposal {
         margin-top: 48px;
         display: flex;
@@ -56,6 +109,66 @@
             font-size: 20px;
             line-height: 28px;
             color: rgb(255, 255, 255, 0.8);
+        }
+    }
+}
+
+@media (max-width: $xl) {
+    .games {
+
+        &__list {
+            width: 100%;
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        &__item {
+            width: 374px;
+            height: 410px;
+        }
+
+        &__proposal {
+            flex-direction: column;
+            row-gap: 20px;
+
+            &-text {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .games {
+
+        &__slider,
+        &__slider-controllers {
+            display: flex !important;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        &__proposal {
+            row-gap: 12px;
+            margin-top: 12px;
+
+            &-text {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            & button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }
