@@ -45,36 +45,40 @@ function Header() {
           </Link>
           <nav className="header__navbar">
             <Link
-              className={`header__link ${currentRoute === "/about" ? "active_link" : ""
-                }`}
+              className={`header__link ${
+                currentRoute === "/about" ? "active_link" : ""
+              }`}
               href="/about"
             >
               About
             </Link>
             <Link
-              className={`header__link ${currentRoute === "/affiliate" ? "active_link" : ""
-                }`}
+              className={`header__link ${
+                currentRoute === "/affiliate" ? "active_link" : ""
+              }`}
               href="/affiliate"
             >
               Affiliate
             </Link>
           </nav>
         </div>
-        {isPrivacy || isTermsOfUse ? (
-          ""
-        ) : isHome ? (
-          <button className="header__btn" onClick={handleClick}>
-            Subscribe
-          </button>
-        ) : (
-          <div className="header__btns">
-            {/* <button className="header__btn header__btn_empty">
+        <div className="header__btn_container">
+          {isPrivacy || isTermsOfUse ? (
+            ""
+          ) : isHome ? (
+            <button className="header__btn" onClick={handleClick}>
+              Subscribe
+            </button>
+          ) : (
+            <div className="header__btns">
+              {/* <button className="header__btn header__btn_empty">
               Login
             </button> */}
-            <Button />
-          </div>
-        )}
-        <button onClick={() => setBurgerOpen(!burgerIsOpen)} className="header__burger-btn">
+              <Button />
+            </div>
+          )}
+        </div>
+        {/* <button onClick={() => setBurgerOpen(!burgerIsOpen)} className="header__burger-btn">
           {burgerIsOpen ? <CloseIcon style={{ stroke: "#fff" }} /> : <BurgerIcon />}
         </button>
         <div className={burgerIsOpen ? "header__burger" : "header__burger header__burger_close"}>
@@ -95,7 +99,7 @@ function Header() {
             </Link>
             <Button className="header__burger-button" />
           </div>
-        </div>
+        </div> */}
       </header>
     </>
   );

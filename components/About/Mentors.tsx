@@ -28,7 +28,7 @@ function Mentors() {
               The chairman of the company with over then 20 years of business
               experience in USA, Estonia and Finland. Has a high level of
               managing people and influence in his business area. In the company
-              he is also a reliable mentor and investor;
+              he is also a reliable mentor and investor.
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ function Mentors() {
               Peter Vesterbacka
             </h3>
             <p className="mentors_desc">
-              Entrepreneur, marketer, programmer, and philanthropist. Marketing
+              Entrepreneur, marketer, programmer and philanthropist. Marketing
               director of Rovio and founder of the Slush startup conference.
               Peter launched the educational initiative Fun Academy Future
               Astronauts, participated in the creation of FinEst Tunnel and a

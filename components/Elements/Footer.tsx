@@ -20,9 +20,9 @@ function Footer() {
           <div className="footer__logo">
             <Logo />
           </div>
-          <p className="footer__text-cursive">
+          {/* <p className="footer__text-cursive">
             “All tools for boost your gaming skills”
-          </p>
+          </p> */}
           <div className="footer__socials">
             <a
               className="footer__social"
@@ -74,7 +74,7 @@ function Footer() {
             </div>
           </div> */}
           <div className="footer__block">
-            <div className="footer__field">
+            {/* <div className="footer__field">
               <div className="footer__field-header">
                 <PhoneIcon className="footer__field-icon" />
                 <p className="footer__menu-title">Phone</p>
@@ -85,7 +85,7 @@ function Footer() {
               >
                 {commonInfo.phone}
               </a>
-            </div>
+            </div> */}
             <div className="footer__field">
               <div className="footer__field-header">
                 <MailIcon className="footer__field-icon" />
@@ -102,11 +102,11 @@ function Footer() {
         </div>
       </div>
       <div className="footer__bottom">
-        <p className="footer__text_gray">
+        {/* <p className="footer__text_gray">
           * Our platform's services constitute 3 percent of the tournament prize
           pool. We provide flexible tournament conditions and are ready to work
           with you to make your tournament a success
-        </p>
+        </p> */}
         <hr />
         <p className="footer__text_gray">
           Cyberyal is an independent entity that is not affiliated or endorsed
@@ -121,11 +121,11 @@ function Footer() {
           in-game skills and provide gifts of in-game items.
         </p>
         <div className="footer__rights">
-          <p className="footer__text_white">
+          {/* <p className="footer__text_white">
             © 2023 All rights reserved CYBERYAL LTD 25 Martiou, 27 D. Michael
             Tower, flat/office 105A, Egkomi, 2408 Nicosia, Amsterdam Reg.No. ΗΕ
             416048
-          </p>
+          </p> */}
           <div className="footer__bottom-links">
             <Link className="footer__link" href={"/privacy"}>
               Privacy Policy

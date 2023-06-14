@@ -138,12 +138,15 @@
 
         &__btns,
         &__navbar {
-            display: none;
+            // display: none;
         }
 
         &__burger-btn {
             display: inherit;
         }
+    }
+    .header__btn_container {
+        display: none;
     }
 }
 

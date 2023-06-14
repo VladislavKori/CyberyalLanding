@@ -1,21 +1,21 @@
 {
   "about.tsx -> @/components/Elements/Header": {
-    "id": 9116,
+    "id": 2126,
     "files": [
-      "static/chunks/858.6292ff7d366b9b84.js"
+      "static/chunks/323.f0f613cf3c5e4f09.js"
     ]
   },
   "home.tsx -> @/components/Elements/Header": {
-    "id": 9116,
+    "id": 2126,
     "files": [
       "static/chunks/42-55a95cc4d8cca6cd.js",
-      "static/chunks/116.a2be60e3502f0d83.js"
+      "static/chunks/126.50980d0668d902ed.js"
     ]
   },
   "index.tsx -> @/components/Elements/Header": {
-    "id": 9116,
+    "id": 2126,
     "files": [
-      "static/chunks/858.6292ff7d366b9b84.js"
+      "static/chunks/323.f0f613cf3c5e4f09.js"
     ]
   }
 }

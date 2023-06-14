@@ -50,14 +50,18 @@ function Hero() {
 
   return (
     <div className="hero">
-
       {notifyIsOpen ? (
         <motion.div {...smoothFromTop(1)} className="hero__notify">
           <div className="hero__notify-inner">
             <CubokIcon className="hero__notify-icon" />
             <div className="hero__notify-texts">
-              <h2 className="hero__notify-title">Register for your welcome tournament right now</h2>
-              <p className="hero__notify-subtitle">Join us now and be the first to know about new tournaments! Play and reach new heights with our platform.</p>
+              <h2 className="hero__notify-title">
+                Register for your welcome tournament right now
+              </h2>
+              <p className="hero__notify-subtitle">
+                Join us now and be the first to know about new tournaments! Play
+                and reach new heights with our platform.
+              </p>
             </div>
             <button className="hero__notify-close" onClick={closeNotifyHandler}>
               <CloseIcon />
@@ -68,8 +72,19 @@ function Hero() {
 
       <div className="hero__content">
         <div className="hero__left">
-          <motion.h1 {...smoothFromBottom(0.8)} className="hero__title">Play competitive games and unlock rewards</motion.h1>
-          <motion.p {...smoothFromBottom(0.8, 0.3)} className="hero__text hero__subtitle">Boost your gaming on our platform, offering top games, a lively community, & skill growth. Join thrilling online contests & tackle exhilarating challenges!</motion.p>
+          <motion.h1 {...smoothFromBottom(0.8)} className="hero__title">
+            Our mission
+          </motion.h1>
+          <motion.p
+            {...smoothFromBottom(0.8, 0.3)}
+            className="hero__text hero__subtitle"
+          >
+            is to give an opportunity to affordable monetization in gaming
+            industry, available to everyone. We are changing the perception of
+            gaming from a futile pastime, attracting new talent to eSports, and
+            helping individuals unleash their potential who have not yet found
+            their calling in other areas.
+          </motion.p>
           <motion.div {...smoothFromBottom(0.8, 0.5)}>
             <Button className="hero__button" />
           </motion.div>
@@ -80,18 +95,20 @@ function Hero() {
       </div>
 
       <div className="hero__links">
-        <motion.p {...smoothFromLeft(1)} className="hero__text">Compete in 1vs1 ranked matches with players all over the world</motion.p>
+        <motion.p {...smoothFromLeft(1)} className="hero__text">
+          Compete in 1vs1 ranked matches with players all over the world
+        </motion.p>
         <ul className="hero__link-list">
           <motion.div {...smoothFromLeft(0.5, 0.4)}>
             <SocialLink
-              link={socials.filter(item => item.title === "Twitter")[0].link}
+              link={socials.filter((item) => item.title === "Twitter")[0].link}
               text="Tweet it"
               icon={TwitterLogo}
             />
           </motion.div>
           <motion.div {...smoothFromLeft(0.5, 0.2)}>
             <SocialLink
-              link={socials.filter(item => item.title === "Facebook")[0].link}
+              link={socials.filter((item) => item.title === "Facebook")[0].link}
               text="Share it"
               icon={FacebookLogo}
             />
