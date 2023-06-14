@@ -470,7 +470,14 @@
     }
 }
 
+.roadmap__img_mob {
+    display:none;
+}
+
 @media (max-width: 992px) {
+    .roadmap__img_mob {
+        display:block;
+    }
     .about_us {
 
         display: flex;
