@@ -12,7 +12,7 @@ function Mentors() {
             <Image
               src={mentor1}
               alt="Viljar Annerviek"
-              style={{ borderRadius: "20px" }}
+              style={{ borderRadius: "20px", objectFit: "cover" }}
               className="mentors_image"
             />
             <h3
@@ -37,7 +37,7 @@ function Mentors() {
             <Image
               src={mentor2}
               alt="Peter Vesterbacka"
-              style={{ borderRadius: "20px" }}
+              style={{ borderRadius: "20px", objectFit: "cover" }}
               className="mentors_image"
             />
             <h3
