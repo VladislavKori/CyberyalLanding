@@ -151,50 +151,6 @@ function Footer() {
                                                 className: "footer__link",
                                                 href: "/affiliate",
                                                 children: "Affiliate"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                className: "footer__link",
-                                                href: "/support",
-                                                children: "Support"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                className: "footer__link",
-                                                href: "/promotion",
-                                                children: "Promotion"
-                                            })
-                                        ]
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                className: "footer__block",
-                                children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                                        className: "footer__menu-title",
-                                        children: "Company"
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                        className: "footer__block-links",
-                                        children: [
-                                            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                className: "footer__link",
-                                                href: "/branding",
-                                                children: "Branding"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                className: "footer__link",
-                                                href: "/partners",
-                                                children: "Partners"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                className: "footer__link",
-                                                href: "/contactus",
-                                                children: "Contact us"
-                                            }),
-                                            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
-                                                className: "footer__link",
-                                                href: "/career",
-                                                children: "Career"
                                             })
                                         ]
                                     })
