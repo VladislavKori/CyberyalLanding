@@ -5,20 +5,20 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Modal from "react-modal";
-import React, { useEffect, useState } from "react";
-import { motion } from 'framer-motion'
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 // utils
 import apiClient from "@/api/apiClient";
 
-// images 
-import BrilliantImg from '@/public/hero/brilliant.png';
-import TwitterLogo from '@/public/hero/TwitterLogo.svg';
-import FacebookLogo from '@/public/hero/FacebookLogo.svg';
-import ShareLogo from '@/public/hero/ShareLogo.svg';
-import CubokIcon from '@/public/hero/cubok.svg';
-import CloseIcon from '@/public/hero/close.svg';
+// images
+import BrilliantImg from "@/public/hero/brilliant.png";
+import TwitterLogo from "@/public/hero/TwitterLogo.svg";
+import FacebookLogo from "@/public/hero/FacebookLogo.svg";
+import ShareLogo from "@/public/hero/ShareLogo.svg";
+import CubokIcon from "@/public/hero/cubok.svg";
+import CloseIcon from "@/public/hero/close.svg";
 import SocialLink from "../UI/SocialLink";
 
 // data
@@ -26,26 +26,51 @@ import { socials } from "@/data/socials";
 import Button from "../UI/Button";
 
 // animation
-import { smoothFromBottom, smoothFromLeft, smoothFromTop, smoothShow } from "@/data/animations";
+import {
+  smoothFromBottom,
+  smoothFromLeft,
+  smoothFromTop,
+  smoothShow,
+} from "@/data/animations";
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  TwitterShareButton,
+} from "react-share";
 
 function Hero() {
   const [notifyIsOpen, setNotifyOpen] = useState<boolean>(false);
 
   // check cookie previos page load
   useEffect(() => {
-    const name = "notifyIsClosed"
-    var match = Object.fromEntries(document.cookie.split('; ').map(v => v.split(/=(.*)/s).map(decodeURIComponent)))
+    const name = "notifyIsClosed";
+    var match = Object.fromEntries(
+      document.cookie
+        .split("; ")
+        .map((v) => v.split(/=(.*)/s).map(decodeURIComponent))
+    );
     if (match.hasOwnProperty("notifyIsClosed") && match.notifyIsClosed) {
-      setNotifyOpen(false)
+      setNotifyOpen(false);
     } else {
-      setNotifyOpen(true)
+      setNotifyOpen(true);
     }
-  }, [])
+  }, []);
 
   // handler for close notification, also it set cookie
   const closeNotifyHandler = () => {
     document.cookie = "notifyIsClosed=true";
-    setNotifyOpen(false)
+    setNotifyOpen(false);
+  };
+
+  const [copySuccess, setCopySuccess] = useState("");
+  // const textAreaRef = useRef(null);
+
+  async function copyToClip() {
+    await navigator.clipboard.writeText(location.href);
+    setCopySuccess("Copied");
+    setTimeout(() => {
+      setCopySuccess("");
+    }, 2000);
   }
 
   return (
@@ -100,21 +125,55 @@ function Hero() {
         </motion.p>
         <ul className="hero__link-list">
           <motion.div {...smoothFromLeft(0.5, 0.4)}>
-            <SocialLink
-              link={socials.filter((item) => item.title === "Twitter")[0].link}
-              text="Tweet it"
-              icon={TwitterLogo}
-            />
+            <TwitterShareButton
+              title={
+                "Cyberyal создаёт возможности для геймеров разного уровня, развивает и привлекает в киберспорт новые таланты! Создавай сеансы по турнирам, обучению, тренировкам и бустам на Cyberyal! Подключайся к реферальной программе и становись партнёром"
+              }
+              url={"https://cyberyal.com/"}
+              hashtags={["esports", "gaming"]}
+            >
+              <SocialLink
+                link={
+                  socials.filter((item) => item.title === "Twitter")[0].link
+                }
+                text="Tweet it"
+                icon={TwitterLogo}
+              />
+            </TwitterShareButton>
           </motion.div>
           <motion.div {...smoothFromLeft(0.5, 0.2)}>
-            <SocialLink
+            <FacebookShareButton
+              url={"https://cyberyal.com/"}
+              quote={
+                "Cyberyal создаёт возможности для геймеров разного уровня, развивает и привлекает в киберспорт новые таланты! Создавай сеансы по турнирам, обучению, тренировкам и бустам на Cyberyal! Подключайся к реферальной программе и становись партнёром"
+              }
+              hashtag={"#gaming"}
+              className="socialLink"
+            >
+              <SocialLink
+                link={
+                  socials.filter((item) => item.title === "Facebook")[0].link
+                }
+                text="Share it"
+                icon={FacebookLogo}
+              />
+              {/* <FacebookIcon size={32} round /> */}
+              {/* <span className="socialLink_text">Share it</span> */}
+            </FacebookShareButton>
+            {/* <SocialLink
               link={socials.filter((item) => item.title === "Facebook")[0].link}
               text="Share it"
               icon={FacebookLogo}
-            />
+            /> */}
           </motion.div>
           <motion.div {...smoothFromLeft(0.5, 0)}>
-            <SocialLink link="" text="Repost it" icon={ShareLogo} />
+            <div onClick={copyToClip}>
+              {copySuccess === "" ? (
+                <SocialLink link="" text="Repost it" icon={ShareLogo} />
+              ) : (
+                <SocialLink link="" text={copySuccess} icon={ShareLogo} />
+              )}
+            </div>
           </motion.div>
         </ul>
       </div>

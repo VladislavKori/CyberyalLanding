@@ -77,7 +77,7 @@ export default function Home() {
         <div className="content">
           {/* <Hero
             modal_text={
-              "You are successfully created an account to participate in the Cyberyal Affilate program. Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards."
+              "You are successfully created an account to participate in the Cyberyal Affiliate program. Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards."
             }
             form_header={"Subscribe to our newsletter "}
             form_text={

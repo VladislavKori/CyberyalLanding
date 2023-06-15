@@ -319,14 +319,7 @@ function Button({ className  }) {
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                     className: "modal__text",
-                                    children: "You are successful created an account to participate in the Cyberyal Affilate program."
-                                }),
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-                                    className: "modal__text",
-                                    children: [
-                                        "Complete simple tasks and receive rewards! accomplish engaging and easy tasks, and then collect your well-deserved rewards.",
-                                        " "
-                                    ]
+                                    children: "You have successfully subscribed to our email newsletter. News, promotions and notifications will be sent to the email address you specified."
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                                     className: "modal__text",

@@ -1,12 +1,12 @@
 {
   "/_app": "pages/_app.js",
-  "/affiliate": "pages/affiliate.html",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/home": "pages/home.html",
-  "/about": "pages/about.html",
+  "/affiliate": "pages/affiliate.html",
   "/": "pages/index.html",
-  "/_error": "pages/_error.js",
-  "/termsofuse": "pages/termsofuse.html",
+  "/about": "pages/about.html",
   "/privacy": "pages/privacy.html",
+  "/termsofuse": "pages/termsofuse.html",
   "/404": "pages/404.html"
 }

@@ -224,13 +224,11 @@ function Button({ className }: ButtonProps) {
           <div className="modal__content" style={{ textAlign: "center" }}>
             <h3 className="modal__title">Congratulations</h3>
             <p className="modal__text">
-              You are successful created an account to participate in the
-              Cyberyal Affilate program.
+              You have successfully subscribed to our email newsletter. News,
+              promotions and notifications will be sent to the email address you
+              specified.
             </p>
-            <p className="modal__text">
-              Complete simple tasks and receive rewards! accomplish engaging and
-              easy tasks, and then collect your well-deserved rewards.{" "}
-            </p>
+
             <p className="modal__text">
               Thank you for your attention to our product
             </p>

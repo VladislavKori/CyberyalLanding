@@ -74,11 +74,11 @@ function Affilate() {
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                     className: "affilate__header",
-                    children: "Cyberyal Affilate program"
+                    children: "Cyberyal Affiliate program"
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                     className: "affilate__text",
-                    children: "Join the ranks of those who are the first to discover opportunities Cyberyal - join our affililiate compaign, complete tasks and get bonuses"
+                    children: "Join the ranks of those who are the first to discover opportunities of the Cyberyal - join our affiliate campaign, complete tasks and get bonuses"
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_UI_Button__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {})
             ]

@@ -93,7 +93,7 @@ Enter the thrilling arena of high-stakes gaming, where competitors showcase thei
             img={InfoPlateImage1}
           />
           <InfoPlate
-            title="Couching — elevate your gaming skills"
+            title="Coaching — elevate your gaming skills"
             text={`Unlock your true potential with personalized coaching designed to elevate your gaming skills. 
 
 Our expert coaches provide tailored strategies, in-depth analysis, and valuable insights to help you excel in your favorite games. Through focused sessions and constructive feedback, watch your abilities soar to new heights. Are you prepared to transform your gameplay?`}

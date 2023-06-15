@@ -56,5 +56,4 @@ export const members = [
   },
 ];
 
-export const commonLinkedin =
-  "https://www.linkedin.com/company/cyberyalgaming/";
+export const commonLinkedin = "https://www.linkedin.com/company/playstar-platform-ou/";

@@ -33,7 +33,7 @@ export default function Affiliate() {
         />
         <meta
           property="og:description"
-          content="Want to monetize your passion for gaming? Join Cyberyal's affiliate program and earn commissions for each new user you refer. We'll provide any promotional materials to help you succeed in promoting the platform. Join Cyberyal's affiliate program and start earning today!"
+          content="Want to monetize your passion for gaming? Join Cyberyal affiliate program and earn commissions for each new user you refer. We'll provide any promotional materials to help you succeed in promoting the platform. Join Cyberyal affiliate program and start earning today!"
         />
         <meta
           property="og:image"
@@ -59,7 +59,7 @@ export default function Affiliate() {
         />
         <meta
           name="twitter:description"
-          content="Want to monetize your passion for gaming? Join Cyberyal's affiliate program and earn commissions for each new user you refer. We'll provide any promotional materials to help you succeed in promoting the platform. Join Cyberyal's affiliate program and start earning today!"
+          content="Want to monetize your passion for gaming? Join Cyberyal affiliate program and earn commissions for each new user you refer. We'll provide any promotional materials to help you succeed in promoting the platform. Join Cyberyal affiliate program and start earning today!"
         />
         <meta
           name="twitter:image"
@@ -81,8 +81,8 @@ export default function Affiliate() {
 
         <div className="affiliate__container-for-shy">
           <div className="affiliate__bg-shy"></div>
-            <HowAffiliateWorks />
-            <PartnerConditions />
+          <HowAffiliateWorks />
+          <PartnerConditions />
         </div>
         <div className="affiliate-container">
           <AboutAffiliate />

@@ -125,14 +125,14 @@ function ContactUs() {
             <h3 className="modal__title">Congratulations</h3>
             <p className="modal__text">
               You are successful created an account to participate in the
-              Cyberyal Affilate program.
+              Cyberyal Affiliate program.
             </p>
             <p className="modal__text">
-              Complete simple tasks and receive rewards! accomplish engaging and
+              Complete simple tasks and receive rewards! Accomplish engaging and
               easy tasks, and then collect your well-deserved rewards.{" "}
             </p>
             <p className="modal__text">
-              Thank you for your attention to our product
+              Thank you for your attention to our product.
             </p>
             <div
               style={{

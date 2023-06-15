@@ -24,26 +24,30 @@ function Hero() {
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     return (
-        <>
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="affiliate-hero"
-            >
-                <div className='affiliate-container'>
-                    <div className="affiliate-hero__inside">
-                        <motion.h1 {...animation(1)} className="affiliate-hero__title">Cyberyal Affilate program</motion.h1>
-                        <motion.p {...animation(2)} className="affiliate-hero__subtitle">Earn commissions promoting product </motion.p>
-                        <motion.div {...animation(3)} className="affiliate-hero__btn">
-                            <Button />
-                        </motion.div>
-                    </div>
-                </div>
-            </motion.div>
-        </>
-    )
+      <>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="affiliate-hero"
+        >
+          <div className="affiliate-container">
+            <div className="affiliate-hero__inside">
+              <motion.h1 {...animation(1)} className="affiliate-hero__title">
+                Cyberyal Affiliate program
+              </motion.h1>
+              <motion.p {...animation(2)} className="affiliate-hero__subtitle">
+                Earn commissions promoting product{" "}
+              </motion.p>
+              <motion.div {...animation(3)} className="affiliate-hero__btn">
+                <Button />
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+      </>
+    );
 }
 
 export default Hero

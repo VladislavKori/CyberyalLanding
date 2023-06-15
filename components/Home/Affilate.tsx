@@ -25,14 +25,13 @@ function Affilate() {
   };
 
   return (
-    <motion.div
-      {...smoothShow(1)}
-      className="affilate"
-    >
+    <motion.div {...smoothShow(1)} className="affilate">
       <div className="affilate__container">
-        <h2 className="affilate__header">Cyberyal Affilate program</h2>
+        <h2 className="affilate__header">Cyberyal Affiliate program</h2>
         <p className="affilate__text">
-          Join the ranks of those who are the first to discover opportunities Cyberyal - join our affililiate compaign, complete tasks and get bonuses
+          Join the ranks of those who are the first to discover opportunities of
+          the Cyberyal - join our affiliate campaign, complete tasks and get
+          bonuses
         </p>
         <Button />
       </div>

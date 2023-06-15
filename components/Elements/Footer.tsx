@@ -17,21 +17,25 @@ function Footer() {
     <footer className="footer">
       <div className="footer__top">
         <div className="footer__left">
-          <div className="footer__logo">
-            <Logo />
-          </div>
+          <a href={"/"}>
+            <div className="footer__logo">
+              <Logo />
+            </div>
+          </a>
           {/* <p className="footer__text-cursive">
             “All tools for boost your gaming skills”
           </p> */}
           <div className="footer__socials">
             <a
               className="footer__social"
+              target="_blank"
               href={socials.filter((item) => item.title === "Discord")[0].link}
             >
               {socials.filter((item) => item.title === "Discord")[0].icon()}
             </a>
             <a
               className="footer__social"
+              target="_blank"
               href={socials.filter((item) => item.title === "Twitter")[0].link}
             >
               {socials.filter((item) => item.title === "Twitter")[0].icon()}

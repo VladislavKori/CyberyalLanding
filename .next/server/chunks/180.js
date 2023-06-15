@@ -89,20 +89,25 @@ function Footer() {
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                         className: "footer__left",
                         children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                className: "footer__logo",
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(logo/* default */.Z, {})
+                            /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                href: "/",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                    className: "footer__logo",
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(logo/* default */.Z, {})
+                                })
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                                 className: "footer__socials",
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("a", {
                                         className: "footer__social",
+                                        target: "_blank",
                                         href: socials/* socials.filter */.U.filter((item)=>item.title === "Discord")[0].link,
                                         children: socials/* socials.filter */.U.filter((item)=>item.title === "Discord")[0].icon()
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("a", {
                                         className: "footer__social",
+                                        target: "_blank",
                                         href: socials/* socials.filter */.U.filter((item)=>item.title === "Twitter")[0].link,
                                         children: socials/* socials.filter */.U.filter((item)=>item.title === "Twitter")[0].icon()
                                     })
