@@ -79,7 +79,6 @@ const commonInfo = {
 
 
 function Footer() {
-    console.log(socials/* socials.filter */.U.filter((item)=>item.title === "Twitter")[0]);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
         className: "footer",
         children: [

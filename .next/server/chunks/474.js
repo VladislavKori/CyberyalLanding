@@ -129,7 +129,6 @@ function Button({ className  }) {
             if (false) {}
         };
     }, []);
-    // console.log("utmParams", utmParams);
     const validationSchema = zod__WEBPACK_IMPORTED_MODULE_6__.z.object({
         email: zod__WEBPACK_IMPORTED_MODULE_6__.z.string().min(1, {
             message: "Please write your email"

@@ -59,8 +59,6 @@ function Button({ className }: ButtonProps) {
     };
   }, []);
 
-  // console.log("utmParams", utmParams);
-
   const validationSchema = z.object({
     email: z.string().min(1, { message: "Please write your email" }).email({
       message: "You entered your email incorrectly",

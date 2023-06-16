@@ -12,7 +12,6 @@ import { socials } from '@/data/socials';
 import { commonInfo } from '@/data/commonInfo';
 
 function Footer() {
-  console.log(socials.filter(item => item.title === "Twitter")[0])
   return (
     <footer className="footer">
       <div className="footer__top">
