@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={"about.tsx -> @/components/Elements/Header":{id:2126,files:["static/chunks/323.f0f613cf3c5e4f09.js"]},"home.tsx -> @/components/Elements/Header":{id:2126,files:["static/chunks/42-55a95cc4d8cca6cd.js","static/chunks/126.17555c366ea83756.js"]},"index.tsx -> @/components/Elements/Header":{id:2126,files:["static/chunks/323.f0f613cf3c5e4f09.js"]}};
+self.__REACT_LOADABLE_MANIFEST={"index.tsx -> @/components/Elements/Header":{"id":"index.tsx -> @/components/Elements/Header","files":["static/chunks/components_Elements_Header_tsx.js"]}}

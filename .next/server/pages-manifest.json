@@ -2,11 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/home": "pages/home.html",
-  "/affiliate": "pages/affiliate.html",
-  "/": "pages/index.html",
-  "/about": "pages/about.html",
-  "/privacy": "pages/privacy.html",
-  "/termsofuse": "pages/termsofuse.html",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }
