@@ -54,14 +54,14 @@ function InfoPlate({ title, text, img, reverse = false }: InfoPlateProps) {
         reverse ? { flexDirection: "row-reverse" } : { flexDirection: "row" }
       }
     >
-      <motion.div 
+      <motion.div
         {...smoothShow(1)}
         className="infoplate__img-container"
         style={{
           background: `url('${img.src}')`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat'
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       />
       <div className="infoplate__info">
@@ -83,7 +83,7 @@ function InfoPlate({ title, text, img, reverse = false }: InfoPlateProps) {
         >
           <TwitterShareButton
             title={
-              "Cyberyal создаёт возможности для геймеров разного уровня, развивает и привлекает в киберспорт новые таланты! Создавай сеансы по турнирам, обучению, тренировкам и бустам на Cyberyal! Подключайся к реферальной программе и становись партнёром"
+              "Cyberyal создаёт возможности для геймеров разного уровня, развивает и привлекает в киберспорт новые таланты! Создавай сеансы по турнирам, обучению, тренировкам и бустам на Cyberyal! Подключайся к реферальной программе и стань партнёром"
             }
             url={"https://cyberyal.com/"}
             hashtags={["esports", "gaming"]}
