@@ -54,9 +54,16 @@ function InfoPlate({ title, text, img, reverse = false }: InfoPlateProps) {
         reverse ? { flexDirection: "row-reverse" } : { flexDirection: "row" }
       }
     >
-      <motion.div {...smoothShow(1)} className="infoplate__img-container">
-        <Image src={img} alt="img" />
-      </motion.div>
+      <motion.div 
+        {...smoothShow(1)}
+        className="infoplate__img-container"
+        style={{
+          background: `url('${img.src}')`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
       <div className="infoplate__info">
         <motion.h1 {...smoothFromBottom(0.7)} className="infoplate__title">
           {title}

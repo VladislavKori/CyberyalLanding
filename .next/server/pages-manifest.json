@@ -2,5 +2,15 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/": "pages/index.js"
+=======
+  "/affiliate": "pages/affiliate.html",
+  "/home": "pages/home.html",
+  "/about": "pages/about.html",
+  "/": "pages/index.html",
+  "/privacy": "pages/privacy.html",
+  "/termsofuse": "pages/termsofuse.html",
+  "/404": "pages/404.html"
+>>>>>>> 803f3d51ff3cc3a1dc9d3026a7a61014dfa51c76
 }
