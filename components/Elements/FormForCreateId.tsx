@@ -13,7 +13,7 @@ import CloseModalIcon from "@/public/assets/close_modal.svg";
 
 function FormForCreateId() {
 
-    const [modalIsOpen, setIsOpen] = React.useState(true);
+    const [modalIsOpen, setIsOpen] = React.useState(false);
     const validationSchema = z.object({
         email: z.string().min(1, { message: "Please write your email" }).email({
             message: "You entered your email incorrectly",
