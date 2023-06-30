@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from "framer-motion";
 
@@ -7,26 +7,28 @@ import { advantages } from '@/data/advantages';
 
 // animations
 import { smoothFromBottom } from '@/data/animations';
+import { supabase } from '@/api/supabaseClient';
 
 function Features() {
+
+  const [texts, setTexts] = useState<Array<{title: string, text: string}> | Array<null>>([])
+  const getTexts = useCallback( async () => {
+    try {
+      const {data, status, error} = await supabase.from('features').select('*');
+      if (data && error == null) {
+        setTexts(data)
+      }
+    } catch (err) {
+      console.log(err)
+    }
+  }, [])
+
+  useEffect(() => {
+    getTexts()
+  }, [])
+
   return (
     <div className="features">
-      {/* <div className="features__online">
-        <div className="features__counter">
-          <span className="features__online-point"></span>
-          <p className="features__online-text">1223 Players online</p>
-        </div>
-        <div className="features__right">
-          <p className="features__text">“Already joined the world of esports on our Сyberyal Gaming Platform”</p>
-        </div>
-      </div>
-      
-      <div className="features__text-block">
-        <motion.h1 {...smoothFromBottom(1)} className="features__title">Over 10,000 registrations in the first month! Experience the thrill of competition now</motion.h1>
-        <motion.h1 {...smoothFromBottom(1)} className="features__subtitle">Sign up Today!</motion.h1>
-        <span className="features__blur"></span>
-      </div> */}
-
       <div className="features__list">
         {advantages.map((item, index) => (
           <motion.div
@@ -35,8 +37,8 @@ function Features() {
             key={item.id}
           >
             <div className="features__icon-wrapper">{item.icon()}</div>
-            <h2 className="features__item-title">{item.title}</h2>
-            <p className="features__item-text">{item.text}</p>
+            <h2 className="features__item-title">{texts[index]?.title}</h2>
+            <p className="features__item-text">{texts[index]?.text}</p>
           </motion.div>
         ))}
       </div>

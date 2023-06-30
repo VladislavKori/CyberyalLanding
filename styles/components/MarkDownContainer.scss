@@ -1,0 +1,38 @@
+.markdown-container {
+
+    &__plugin {
+        white-space: 'pre-wrap';
+    }
+
+    & p {
+        color: var(--color-gray);
+        font-size: 14px;
+        font-family: Cera Pro;
+        line-height: 24px;
+    }
+
+    & h1,
+    & h2,
+    & h3,
+    & h4 {
+        color: var(--color-black);
+        font-family: Cera Pro;
+        font-weight: 700;
+        margin-top: 18px;
+    }
+
+    & h1 {
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    & h2 {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    & h3 {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

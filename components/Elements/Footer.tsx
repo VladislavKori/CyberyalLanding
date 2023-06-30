@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,8 +10,37 @@ import MailIcon from '@/public/footer/mail.svg';
 //data
 import { socials } from '@/data/socials';
 import { commonInfo } from '@/data/commonInfo';
+import { supabase } from '@/api/supabaseClient';
 
 function Footer() {
+
+  const [footerInfo, setFooterInfo] = useState<{
+    mail: string
+    footer_text: string
+  }>({
+    mail: '123',
+    footer_text: ''
+  })
+
+  const getTexts = useCallback(async () => {
+    try {
+      const { data, status, error } = await supabase.from('common').select('*');
+      if (data && error == null) {
+        setFooterInfo(data[0])
+      }
+    } catch (err) {
+      console.log(err)
+    }
+  }, [])
+
+  useEffect(() => {
+    getTexts();
+  }, [])
+
+  if (footerInfo.mail === '') {
+    return null
+  }
+
   return (
     <footer className="footer">
       <div className="footer__top">
@@ -38,6 +67,20 @@ function Footer() {
               href={socials.filter((item) => item.title === "Twitter")[0].link}
             >
               {socials.filter((item) => item.title === "Twitter")[0].icon()}
+            </a>
+            <a
+              className="footer__social"
+              target="_blank"
+              href={socials.filter((item) => item.title === "VK")[0].link}
+            >
+              {socials.filter((item) => item.title === "VK")[0].icon()}
+            </a>
+            <a
+              className="footer__social"
+              target="_blank"
+              href={socials.filter((item) => item.title === "Facebook")[0].link}
+            >
+              {socials.filter((item) => item.title === "Facebook")[0].icon()}
             </a>
           </div>
         </div>
@@ -95,10 +138,10 @@ function Footer() {
                 <p className="footer__menu-title">Mail</p>
               </div>
               <a
-                href={`mailto:${commonInfo.mail}`}
+                href={`mailto:${footerInfo.mail}`}
                 className="footer__text_white"
               >
-                {commonInfo.mail}
+                {footerInfo.mail}
               </a>
             </div>
           </div>
@@ -112,16 +155,7 @@ function Footer() {
         </p> */}
         <hr />
         <p className="footer__text_gray">
-          Cyberyal is an independent entity that is not affiliated or endorsed
-          by Blizzard Entertainment, Bungie, or Respawn Entertainment. The views
-          and opinions expressed by Cyberyal do not reflect those of the
-          aforementioned entities or anyone involved in managing their
-          franchises. All trademarks belonging to the aforementioned entities
-          are the property of their respective owners in the U.S.A and/or other
-          countries. All submitted art content remains the copyright of its
-          original copyright holder. Please note that Cyberyal does not sell
-          in-game items; we only offer services to help players improve their
-          in-game skills and provide gifts of in-game items.
+          {footerInfo.footer_text}
         </p>
         <div className="footer__rights">
           {/* <p className="footer__text_white">

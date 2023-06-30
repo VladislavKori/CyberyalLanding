@@ -1,4 +1,5 @@
 @import '../breakpoints';
+
 .socialLink_text {
     font-family: "Nunito";
     font-style: normal;
@@ -7,6 +8,7 @@
     line-height: 24px;
     color: #6A6A6F
 }
+
 .hero {
     height: 85vh;
     display: flex;
@@ -14,8 +16,10 @@
     justify-content: center;
 
     &__content {
+        width: 100%;
         display: flex;
         align-items: center;
+        column-gap: 20px;
         flex: 1;
     }
 
@@ -50,6 +54,11 @@
     &__left,
     &__right {
         flex: 1;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: flex-end;
     }
 
     &__link-list {
@@ -132,6 +141,18 @@
 
 @media (max-width: $xl) {
     .hero {
+
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.32px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
         &__right {
             & img {
                 width: 375px;
@@ -152,7 +173,8 @@
         height: 100%;
 
         &__content {
-            flex-direction: column-reverse;
+            margin-top: 20px;
+            flex-direction: column;
         }
 
         &__right img {
@@ -191,7 +213,7 @@
         &__button {
             margin-top: 36px;
         }
-        
+
         &__links {
             margin-top: 20px;
         }

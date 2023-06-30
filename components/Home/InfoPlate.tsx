@@ -21,7 +21,7 @@ interface InfoPlateProps {
   title: string;
   text: string;
   reverse?: boolean;
-  img: StaticImageData;
+  img: string;
 }
 
 const animation = {
@@ -58,7 +58,7 @@ function InfoPlate({ title, text, img, reverse = false }: InfoPlateProps) {
         {...smoothShow(1)}
         className="infoplate__img-container"
         style={{
-          background: `url('${img.src}')`,
+          background: `url('${img}')`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

@@ -5,9 +5,10 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Modal from "react-modal";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { supabase } from "@/api/supabaseClient";
 
 // utils
 import apiClient from "@/api/apiClient";
@@ -37,12 +38,37 @@ import {
   FacebookShareButton,
   TwitterShareButton,
 } from "react-share";
+import FormForCreateId from "../Elements/FormForCreateId";
+import MarkdownContainer from "../Elements/MarkDownContainer";
 
 function Hero() {
   const [notifyIsOpen, setNotifyOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [texts, setTexts] = useState({
+    notification_text: "",
+    notification_title: "",
+    subtitle: "",
+    title: ""
+  })
+
+  // loading texts
+  const getTexts = useCallback(async () => {
+    try {
+      const { data, error, status } = await supabase.from('hero').select('*')
+      if (data && error === null) {
+        setTexts(data[0])
+      }
+    } catch (err) {
+      console.log(err)
+    } finally {
+      setLoading(false)
+    }
+  }, [])
 
   // check cookie previos page load
   useEffect(() => {
+    setLoading(true)
+    getTexts();
     const name = "notifyIsClosed";
     var match = Object.fromEntries(
       document.cookie
@@ -80,13 +106,8 @@ function Hero() {
           <div className="hero__notify-inner">
             <CubokIcon className="hero__notify-icon" />
             <div className="hero__notify-texts">
-              <h2 className="hero__notify-title">
-                Register for your welcome tournament right now
-              </h2>
-              <p className="hero__notify-subtitle">
-                Join us now and be the first to know about new tournaments! Play
-                and reach new heights with our platform.
-              </p>
+              <h2 className="hero__notify-title">{texts.notification_title}</h2>
+              <p className="hero__notify-subtitle">{texts.notification_text}</p>
             </div>
             <button className="hero__notify-close" onClick={closeNotifyHandler}>
               <CloseIcon />
@@ -97,85 +118,17 @@ function Hero() {
 
       <div className="hero__content">
         <div className="hero__left">
-          <motion.h1 {...smoothFromBottom(0.8)} className="hero__title">
-            Our mission
-          </motion.h1>
+          <motion.h1 {...smoothFromBottom(0.8)} className="hero__title">{texts.title}</motion.h1>
           <motion.p
             {...smoothFromBottom(0.8, 0.3)}
             className="hero__text hero__subtitle"
           >
-            is to give an opportunity to affordable monetization in gaming
-            industry, available to everyone. We are changing the perception of
-            gaming from a futile pastime, attracting new talent to eSports, and
-            helping individuals unleash their potential who have not yet found
-            their calling in other areas.
+            {texts.subtitle ? <MarkdownContainer text={texts.subtitle} /> : null}
           </motion.p>
-          <motion.div {...smoothFromBottom(0.8, 0.5)}>
-            <Button className="hero__button" />
-          </motion.div>
         </div>
         <motion.div {...smoothShow(0.8)} className="hero__right">
-          <Image src={BrilliantImg} alt="BrilliantImg" />
+          <FormForCreateId />
         </motion.div>
-      </div>
-
-      <div className="hero__links">
-        <motion.p {...smoothFromLeft(1)} className="hero__text">
-          Compete in 1vs1 ranked matches with players all over the world
-        </motion.p>
-        <ul className="hero__link-list">
-          <motion.div {...smoothFromLeft(0.5, 0.4)}>
-            <TwitterShareButton
-              title={
-                "Cyberyal создаёт возможности для геймеров разного уровня, развивает и привлекает в киберспорт новые таланты! Создавай сеансы по турнирам, обучению, тренировкам и бустам на Cyberyal! Подключайся к реферальной программе и стань партнёром"
-              }
-              url={"https://cyberyal.com/"}
-              hashtags={["esports", "gaming"]}
-            >
-              <SocialLink
-                link={
-                  socials.filter((item) => item.title === "Twitter")[0].link
-                }
-                text="Tweet it"
-                icon={TwitterLogo}
-              />
-            </TwitterShareButton>
-          </motion.div>
-          <motion.div {...smoothFromLeft(0.5, 0.2)}>
-            <FacebookShareButton
-              url={"https://cyberyal.com/"}
-              quote={
-                "Cyberyal создаёт возможности для геймеров разного уровня, развивает и привлекает в киберспорт новые таланты! Создавай сеансы по турнирам, обучению, тренировкам и бустам на Cyberyal! Подключайся к реферальной программе и становись партнёром"
-              }
-              hashtag={"#gaming"}
-              className="socialLink"
-            >
-              <SocialLink
-                link={
-                  socials.filter((item) => item.title === "Facebook")[0].link
-                }
-                text="Share it"
-                icon={FacebookLogo}
-              />
-              {/* <FacebookIcon size={32} round /> */}
-              {/* <span className="socialLink_text">Share it</span> */}
-            </FacebookShareButton>
-            {/* <SocialLink
-              link={socials.filter((item) => item.title === "Facebook")[0].link}
-              text="Share it"
-              icon={FacebookLogo}
-            /> */}
-          </motion.div>
-          <motion.div {...smoothFromLeft(0.5, 0)}>
-            <div onClick={copyToClip}>
-              {copySuccess === "" ? (
-                <SocialLink link="" text="Repost it" icon={ShareLogo} />
-              ) : (
-                <SocialLink link="" text={copySuccess} icon={ShareLogo} />
-              )}
-            </div>
-          </motion.div>
-        </ul>
       </div>
     </div>
   );

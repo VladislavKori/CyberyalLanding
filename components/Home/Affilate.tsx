@@ -24,14 +24,16 @@ function Affilate() {
     // router.reload();
   };
 
+  const text = `We've designed a referral program so you could invite your friends and get bonuses and prizes for their victories.
+  
+  More details:`
+
   return (
     <motion.div {...smoothShow(1)} className="affilate">
       <div className="affilate__container">
         <h2 className="affilate__header">Cyberyal Affiliate program</h2>
-        <p className="affilate__text">
-          Join the ranks of those who are the first to discover opportunities of
-          the Cyberyal - join our affiliate campaign, complete tasks and get
-          bonuses
+        <p className="affilate__text" style={{whiteSpace: 'pre-wrap'}}>
+          {text}
         </p>
         <Button />
       </div>
