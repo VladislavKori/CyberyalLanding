@@ -73,10 +73,12 @@ export default function OurTeam() {
                   <h2 className="ourteam__name">{member.name}</h2>
                   <h2 className="ourteam__post">{member.post}</h2>
                   <p className="ourteam__description">{member.description}</p>
-                  
-                  {isTg ? (<a className="ourteam__link" href={member.telegram} target="_blank"><TelegramIcon /></a>) : null}
-                  {isLinkedin ? (<a className="ourteam__link" href={member.linkedin} target="_blank"><LinkedinIcon /></a>) : null}
-                  {isCrunchbase ? (<a className="ourteam__link" href={member.crunchbase} target="_blank"><CrunchBaseIcon /></a>) : null}
+
+                  <div className="ourteam__links">
+                    {isTg ? (<a className="ourteam__link" href={member.telegram} target="_blank"><TelegramIcon /></a>) : null}
+                    {isLinkedin ? (<a className="ourteam__link" href={member.linkedin} target="_blank"><LinkedinIcon /></a>) : null}
+                    {isCrunchbase ? (<a className="ourteam__link" href={member.crunchbase} target="_blank"><CrunchBaseIcon /></a>) : null}
+                  </div>
                 </SwiperSlide>
               </React.Fragment>
             )

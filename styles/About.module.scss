@@ -184,6 +184,11 @@
         margin-top: 16px;
     }
 
+    &__links {
+        display: flex;
+        column-gap: 20px;
+    }
+
     &__link {
         text-decoration: none;
 

@@ -29,6 +29,7 @@ export const members = [
     description:
       "Head of marketing departments with ten years of experience. Launched startups in Russia, Georgia, and Germany. Has founded two advertising agencies and two charitable organizations. Responsible for advertising strategy and user experience in the company.",
     telegram: "https://t.me/kogankto",
+    linkedin: 'https://www.linkedin.com/in/evertine/'
   },
   {
     photo: Anton,
