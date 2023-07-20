@@ -31,48 +31,31 @@ export default function Privacy() {
           <h1 className="privacy__title">
             PRIVACY NOTICE FOR PROCESSING PERSONAL DATA BY СYBERYAL
           </h1>
-          <p className="privacy__default-text">Version 1 – 05.05.2023</p>
+          <p className="privacy__default-text">Version 1.1 – 06.07.2023</p>
           <p className="privacy__default-text">
-            Playstar Platform OÜ, address Harju maakond, Tallinn, Artelli tn 19,
-            10621, registry code 16306741 (hereinafter “Cyberyal”) processes
-            personal data of individuals who use the information society service
-            сyberyal.com.
+            Playstar Platform OÜ, address Harju maakond, Tallinn, Artelli tn 19, 10621, registry code 16306741 (hereinafter “Cyberyal”) processes personal data of individuals who use the information society service сyberyal.com.
           </p>
 
           <div className="privacy__text-block">
             <h2 className="privacy__min-title">1. GENERAL PROVISIONS</h2>
             <p className="privacy__default-text">
-              1.1 Cyberyal ensures that the processing of personal data is in
-              accordance with the legislation regarding the protection and
-              security of personal data (including the General Data Protection
-              Regulation of the European Union, hereinafter, “GDPR”), other
-              personal data protection legislation, and good business practices.
+              1.1 Cyberyal ensures that the processing of personal data is in accordance with the legislation regarding the protection and security of personal data (including the General Data Protection Regulation of the European Union, hereinafter, “GDPR”), other personal data protection legislation, and good business practices.
             </p>
             <p className="privacy__default-text">
-              1.2 Cyberyal considers the privacy of individuals and the
-              protection of their data important and makes the best efforts to
-              ensure the security and protection of the information system and
-              other data carriers.
+              1.2 Cyberyal considers the privacy of individuals and the protection of their data important and makes the best efforts to ensure the security and protection of the information system and other data carriers.
             </p>
             <p className="privacy__default-text">
-              1.3 Please note that the cyberyal.com Platform is used in
-              different countries. Personal data processing conditions may
-              differ from country to country, and the corresponding data
-              processing notice can be found on localised versions of the
-              Platform.
+              1.3 Please note that the cyberyal.com Platform is used in different countries. Personal data processing conditions may differ from country to country, and the corresponding data processing notice can be found on localised versions of the Platform.
             </p>
           </div>
 
           <div className="privacy__text-block">
             <h2 className="privacy__min-title">2. DEFINITIONS</h2>
             <p className="privacy__default-text">
-              2.1 User means a person who signs up for the Platform or uses the
-              services provided by Cyberyal.
+              2.1 User means a person who signs up for the Platform or uses the services provided by Cyberyal.
             </p>
             <p className="privacy__default-text">
-              2.2 Processing of personal data means viewing, collecting, saving,
-              storing, altering, transmitting, or receiving personal data and
-              other activities related to personal data.
+              2.2 Processing of personal data means viewing, collecting, saving, storing, altering, transmitting, or receiving personal data and other activities related to personal data.
             </p>
             <p className="privacy__default-text">
               2.3 Platform means Software as a Service, including the website{" "}
@@ -235,13 +218,6 @@ export default function Privacy() {
               form (API solution) or by making individual requests.
             </p>
             <p className="privacy__default-text">
-              4.1.3 the User authorises Cyberyal to make inquiries for the
-              collection of activity from the supported games and other
-              integrated services, e.g. usage activity data or match results
-              from a supported game. Cyberyal performs queries in an automated
-              form (API solution) or by making individual requests.
-            </p>
-            <p className="privacy__default-text">
               4.2 Cyberyal collects indirectly personal information on the
               Platform when providing IT infrastructure (Platform) for provision
               of goods or services, specifically when:
@@ -255,7 +231,7 @@ export default function Privacy() {
             </p>
             <p className="privacy__default-text">
               4.2.3 the User provides their account information for the purposes
-              of fulfilling an order or handling competitions.
+              of fulfilling an order or handling competitions..
             </p>
           </div>
 
@@ -305,6 +281,35 @@ export default function Privacy() {
               with legal obligations, such as platform exchange of tax
               information or anti-money laundering obligations.
             </p>
+            <p className="privacy__default-text">
+              6.6 We integrate third-party services, such as Xsolla to operate payment transactions. Xsolla may collect various personal data both directly from users and indirectly from the third parties by acting strictly in accordance with all applicable laws and regulations, and the goals of personal data collection. Xsolla does not process transactions on its own. Xsolla's sole responsibility is to manage payment flows, not to process, facilitate, control, or support any money transactions.
+            </p>
+            <p className="privacy__default-text">
+              6.7 Infrastructure service providers:
+            </p>
+            <div className="privacy__table-container">
+              <table className="privacy__table">
+                <thead>
+                  <tr className="privacy__tr">
+                    <td className="privacy__head-td">Processing activity (controller)</td>
+                    <td className="privacy__head-td">Activity</td>
+                    <td className="privacy__head-td">Territory</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="privacy__tr">
+                    <td className="privacy__body-td">Xsolla</td>
+                    <td className="privacy__body-td">Management of payment flows</td>
+                    <td className="privacy__body-td">If your data is collected in the United Kingdom, the European Union or Switzerland, Xsolla will transfer your personal data subject to appropriate safeguards, such as Standard Contractual Clauses.</td>
+                  </tr>
+                  <tr className="privacy__tr">
+                    <td className="privacy__body-td">Amazon AWS</td>
+                    <td className="privacy__body-td">Storage of cloud services</td>
+                    <td className="privacy__body-td">Frankfurt, Germany</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div className="privacy__text-block">
@@ -422,13 +427,13 @@ export default function Privacy() {
             </p>
             <p className="privacy__default-text">
               8.2 In order to exercise these rights, the User must submit a
-              declaration to support@cyberyal.com. The application shall be
+              declaration to <a className="privacy__default-text" href="mailto:support@cyberyal.com">support@cyberyal.com</a>. The application shall be
               responded to within a maximum of 30 calendar days.
             </p>
             <p className="privacy__default-text">
               8.3 The User has the right to lodge a complaint against the
               processing of personal data with the supervisory authority, which
-              is the Estonian Data Protection Inspectorate (www.aki.ee).
+              is the Estonian Data Protection Inspectorate (<a className="privacy__default-text" href="www.aki.ee">www.aki.ee</a>).
             </p>
           </div>
 
@@ -441,8 +446,7 @@ export default function Privacy() {
               through the Platform before the substantial changes take effect.
             </p>
             <p className="privacy__default-text">
-              9.2 The conditions for processing personal data are valid from
-              2023.
+              9.2 The conditions for processing personal data are valid from [23.07.] 2023.
             </p>
           </div>
         </div>

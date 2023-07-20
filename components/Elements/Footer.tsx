@@ -170,6 +170,9 @@ function Footer() {
             <Link className="footer__link" href={"/termsofuse"}>
               Terms Of Use
             </Link>
+            <Link className="footer__link" href={"/competitionterms"}>
+              Competition Terms
+            </Link>
           </div>
         </div>
       </div>

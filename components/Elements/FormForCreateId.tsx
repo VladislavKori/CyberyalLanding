@@ -34,7 +34,6 @@ function FormForCreateId() {
     });
 
     const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
-        console.log(data);
         apiClient
             .post(``, {
                 email: data.email,
@@ -49,14 +48,14 @@ function FormForCreateId() {
 
     const customStyles = {
         content: {
-          top: "50%",
-          left: "50%",
-          right: "auto",
-          bottom: "auto",
-          marginRight: "-50%",
-          transform: "translate(-50%, -50%)",
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
         },
-      };
+    };
 
     return (
         <>
@@ -113,7 +112,7 @@ function FormForCreateId() {
                     <h3 className="formfcd__title_small">You Email</h3>
                     <input {...register("email")} className="formfcd__input" placeholder='Enter your Email' />
                     {errors.email ? (
-                        <div className="hero__section_2__subscribe__input_text_error">
+                        <div className="modal__error-text">
                             <div>{errors.email?.message}</div>
                         </div>
                     ) : ""}
@@ -132,7 +131,7 @@ function FormForCreateId() {
                         </p>
                     </label>
                     {errors.privacy ? (
-                        <div className="hero__section_2__subscribe__input_text_error">
+                        <div className="modal__error-text">
                             <div>{errors.privacy?.message}</div>
                         </div>
                     ) : ""}
