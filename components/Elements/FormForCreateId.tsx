@@ -109,7 +109,7 @@ function FormForCreateId() {
                     Register now and get access to exclusive offers for first users!</p>
                 <hr />
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <h3 className="formfcd__title_small">You Email</h3>
+                    <h3 className="formfcd__title_small">Your Email</h3>
                     <input {...register("email")} className="formfcd__input" placeholder='Enter your Email' />
                     {errors.email ? (
                         <div className="modal__error-text">
