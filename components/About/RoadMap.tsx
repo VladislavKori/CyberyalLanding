@@ -29,7 +29,7 @@ function RoadMap() {
           Roadmap
         </motion.h2>
         <motion.h2 {...animation()} className="roadmap__time">
-          2021 - 2024
+          2021 - 2025
         </motion.h2>
       </header>
       <motion.div {...animation()} className="roadmap__img">

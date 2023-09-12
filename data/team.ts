@@ -15,6 +15,14 @@ export const members = [
     linkedin: "https://www.linkedin.com/in/yakov-litvinov-8a818125a",
   },
   {
+    photo: Alexander,
+    name: "Alexander Tsivin",
+    post: "Founder",
+    description:
+      "Video Game industry analyst and streamer. Optimizes resources and cash flows, develops service mechanics and influencer partnership programs. Also he is responsible for project economics.",
+    linkedin: "https://www.linkedin.com/in/tsivin/",
+  },
+  {
     photo: Roma,
     name: "Roma Kogan",
     post: "CMO",
@@ -47,6 +55,7 @@ export const members = [
       "An artist and designer with extensive experience. Engaged in the development of promotional materials and their control. Represents the interests of the company in the media environment.",
     crunchbase: "https://www.crunchbase.com/person/alexey-sychev",
   },
+
 ];
 
 export const commonLinkedin = "https://www.linkedin.com/company/playstar-platform-ou/";
