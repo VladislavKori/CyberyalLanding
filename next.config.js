@@ -16,12 +16,6 @@ const nextConfig = {
       hostname: 'w7.pngwing.com',
       port: '',
       pathname: '/pngs/**',
-    }, 
-    { 
-      protocol: 'https',
-      hostname: "upphsnzcvkocxjycdaxc.supabase.co",
-      port: '',
-      pathname: '/storage/v1/object/public/**'
     }],
   },
 }

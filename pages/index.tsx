@@ -1,3 +1,5 @@
+import React from "react";
+
 import Header from "@/components/Elements/Header";
 import Footer from "@/components/Elements/Footer";
 import Head from "next/head";
@@ -17,7 +19,6 @@ import InfoPlateImage1 from '@/public/infoplate/img1.png';
 import InfoPlateImage2 from '@/public/infoplate/img2.png';
 import InfoPlateImage3 from '@/public/infoplate/img3.png';
 import { useCallback, useEffect, useState } from "react";
-import { supabase } from "@/api/supabaseClient";
 import ProblemsWeSolve from "@/components/About/ProblemsWeSolve";
 
 const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
@@ -26,22 +27,29 @@ const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
 
 export default function Home() {
 
-  const [loading, setLoading] = useState<boolean>(false)
-  const [info, setInfo] = useState<Array<{ title: string, text: string, image: string }>>([])
-  const getTexts = useCallback(async () => {
-    try {
-      const { data, status, error } = await supabase.from('infoplates').select('*');
-      if (data && error == null) {
-        setInfo(data)
-      }
-    } catch (err) {
-      console.log(err)
-    }
-  }, [])
+  const [info, setInfo] = useState<Array<{ title: string, text: string, image: string }>>([
+    {
+      title: "Tournament — intense gaming showdown",
+      text: `Witness nail-biting battles, extraordinary strategies, and exceptional teamwork as players vie for the championship title.
 
-  useEffect(() => {
-    getTexts()
-  }, [])
+Enter the thrilling arena of high-stakes gaming, where competitors showcase their skills in popular titles. With an exciting lineup of matches and expert commentary, immerse yourself in each heart-pounding moment. Are you ready for the challenge?`,
+      image: InfoPlateImage1.src
+    },
+    {
+      title: "Coaching — elevate your gaming skills",
+      text: `Unlock your true potential with personalized coaching designed to elevate your gaming skills. 
+
+Our expert coaches provide tailored strategies, in-depth analysis, and valuable insights to help you excel in your favorite games. Through focused sessions and constructive feedback, watch your abilities soar to new heights. Are you prepared to transform your gameplay?`,
+      image: InfoPlateImage2.src
+    },
+    {
+      title: "PvP — Compete, Conquer, Claim Rewards",
+      text: `Dive into exhilarating PvP action where you'll compete, conquer, and claim incredible rewards. 
+
+Challenge players from around the globe in thrilling matches that test your skills and strategic prowess. Prove your dominance across a variety of popular games and climb the ranks to earn your spot among the elite. Are you ready to conquer the arena and claim your rewards?`,
+      image: InfoPlateImage3.src
+    },
+  ])
 
   return (
     <>
@@ -105,21 +113,18 @@ export default function Home() {
           <HeaderWithNoSSR />
           <Hero />
           <Features />
-          <Games />
+          <Games /> 
           <ProblemsWeSolve />
-          {loading ? (<p>Loading...</p>) : (
-            <>
-              {info.map((item, index) => (
-                <InfoPlate
-                  title={item.title}
-                  text={item.text}
-                  img={item.image}
-                  reverse={index % 2 != 0}
-                />
-              ))}
-            </>
-          )}
-          {/* <Comments /> */}
+          {info.map((item, index) => (
+            <React.Fragment key={index}>
+              <InfoPlate
+                title={item.title}
+                text={item.text}
+                img={item.image}
+                reverse={index % 2 != 0}
+              />
+            </React.Fragment>
+          ))}
           <Socials />
           <Affiliate />
           <Footer />

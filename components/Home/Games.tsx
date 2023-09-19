@@ -52,9 +52,8 @@ function Games() {
                     modules={[Navigation]}
                     className="games__slider"
                 >
-                    {games
-                        .map((game, index) => (
-                            <React.Fragment key={index}>
+                    {games.map((game, index) => (
+                            <React.Fragment key={game.id}>
                                 <SwiperSlide className="games__slide">
                                     <Image src={game.img} alt="game" />
                                 </SwiperSlide>
@@ -72,7 +71,7 @@ function Games() {
 
                 <div className="games__list">
                     {games.map((item, index) => (
-                        <motion.div {...smoothShow(0.8, index / 5)} className="games__item" key={item.id}>
+                        <motion.div {...smoothShow(0.8, index / 5)} className="games__item" key={`${index}`}>
                             <Image src={item.img} alt="game" />
                         </motion.div>
                     ))}

@@ -6,11 +6,11 @@ import Link from 'next/link';
 import Logo from '@/public/logo.svg';
 import PhoneIcon from '@/public/footer/Phone.svg';
 import MailIcon from '@/public/footer/mail.svg';
+import VKIcon from '@/public/socials/VK.svg'
 
 //data
 import { socials } from '@/data/socials';
 import { commonInfo } from '@/data/commonInfo';
-import { supabase } from '@/api/supabaseClient';
 
 function Footer() {
 
@@ -18,24 +18,9 @@ function Footer() {
     mail: string
     footer_text: string
   }>({
-    mail: '123',
-    footer_text: ''
+    mail: 'support@cyberyal.com',
+    footer_text: 'Cyberyal is an independent entity that is not affiliated or endorsed by Blizzard Entertainment, Bungie, or Respawn Entertainment. The views and opinions expressed by Cyberyal do not reflect those of the aforementioned entities or anyone involved in managing their franchises. All trademarks belonging to the aforementioned entities are the property of their respective owners in the U.S.A and/or other countries. All submitted art content remains the copyright of its original copyright holder. Please note that Cyberyal does not sell in-game items; we only offer services to help players improve their in-game skills and provide gifts of in-game items.'
   })
-
-  const getTexts = useCallback(async () => {
-    try {
-      const { data, status, error } = await supabase.from('common').select('*');
-      if (data && error == null) {
-        setFooterInfo(data[0])
-      }
-    } catch (err) {
-      console.log(err)
-    }
-  }, [])
-
-  useEffect(() => {
-    getTexts();
-  }, [])
 
   if (footerInfo.mail === '') {
     return null
@@ -73,7 +58,7 @@ function Footer() {
               target="_blank"
               href={socials.filter((item) => item.title === "VK")[0].link}
             >
-              {socials.filter((item) => item.title === "VK")[0].icon()}
+              <VKIcon />
             </a>
             <a
               className="footer__social"

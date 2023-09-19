@@ -1,4 +1,3 @@
-
 // libs
 import Image from "next/image";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -8,10 +7,6 @@ import Modal from "react-modal";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { supabase } from "@/api/supabaseClient";
-
-// utils
-import apiClient from "@/api/apiClient";
 
 // images
 import BrilliantImg from "@/public/hero/brilliant.png";
@@ -21,6 +16,11 @@ import ShareLogo from "@/public/hero/ShareLogo.svg";
 import CubokIcon from "@/public/hero/cubok.svg";
 import CloseIcon from "@/public/hero/close.svg";
 import SocialLink from "../UI/SocialLink";
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  TwitterShareButton,
+} from "react-share";
 
 // data
 import { socials } from "@/data/socials";
@@ -33,42 +33,26 @@ import {
   smoothFromTop,
   smoothShow,
 } from "@/data/animations";
-import {
-  FacebookIcon,
-  FacebookShareButton,
-  TwitterShareButton,
-} from "react-share";
+
+// components
 import FormForCreateId from "../Elements/FormForCreateId";
 import MarkdownContainer from "../Elements/MarkDownContainer";
 
 function Hero() {
   const [notifyIsOpen, setNotifyOpen] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
   const [texts, setTexts] = useState({
-    notification_text: "",
-    notification_title: "",
-    subtitle: "",
-    title: ""
+    notification_text: "Join us now and be the first to know about new tournaments! Play and reach new heights with our platform.",
+    notification_title: "Register for your welcome tournament right now",
+    subtitle: `- Cyberyal provides an easy and affordable way to monetize the gaming
+- Attract new talents to eSports
+- Make eSports available to everyone 
+- Change the perception of gaming from a futile pastime
+- Help to unleash potential to individuals who have not yet found their calling in other areas.`,
+    title: "Play competitive games and unlock rewards"
   })
-
-  // loading texts
-  const getTexts = useCallback(async () => {
-    try {
-      const { data, error, status } = await supabase.from('hero').select('*')
-      if (data && error === null) {
-        setTexts(data[0])
-      }
-    } catch (err) {
-      console.log(err)
-    } finally {
-      setLoading(false)
-    }
-  }, [])
 
   // check cookie previos page load
   useEffect(() => {
-    setLoading(true)
-    getTexts();
     const name = "notifyIsClosed";
     var match = Object.fromEntries(
       document.cookie

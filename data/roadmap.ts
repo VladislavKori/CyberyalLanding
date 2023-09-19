@@ -39,7 +39,7 @@ export const points = [
     },
     {
         id: 5,
-        title: "2023 Q3",
+        title: "2023 Q4",
         cases: [
             "Release of the extended version of the site, major bugfixes;",
             "in-game integration;",
@@ -49,7 +49,7 @@ export const points = [
     },
     {
         id: 6,
-        title: "2023 Q4",
+        title: "2024 Q1",
         cases: [
             "Investment round A;",
             "Gamification release;",
@@ -58,7 +58,7 @@ export const points = [
     },
     {
         id: 7,
-        title: "2024 Q1",
+        title: "2024 Q2",
         cases: [
             "Mobile app release;",
             "Marketplace release."
@@ -66,14 +66,14 @@ export const points = [
     },
     {
         id: 8,
-        title: "2024 Q2",
+        title: "2024 Q4",
         cases: [
             "Social release.",
         ]
     },
     {
         id: 9,
-        title: "2024 Q4",
+        title: "2025 Q1",
         cases: [
             "Software launch.",
         ]

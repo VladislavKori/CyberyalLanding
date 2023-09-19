@@ -3,18 +3,20 @@ import TwitterIcon from "@/public/socials/Twitter.svg";
 import YoutubeIcon from "@/public/socials/Youtube.svg";
 import FacebookIcon from "@/public/socials/Facebook.svg";
 import TwitchIcon from "@/public/socials/Twitch.svg";
-import VkIcon from "@/public/socials/VK.svg";
+import VkIcon from "@/public/socials/VKWhite.svg";
 
 export const socials = [
     {
-      title: "Facebook",
-      icon: FacebookIcon,
-      text: "You can follow us on Facebook",
-      link: "http://www.facebook.com/groups/cyberyalgaming/",
+      id: 0,
+      title: "Discord",
+      icon: DiscordIcon,
+      text: "Chat in our Discord channel",
+      link: "https://discord.com",
       social: "facebook",
       bgColor: ""
     },
     {
+      id: 1,
       title: "Twitter",
       icon: TwitterIcon,
       text: "Follow the news on Twitter",
@@ -23,30 +25,16 @@ export const socials = [
       bgColor: ""
     },
     {
-      title: "Discord",
-      icon: DiscordIcon,
-      text: "Join our Discord channel",
-      link: "https://discord.gg/chjDVWAbBU",
-      social: "discord",
+      id: 2,
+      title: "Facebook",
+      icon: FacebookIcon,
+      text: "You can follow us on Facebook",
+      link: "http://www.facebook.com/groups/cyberyalgaming/",
+      social: "facebook",
       bgColor: ""
     },
     {
-      title: "Twitch",
-      icon: TwitchIcon,
-      text: "Watch our streams on Twitch",
-      link: "https://www.twitch.tv/cyberyal",
-      social: "twitch",
-      bgColor: ""
-    },
-    {
-      title: "Youtube",
-      icon: YoutubeIcon,
-      text: "Follow our channel on YouTube",
-      link: "https://www.youtube.com/@CyberyalGaming",
-      social: "youtube",
-      bgColor: ""
-    },
-    {
+      id: 3,
       title: "VK",
       icon: VkIcon,
       text: "Subscribe to the group in VK",
