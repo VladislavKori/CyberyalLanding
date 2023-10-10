@@ -9,7 +9,7 @@ export const members = [
   {
     photo: Yakov,
     name: "Jaska Litvinov",
-    post: "CEO",
+    post: "Co-Founder & CEO",
     description:
       "An engineer and entrepreneur from Finland. Led teams in the media, forestry and startup industries. He is responsible for partner relations, corporate processes, project's philosophy and project development control.",
     linkedin: "https://www.linkedin.com/in/yakov-litvinov-8a818125a",
@@ -17,7 +17,7 @@ export const members = [
   {
     photo: Alexander,
     name: "Alexander Tsivin",
-    post: "Founder",
+    post: "Co-Founder",
     description:
       "Video Game industry analyst and streamer. Optimizes resources and cash flows, develops service mechanics and influencer partnership programs. Also he is responsible for project economics.",
     linkedin: "https://www.linkedin.com/in/tsivin/",
