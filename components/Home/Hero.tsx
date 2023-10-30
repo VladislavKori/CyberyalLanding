@@ -103,12 +103,12 @@ function Hero() {
       <div className="hero__content">
         <div className="hero__left">
           <motion.h1 {...smoothFromBottom(0.8)} className="hero__title">{texts.title}</motion.h1>
-          <motion.p
+          <motion.div
             {...smoothFromBottom(0.8, 0.3)}
             className="hero__text hero__subtitle"
           >
             {texts.subtitle ? <MarkdownContainer text={texts.subtitle} /> : null}
-          </motion.p>
+          </motion.div>
         </div>
         <motion.div {...smoothShow(0.8)} className="hero__right">
           <FormForCreateId />

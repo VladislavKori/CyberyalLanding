@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
 import Footer from "@/components/Elements/Footer";
 import Header from "@/components/Elements/Header";
@@ -12,6 +13,10 @@ import FAQ from '@/components/Affiliate/FAQ';
 import PartnerConditions from '@/components/Affiliate/PartnerConditions';
 import HowAffiliateWorks from '@/components/Affiliate/HowAffiliateWorks';
 import AboutAffiliate from '@/components/Affiliate/AboutAffiliate';
+
+const HeaderWithNoSSR = dynamic(() => import("@/components/Elements/Header"), {
+  ssr: false,
+});
 
 export default function Affiliate() {
   return (
@@ -75,7 +80,7 @@ export default function Affiliate() {
       </Head>
       <main className="wrapper">
         <div className="affiliate__header-wrapper content">
-          <Header />
+          <HeaderWithNoSSR fixed={true} />
         </div>
         <Hero />
 

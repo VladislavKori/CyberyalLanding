@@ -77,7 +77,7 @@ export default function About() {
 
       <main className="wrapper">
         <div className="content">
-          <HeaderWithNoSSR />
+          <HeaderWithNoSSR fixed={true} />
           <AboutUs />
           <div className="about__gradient"></div>
           <Advantages />

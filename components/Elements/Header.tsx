@@ -15,7 +15,7 @@ import BurgerIcon from '@/public/header/burger.svg';
 import CloseIcon from '@/public/assets/close_modal.svg';
 
 
-function Header() {
+function Header({fixed}: {fixed?: boolean}) {
 
   const router = useRouter();
   if (typeof window !== "undefined") {
@@ -36,7 +36,8 @@ function Header() {
 
   return (
     <>
-      <header className="header">
+      {fixed ? (<div className="header_fixed-gap"></div>) : null}
+      <header className={fixed ? "header header_fixed" : "header"}>
         <div className="header__left">
           <Link href={"/"}>
             <div className="header__logo">

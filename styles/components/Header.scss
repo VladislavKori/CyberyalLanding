@@ -10,6 +10,21 @@
     position: relative;
     z-index: 3;
 
+    &_fixed {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 18px 75px;
+        background: #1A1A22;
+        border-radius: 0px 0px 40px 40px;
+        z-index: 3;
+
+        &-gap {
+            height: 100px;
+        }
+    }
+
     &__left {
         display: flex;
         align-items: center;
@@ -165,6 +180,10 @@
 @media (max-width: $sm) {
     .header {
 
+        &_fixed {
+            padding: 13px 16px;   
+        }
+
         &__burger {
             &-button {
                 width: 100%;
@@ -172,6 +191,14 @@
                 justify-content: center;
                 align-items: center;
             }
+        }
+
+        &__left {
+            gap: 12px;
+        }
+
+        &__navbar {
+            gap: 12px;
         }
     }
 }
