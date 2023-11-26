@@ -19,6 +19,7 @@ import BecomeAnInvestor from "@/components/About/BecomeAnInvestor";
 import ContactUs from "@/components/About/ContactUs";
 import Advantages from "@/components/About/Advantages";
 import Mentors from "@/components/About/Mentors";
+import Partners from "@/components/About/Partners";
 
 export default function About() {
   return (
@@ -85,6 +86,7 @@ export default function About() {
           <ProblemsWeSolve />
           <OurTeam />
           <Mentors />
+          <Partners />
           <RoadMap />
 
           <BecomeAnInvestor />

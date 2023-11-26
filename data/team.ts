@@ -4,6 +4,7 @@ import Roma from "../public/team/Roma.png";
 import Anton from "../public/team/Anton.png";
 import Yexela from "../public/team/Yexela.png";
 import Galina from "../public/team/Galina.png";
+import Alex from "../public/team/alex.jpg"
 
 export const members = [
   {
@@ -55,7 +56,14 @@ export const members = [
       "An artist and designer with extensive experience. Engaged in the development of promotional materials and their control. Represents the interests of the company in the media environment.",
     crunchbase: "https://www.crunchbase.com/person/alexey-sychev",
   },
-
+  {
+    photo: Alex,
+    name: "Alex Solyar",
+    post: "Chief Architect",
+    description:
+      "Chief architect, leading system analyst, head of the technical department with experience in many IT projects, including the Innotech group of companies, author of interactive analytics blocks on employee performance, as well as Self Service HR.",
+    // crunchbase: "https://www.crunchbase.com/person/alexey-sychev",
+  }
 ];
 
 export const commonLinkedin = "https://www.linkedin.com/company/playstar-platform-ou/";
