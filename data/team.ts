@@ -1,10 +1,10 @@
-import Yakov from "../public/team/Yakov.png";
+import Yakov from "../public/team/yakov.jpg";
 import Alexander from "../public/team/A3.jpg";
 import Roma from "../public/team/Roma.png";
-import Anton from "../public/team/Anton.png";
 import Yexela from "../public/team/Yexela.png";
 import Galina from "../public/team/Galina.png";
-import Alex from "../public/team/alex.jpg"
+import Alex from "../public/team/alex.jpg";
+import Kirill from "../public/team/Kirill.jpg";
 
 export const members = [
   {
@@ -24,6 +24,14 @@ export const members = [
     linkedin: "https://www.linkedin.com/in/tsivin/",
   },
   {
+    photo: Alex,
+    name: "Alex Solyar",
+    post: "Chief Architect",
+    description:
+      "Chief architect, leading system analyst, head of the technical department with experience in many IT projects, including the Innotech group of companies, author of interactive analytics blocks on employee performance, as well as Self Service HR.",
+    // crunchbase: "https://www.crunchbase.com/person/alexey-sychev",
+  },
+  {
     photo: Roma,
     name: "Roma Kogan",
     post: "CMO",
@@ -33,12 +41,12 @@ export const members = [
     linkedin: 'https://www.linkedin.com/in/evertine/'
   },
   {
-    photo: Anton,
-    name: "Anton Tyatenko",
-    post: "CTO",
+    photo: Kirill,
+    name: "Kirill",
+    post: "Team leader",
     description:
-      "Experienced manager, led teams of up to 50 developers. Has founded two HR startups. Also he is a renowned professional in corporate data optimization. In the company he is engaged in service architecture, cybersecurity, and strategic development planning.",
-    linkedin: "https://www.linkedin.com/in/anton-tyatenkov/",
+      "Go and FullStack, Software Engineer with 6 years of development experience. He was part of a team at a fintech institution. He is the team leader of the technical department.",
+    telegram: "https://t.me/imexclusive",
   },
   {
     photo: Galina,
@@ -56,14 +64,6 @@ export const members = [
       "An artist and designer with extensive experience. Engaged in the development of promotional materials and their control. Represents the interests of the company in the media environment.",
     crunchbase: "https://www.crunchbase.com/person/alexey-sychev",
   },
-  {
-    photo: Alex,
-    name: "Alex Solyar",
-    post: "Chief Architect",
-    description:
-      "Chief architect, leading system analyst, head of the technical department with experience in many IT projects, including the Innotech group of companies, author of interactive analytics blocks on employee performance, as well as Self Service HR.",
-    // crunchbase: "https://www.crunchbase.com/person/alexey-sychev",
-  }
 ];
 
 export const commonLinkedin = "https://www.linkedin.com/company/playstar-platform-ou/";
