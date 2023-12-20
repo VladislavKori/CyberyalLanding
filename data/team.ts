@@ -1,10 +1,10 @@
-import Yakov from "../public/team/yakov.jpg";
-import Alexander from "../public/team/A3.jpg";
-import Roma from "../public/team/Roma.png";
-import Yexela from "../public/team/Yexela.png";
-import Galina from "../public/team/Galina.png";
-import Alex from "../public/team/alex.jpg";
-import Kirill from "../public/team/Kirill.jpg";
+import Yakov from "../public/team/yakov.webp";
+import Alexander from "../public/team/A3.webp";
+import Roma from "../public/team/Roma.webp";
+import Yexela from "../public/team/Yexela.webp";
+import Galina from "../public/team/Galina.webp";
+import Alex from "../public/team/alex.webp";
+import Kirill from "../public/team/Kirill.webp";
 
 export const members = [
   {

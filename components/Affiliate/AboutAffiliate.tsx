@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import Button from '@/components/UI/Button'
 
 // images
-import AffiliateImage from '@/public/affiliate/homepage.png';
+import AffiliateImage from '@/public/affiliate/homepage.webp';
 
 // animations
 import { smoothFromBottom } from '@/data/animations'
